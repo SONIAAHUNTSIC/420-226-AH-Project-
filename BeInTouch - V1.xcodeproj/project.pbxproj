@@ -46,12 +46,12 @@
 		E3213AEF1CB9D5C70016A3B4 /* AdresseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdresseDTO.h; sourceTree = "<group>"; };
 		E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdresseDTO.m; sourceTree = "<group>"; };
 		E3213AF21CBB34B50016A3B4 /* Constants-hosting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-hosting.h"; sourceTree = "<group>"; };
-		E3213AF31CBB3C360016A3B4 /* BeInTouch-V1-localhost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeInTouch-V1-localhost-Prefix.pch"; sourceTree = "<group>"; };
 		E3213AF41CBB4ABE0016A3B4 /* Constants-localhost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-localhost.h"; sourceTree = "<group>"; };
 		E3213AF51CBB54660016A3B4 /* BeInTouch-V1-hosting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BeInTouch-V1-hosting-Prefix.pch"; path = "../BeInTouch-V1-hosting-Prefix.pch"; sourceTree = "<group>"; };
 		E3213B061CBBA7430016A3B4 /* BeInTouch-V1-hosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeInTouch-V1-hosting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3213B071CBBB05E0016A3B4 /* UtilisateurDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilisateurDTO.h; sourceTree = "<group>"; };
 		E3213B081CBBB05E0016A3B4 /* UtilisateurDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurDTO.m; sourceTree = "<group>"; };
+		E3213B0B1CBBF8990016A3B4 /* BeInTouch-V1-localhost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BeInTouch-V1-localhost-Prefix.pch"; path = "../BeInTouch-V1-localhost-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +111,8 @@
 				E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */,
 				E3213AF21CBB34B50016A3B4 /* Constants-hosting.h */,
 				E3213AF41CBB4ABE0016A3B4 /* Constants-localhost.h */,
+				E3213B0B1CBBF8990016A3B4 /* BeInTouch-V1-localhost-Prefix.pch */,
 				E3213AF51CBB54660016A3B4 /* BeInTouch-V1-hosting-Prefix.pch */,
-				E3213AF31CBB3C360016A3B4 /* BeInTouch-V1-localhost-Prefix.pch */,
 			);
 			path = "BeInTouch - V1";
 			sourceTree = "<group>";
