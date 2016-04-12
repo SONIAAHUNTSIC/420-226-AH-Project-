@@ -25,7 +25,7 @@
 		E3213B001CBBA7430016A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */; };
 		E3213B011CBBA7430016A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */; };
 		E3213B021CBBA7430016A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
-		E3213B091CBBB05E0016A3B4 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213B081CBBB05E0016A3B4 /* UtilisateurDTO.m */; };
+		E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,11 +47,11 @@
 		E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdresseDTO.m; sourceTree = "<group>"; };
 		E3213AF21CBB34B50016A3B4 /* Constants-hosting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-hosting.h"; sourceTree = "<group>"; };
 		E3213AF41CBB4ABE0016A3B4 /* Constants-localhost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-localhost.h"; sourceTree = "<group>"; };
-		E3213AF51CBB54660016A3B4 /* BeInTouch-V1-hosting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BeInTouch-V1-hosting-Prefix.pch"; path = "../BeInTouch-V1-hosting-Prefix.pch"; sourceTree = "<group>"; };
 		E3213B061CBBA7430016A3B4 /* BeInTouch-V1-hosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeInTouch-V1-hosting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3213B071CBBB05E0016A3B4 /* UtilisateurDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilisateurDTO.h; sourceTree = "<group>"; };
-		E3213B081CBBB05E0016A3B4 /* UtilisateurDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurDTO.m; sourceTree = "<group>"; };
-		E3213B0B1CBBF8990016A3B4 /* BeInTouch-V1-localhost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BeInTouch-V1-localhost-Prefix.pch"; path = "../BeInTouch-V1-localhost-Prefix.pch"; sourceTree = "<group>"; };
+		E39B71401CBD502900B15382 /* BeInTouch-V1-localhost-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeInTouch-V1-localhost-Prefix.pch"; sourceTree = "<group>"; };
+		E39B71411CBD502900B15382 /* BeInTouch-V1-hosting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeInTouch-V1-hosting-Prefix.pch"; sourceTree = "<group>"; };
+		E39B71421CBD502900B15382 /* UtilisateurDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurDTO.m; sourceTree = "<group>"; };
+		E39B71441CBD503400B15382 /* UtilisateurDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilisateurDTO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +75,6 @@
 		E3213AC61CB9C8250016A3B4 = {
 			isa = PBXGroup;
 			children = (
-				E3213B071CBBB05E0016A3B4 /* UtilisateurDTO.h */,
-				E3213B081CBBB05E0016A3B4 /* UtilisateurDTO.m */,
 				E3213AD11CB9C8250016A3B4 /* BeInTouch - V1 */,
 				E3213AD01CB9C8250016A3B4 /* Products */,
 			);
@@ -94,6 +92,10 @@
 		E3213AD11CB9C8250016A3B4 /* BeInTouch - V1 */ = {
 			isa = PBXGroup;
 			children = (
+				E39B71441CBD503400B15382 /* UtilisateurDTO.h */,
+				E39B71401CBD502900B15382 /* BeInTouch-V1-localhost-Prefix.pch */,
+				E39B71411CBD502900B15382 /* BeInTouch-V1-hosting-Prefix.pch */,
+				E39B71421CBD502900B15382 /* UtilisateurDTO.m */,
 				E3213AD51CB9C8250016A3B4 /* AppDelegate.h */,
 				E3213AD61CB9C8250016A3B4 /* AppDelegate.m */,
 				E3213AD81CB9C8250016A3B4 /* ViewController.h */,
@@ -111,8 +113,6 @@
 				E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */,
 				E3213AF21CBB34B50016A3B4 /* Constants-hosting.h */,
 				E3213AF41CBB4ABE0016A3B4 /* Constants-localhost.h */,
-				E3213B0B1CBBF8990016A3B4 /* BeInTouch-V1-localhost-Prefix.pch */,
-				E3213AF51CBB54660016A3B4 /* BeInTouch-V1-hosting-Prefix.pch */,
 			);
 			path = "BeInTouch - V1";
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 				E3213ADA1CB9C8250016A3B4 /* ViewController.m in Sources */,
 				E3213AF11CB9D5C70016A3B4 /* AdresseDTO.m in Sources */,
 				E3213AEE1CB9CAA00016A3B4 /* AdresseFacade.m in Sources */,
-				E3213B091CBBB05E0016A3B4 /* UtilisateurDTO.m in Sources */,
+				E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */,
 				E3213AEB1CB9C95B0016A3B4 /* UtilisateurFacade.m in Sources */,
 				E3213AD71CB9C8250016A3B4 /* AppDelegate.m in Sources */,
 				E3213AD41CB9C8250016A3B4 /* main.m in Sources */,
@@ -365,7 +365,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SONIA IBARRA FLORES (H5BXBQPGZ9)";
+				GCC_PREFIX_HEADER = "BeInTouch - V1/BeInTouch-V1-localhost-Prefix.pch";
 				INFOPLIST_FILE = "BeInTouch - V1/BeInTouch-V1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -378,7 +379,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SONIA IBARRA FLORES (H5BXBQPGZ9)";
+				GCC_PREFIX_HEADER = "BeInTouch - V1/BeInTouch-V1-localhost-Prefix.pch";
 				INFOPLIST_FILE = "BeInTouch - V1/BeInTouch-V1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -393,7 +395,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREFIX_HEADER = "BeInTouch-V1-hosting-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BeInTouch - V1/BeInTouch-V1-hosting-Prefix.pch";
 				INFOPLIST_FILE = "BeInTouch - V1/BeInTouch-V1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -409,7 +412,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREFIX_HEADER = "BeInTouch-V1-hosting-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BeInTouch - V1/BeInTouch-V1-hosting-Prefix.pch";
 				INFOPLIST_FILE = "BeInTouch - V1/BeInTouch-V1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

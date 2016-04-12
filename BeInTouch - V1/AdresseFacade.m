@@ -103,7 +103,7 @@ static AdresseFacade* adresseFacade = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateAdresse&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idAdresse=%@&prenom=%@&nom=%@&age=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [adresseDTO idAdresse], [adresseDTO rue], [adresseDTO appartement], [adresseDTO codePostal] , [adresseDTO ville], [adresseDTO province], [adresseDTO pays]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateAdresse&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idAdresse=%@&rue=%@&codePostal=%@&appartement=%@&ville=%@&province=%@&pays=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [adresseDTO idAdresse], [adresseDTO rue], [adresseDTO appartement], [adresseDTO codePostal] , [adresseDTO ville], [adresseDTO province], [adresseDTO pays]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
