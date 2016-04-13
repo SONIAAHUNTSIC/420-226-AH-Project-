@@ -1,49 +1,45 @@
 //
-//  UtilisateurFacade.m
+//  MessageFacade.m
 //  BeInTouch - V1
 //
-//  Created by SONIA IBARRA FLORES on 2016-04-09.
-//  Copyright © 2016 collegeahuntsic. All rights reserved.
+//  Created by tamadje patrick on 12/04/2016.
+//  Copyright (c) 2016 collegeahuntsic. All rights reserved.
 //
 
+#import "MessageFacade.h"
+#import "MessageDTO.h"
 
-#import "UtilisateurFacade.h"
-#import "UtilisateurDTO.h"
-
-static UtilisateurFacade* utilisateurFacade = nil;
+static MessageFacade* messageFacade = nil;
 
 #pragma mark - Membres publics
 
-@implementation UtilisateurFacade
 
-#pragma mark - Méthodes d'initialisation
+@implementation MessageFacade
+
 + (void)initialize {
-    utilisateurFacade = [[UtilisateurFacade alloc] init];
+    messageFacade = [[MessageFacade alloc] init];
 }
 
 - (instancetype)init {
-    if(utilisateurFacade == nil) {
-        utilisateurFacade = [super init];
+    if(messageFacade == nil) {
+        messageFacade = [super init];
     }
-    return utilisateurFacade;
+    return messageFacade;
 }
 
 #pragma mark - Méthodes métier
-+ (UtilisateurFacade*)utilisateurFacade {
-    return utilisateurFacade;
++ (MessageFacade*)messageFacade {
+    return messageFacade;
 }
 
-- (int)createUtilisateur:(UtilisateurDTO*)utilisateurDTO {
-    NSLog(@"test utilisateur");
+- (int)createMessage:(MessageDTO *)messageDTO
+{
+    NSLog(@"test message");
     int nombreEnregistrements = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
-    
-    AdresseDTO *adresseU = [[AdresseDTO alloc]init];
-    adresseU = [utilisateurDTO adresse];
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@idAdresse=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO nom], [utilisateurDTO prenom], [utilisateurDTO sexe],[utilisateurDTO dateCreation],[utilisateurDTO dateNaissance],[utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone], [adresseU idAdresse]];
-    
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createMessage&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&dateMessage=%@&contenu=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [messageDTO dateMessage], [messageDTO contenu]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -71,12 +67,13 @@ static UtilisateurFacade* utilisateurFacade = nil;
     return nombreEnregistrements;
 }
 
-- (UtilisateurDTO*)readUtilisateur:(NSString*)idUtilisateur {
-    UtilisateurDTO* utilisateurDTO = nil;
+- (MessageDTO*)readMesaage:(NSString *)idMessage
+{
+    MessageDTO* messageDTO = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idUtilisateur];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readMessage&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idMessage=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idMessage];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -85,10 +82,9 @@ static UtilisateurFacade* utilisateurFacade = nil;
     donnees = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     if([response statusCode] == 200
        && donnees != nil) {
-        NSDictionary* utilisateurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
+        NSDictionary* messageJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
-        
-        utilisateurDTO = [[UtilisateurDTO alloc] initAvecIdUtilisateur:utilisateurJSON[@"idUtilisateur"] nom:utilisateurJSON[@"nom"] prenom:utilisateurJSON[@"prenom"] sexe:utilisateurJSON[@"sexe"]  dateCreation:utilisateurJSON[@"dateCreation"] dateNaissance:utilisateurJSON[@"dateNaissance"] photo:utilisateurJSON[@"photo"] courriel:utilisateurJSON[@"courriel"]   telephone:utilisateurJSON[@"telephone"] etAdresse:utilisateurJSON[@"adresse"]];
+        messageDTO = [[MessageDTO alloc] initAvecIdMessage:messageJSON[@"idMessage"] dateMessage:messageJSON[@"dateMessage"] etContenu:messageJSON[@"contenu"]];
     } else if([response statusCode] != 200
               &&      donnees != nil) {
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
@@ -101,15 +97,16 @@ static UtilisateurFacade* utilisateurFacade = nil;
     } else {
         NSLog(@"[Code d'erreur %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
-    return utilisateurDTO;
+    return messageDTO;
 }
 
-- (int)updateUtilisateur:(UtilisateurDTO*)utilisateurDTO {
+- (int)updateMessage:(MessageDTO *)messageDTO
+{
     int nombreEnregistrements = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO idUtilisateur], [utilisateurDTO nom], [utilisateurDTO prenom], [utilisateurDTO sexe] , [utilisateurDTO dateCreation], [utilisateurDTO dateNaissance], [utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateMessage&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idMessage=%@&dateMessage=%@&contenu=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [messageDTO idMessage], [messageDTO dateMessage], [messageDTO contenu]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -136,12 +133,13 @@ static UtilisateurFacade* utilisateurFacade = nil;
     return nombreEnregistrements;
 }
 
-- (int)deleteUtilisateur:(UtilisateurDTO*)utilisateurDTO {
+- (int)deleteMessage:(MessageDTO *)messageDTO
+{
     int nombreEnregistrements = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=delete&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO idUtilisateur]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=deleteMessage&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idMessage=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [messageDTO idMessage]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -168,13 +166,13 @@ static UtilisateurFacade* utilisateurFacade = nil;
     return nombreEnregistrements;
 }
 
-- (NSMutableArray*)getAllUtilisateurs {
+- (NSMutableArray*)getAllMessages {
     NSLog(@"get all ");
-    NSMutableArray* utilisateurs = [[NSMutableArray alloc] init];
+    NSMutableArray* messages = [[NSMutableArray alloc] init];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllUtilisateurs&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllMessages&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -187,20 +185,15 @@ static UtilisateurFacade* utilisateurFacade = nil;
         NSLog(@"== 200");
         NSArray* resultats = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
-        for (NSDictionary* utilisateurJSON in resultats) {
-            UtilisateurDTO* utilisateurDTO = [[UtilisateurDTO alloc] init];
+        for (NSDictionary* messageJSON in resultats) {
+            MessageDTO* messageDTO = [[MessageDTO alloc] init];
             
-            [utilisateurDTO setIdUtilisateur:utilisateurJSON[@"idUtilisateur"]];
-            [utilisateurDTO setNom:utilisateurJSON[@"nom"]];
-            [utilisateurDTO setPrenom:utilisateurJSON[@"prenom"]];
-            [utilisateurDTO setSexe:utilisateurJSON[@"sexe"]];
-            [utilisateurDTO setDateCreation:utilisateurJSON[@"dateCreation"]];
-            [utilisateurDTO setDateNaissance:utilisateurJSON[@"dateNaissance"]];
-            [utilisateurDTO setPhoto:utilisateurJSON[@"photo"]];
-            [utilisateurDTO setCourriel:utilisateurJSON[@"courriel"]];
-            [utilisateurDTO setTelephone:utilisateurJSON[@"telephone"]];
+            [messageDTO setIdMessage:messageJSON[@"idMessage"]];
             
-            [utilisateurs addObject:utilisateurDTO];
+            [messageDTO setDateMessage:messageJSON[@"dateMessage"]];
+            [messageDTO setContenu:messageJSON[@"contenu"]];
+            
+            [messages addObject:messageDTO];
         }
     } else if([response statusCode] != 200
               &&      donnees != nil) {
@@ -215,7 +208,7 @@ static UtilisateurFacade* utilisateurFacade = nil;
     } else {
         NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
-    return utilisateurs;
+    return messages;
 }
 
 @end
