@@ -39,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="11r-yx-d0w" kind="push" id="AaJ-Hl-DWb"/>
+                                    <segue destination="11r-yx-d0w" kind="modal" id="Erw-Gb-U1s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,6 +147,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLF-7f-8qL">
+                                <rect key="frame" x="0.0" y="12" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Enregistrement" id="a1X-Zz-0aN">
+                                        <barButtonItem key="leftBarButtonItem" title="Accueil" id="Tfx-WM-5wP">
+                                            <connections>
+                                                <segue destination="LrY-bf-aaO" kind="unwind" unwindAction="returnFromEnregistrement:" id="yKc-eE-2mg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="OK >" id="c5e-Rm-4JG">
+                                            <connections>
+                                                <segue destination="nIZ-aR-0hu" kind="modal" id="2NM-iP-Asg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -156,14 +174,12 @@
                         <barButtonItem key="backBarButtonItem" title="Accueil" id="U8t-Bx-Qzg"/>
                         <barButtonItem key="rightBarButtonItem" title="OK >" id="ijR-2H-pL1">
                             <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="nIZ-aR-0hu" kind="push" id="sfN-bU-jKE"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxk-ID-1bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LrY-bf-aaO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="144" y="577"/>
         </scene>
@@ -184,10 +200,20 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBi-vM-pPf">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9e-GT-am7">
+                                <rect key="frame" x="0.0" y="11" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Utilisateurs" id="8vH-1N-DqY"/>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nM8-d1-Rn9">
+                                <rect key="frame" x="0.0" y="60" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yoo-9F-cXu" id="dcw-aN-Ezv"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -198,8 +224,20 @@
                         <barButtonItem key="rightBarButtonItem" title="Sauv" id="Kos-7p-G9a"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Uyx-Xc-wwh" id="M0Z-HD-ZId"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEI-pf-q9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Uyx-Xc-wwh">
+                    <connections>
+                        <outlet property="delegate" destination="yoo-9F-cXu" id="jZf-8d-2Zl"/>
+                        <outlet property="searchBar" destination="nM8-d1-Rn9" id="HgT-fq-1Yv"/>
+                        <outlet property="searchContentsController" destination="yoo-9F-cXu" id="UGo-zS-wcm"/>
+                        <outlet property="searchResultsDataSource" destination="yoo-9F-cXu" id="nYF-Ni-rMx"/>
+                        <outlet property="searchResultsDelegate" destination="yoo-9F-cXu" id="KHW-dS-8bN"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1207" y="157"/>
         </scene>
@@ -223,10 +261,10 @@
             </objects>
             <point key="canvasLocation" x="633" y="684"/>
         </scene>
-        <!--Table View Controller - TchatRooms-->
+        <!--Tchat Room Table View Controller - TchatRooms-->
         <scene sceneID="gOG-eL-0uB">
             <objects>
-                <tableViewController id="zfZ-A8-i0p" sceneMemberID="viewController">
+                <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L2n-QT-P6M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,7 +287,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="MYT-A3-dSu" kind="push" identifier="DetailTchatRoom" trigger="accessoryAction" id="Ut2-c1-cL2"/>
+                                    <segue destination="MYT-A3-dSu" kind="push" identifier="sujetTchat" trigger="accessoryAction" id="Ut2-c1-cL2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -270,10 +308,10 @@
             </objects>
             <point key="canvasLocation" x="1694" y="1008"/>
         </scene>
-        <!--View Controller - Nouveau TchatRoom-->
+        <!--Nouveau Tchat Room View Controller - Nouveau TchatRoom-->
         <scene sceneID="tuF-s8-duJ">
             <objects>
-                <viewController id="Zuv-Rt-5BM" sceneMemberID="viewController">
+                <viewController id="Zuv-Rt-5BM" customClass="NouveauTchatRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jh3-v1-SVv"/>
                         <viewControllerLayoutGuide type="bottom" id="7yQ-kk-e4D"/>
@@ -284,10 +322,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nouveau TchatRoom" id="e9B-vF-lXm">
-                        <barButtonItem key="backBarButtonItem" title="Tchat." id="7tI-xm-TrS"/>
-                        <barButtonItem key="rightBarButtonItem" title="Suivant" id="mfJ-CH-JaM">
+                        <barButtonItem key="backBarButtonItem" title="Disc." id="7tI-xm-TrS"/>
+                        <barButtonItem key="rightBarButtonItem" title="- >>" id="mfJ-CH-JaM">
                             <connections>
-                                <segue destination="WpZ-BB-oao" kind="push" id="weN-pF-a0P"/>
+                                <segue destination="WpZ-BB-oao" kind="modal" id="weN-pF-a0P"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -296,10 +334,10 @@
             </objects>
             <point key="canvasLocation" x="2220" y="530"/>
         </scene>
-        <!--View Controller - DetailTchatRoom-->
+        <!--Detail Tchat Room View Controller - Sujet du Tchat-->
         <scene sceneID="L5Y-Pd-ZvZ">
             <objects>
-                <viewController id="MYT-A3-dSu" sceneMemberID="viewController">
+                <viewController id="MYT-A3-dSu" customClass="DetailTchatRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uVW-lm-XMO"/>
                         <viewControllerLayoutGuide type="bottom" id="LwE-i9-iOS"/>
@@ -309,11 +347,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="DetailTchatRoom" id="Ags-3I-ltJ">
-                        <barButtonItem key="backBarButtonItem" title="Annuler" id="OSH-rS-QRe"/>
+                    <navigationItem key="navigationItem" title="Sujet du Tchat" id="Ags-3I-ltJ">
+                        <barButtonItem key="backBarButtonItem" title="&lt;-" id="OSH-rS-QRe"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hnt-5L-0MU">
                             <connections>
-                                <segue destination="TrU-yY-Y2i" kind="push" id="uVs-TM-Vt2"/>
+                                <segue destination="TrU-yY-Y2i" kind="modal" id="uVs-TM-Vt2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -333,6 +371,26 @@
                     <view key="view" contentMode="scaleToFill" id="ecb-K9-H19">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bp8-2S-de3">
+                                <rect key="frame" x="0.0" y="24" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Liste membres" id="y5Z-DN-GV7">
+                                        <barButtonItem key="leftBarButtonItem" title="Disc" id="jxo-UB-Cbk">
+                                            <connections>
+                                                <segue destination="NtX-nj-obc" kind="unwind" unwindAction="AnnulerModifierTchat:" id="jLh-xj-lzn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Ajout." id="zBP-Uq-EIv">
+                                            <connections>
+                                                <segue destination="NtX-nj-obc" kind="unwind" unwindAction="returnFromListeMembres:" id="khW-Tu-I1t"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Liste Participants" id="Z0E-wr-Or4">
@@ -341,13 +399,14 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzC-Gi-j3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NtX-nj-obc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2728" y="1350"/>
         </scene>
-        <!--View Controller - Ajouter Tchaters-->
+        <!--Ajout Utilisateur View Controller - Ajouter Tchaters-->
         <scene sceneID="aao-7t-6Nh">
             <objects>
-                <viewController id="WpZ-BB-oao" sceneMemberID="viewController">
+                <viewController id="WpZ-BB-oao" customClass="AjoutUtilisateurViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z2W-N3-t0l"/>
                         <viewControllerLayoutGuide type="bottom" id="2HB-sU-BOZ"/>
@@ -355,6 +414,26 @@
                     <view key="view" contentMode="scaleToFill" id="Zwj-QJ-MNd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-4w-SEn">
+                                <rect key="frame" x="0.0" y="27" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Ajouter membre(s)" id="SKH-ki-QQd">
+                                        <barButtonItem key="leftBarButtonItem" title="Annuler" id="m0a-Wf-wPA">
+                                            <connections>
+                                                <segue destination="aCz-HK-BYp" kind="unwind" unwindAction="AnnulerAjoutMembre:" id="zf4-77-scW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Créer" id="pfh-LQ-04c">
+                                            <connections>
+                                                <segue destination="aCz-HK-BYp" kind="unwind" unwindAction="AjoutMembre:" id="aHX-aQ-oDg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ajouter Tchaters" id="iXG-tc-5QQ">
@@ -363,6 +442,7 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybk-z1-u70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aCz-HK-BYp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2790" y="530"/>
         </scene>

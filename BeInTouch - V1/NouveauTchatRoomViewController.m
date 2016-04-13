@@ -50,7 +50,7 @@
     
 }
 
--(IBAction)AnnulerAjoutUtilisateur:(UIStoryboardSegue*) segue{
+-(IBAction)AnnulerAjoutMembre:(UIStoryboardSegue*) segue{
     
 }
 
