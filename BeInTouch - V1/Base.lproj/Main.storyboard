@@ -159,7 +159,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="OK >" id="c5e-Rm-4JG">
                                             <connections>
-                                                <segue destination="nIZ-aR-0hu" kind="modal" id="2NM-iP-Asg"/>
+                                                <segue destination="nIZ-aR-0hu" kind="modal" identifier="segueEnregistrer" id="2NM-iP-Asg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
