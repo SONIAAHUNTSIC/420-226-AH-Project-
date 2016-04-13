@@ -193,16 +193,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Iie-xW-aaY">
-                                <rect key="frame" x="-8" y="49" width="328" height="408"/>
+                                <rect key="frame" x="0.0" y="98" width="328" height="404"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBi-vM-pPf">
-                                <rect key="frame" x="0.0" y="55" width="320" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="yoo-9F-cXu" id="dcw-aN-Ezv"/>
-                                </connections>
-                            </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lX9-co-bWP">
                                 <rect key="frame" x="-4" y="5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -210,6 +203,14 @@
                                     <navigationItem title="Utilisateurs" id="9ur-kG-czn"/>
                                 </items>
                             </navigationBar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Djo-y7-MQY">
+                                <rect key="frame" x="0.0" y="49" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yoo-9F-cXu" id="3qm-zR-ZH5"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -220,7 +221,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="Uyx-Xc-wwh" id="M0Z-HD-ZId"/>
+                        <outlet property="searchDisplayController" destination="Fdp-P8-CTb" id="U6I-A2-FUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEI-pf-q9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,6 +231,15 @@
                         <outlet property="searchContentsController" destination="yoo-9F-cXu" id="UGo-zS-wcm"/>
                         <outlet property="searchResultsDataSource" destination="yoo-9F-cXu" id="nYF-Ni-rMx"/>
                         <outlet property="searchResultsDelegate" destination="yoo-9F-cXu" id="KHW-dS-8bN"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="Fdp-P8-CTb">
+                    <connections>
+                        <outlet property="delegate" destination="yoo-9F-cXu" id="x03-Dt-Mb5"/>
+                        <outlet property="searchBar" destination="Djo-y7-MQY" id="uMp-l5-jhF"/>
+                        <outlet property="searchContentsController" destination="yoo-9F-cXu" id="1wk-NC-RSH"/>
+                        <outlet property="searchResultsDataSource" destination="yoo-9F-cXu" id="Ls9-d2-MGK"/>
+                        <outlet property="searchResultsDelegate" destination="yoo-9F-cXu" id="U8b-IZ-ZDf"/>
                     </connections>
                 </searchDisplayController>
             </objects>
@@ -293,7 +303,7 @@
                     <navigationItem key="navigationItem" title="TchatRooms" id="qFu-KW-2bf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Ug-yE-OXo">
                             <connections>
-                                <segue destination="Zuv-Rt-5BM" kind="push" identifier="Nouveau TchatRoom" id="kYx-Xl-g48"/>
+                                <segue destination="Zuv-Rt-5BM" kind="push" identifier="nouveauTchatRoom" id="kYx-Xl-g48"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -313,6 +323,25 @@
                     <view key="view" contentMode="scaleToFill" id="UZb-SV-Vcs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hH-RI-i4L">
+                                <rect key="frame" x="20" y="92" width="46" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Veuillez spécifier le sujet du TchatRoom et éventuellement lui donner une icône." translatesAutoresizingMaskIntoConstraints="NO" id="Orf-8M-Gz0">
+                                <rect key="frame" x="74" y="92" width="246" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sujet du tchat" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-w8-mGs">
+                                <rect key="frame" x="20" y="178" width="272" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nouveau TchatRoom" id="e9B-vF-lXm">
@@ -339,6 +368,21 @@
                     <view key="view" contentMode="scaleToFill" id="DL0-dA-J3p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taper message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wnv-bv-rt1">
+                                <rect key="frame" x="5" y="399" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYr-u0-thZ">
+                                <rect key="frame" x="286" y="399" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sujet du Tchat" id="Ags-3I-ltJ">
@@ -384,6 +428,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="O7W-hI-R2L">
+                                <rect key="frame" x="0.0" y="68" width="320" height="259"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -414,7 +463,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Ajouter membre(s)" id="SKH-ki-QQd">
-                                        <barButtonItem key="leftBarButtonItem" title="Annuler" id="m0a-Wf-wPA">
+                                        <barButtonItem key="leftBarButtonItem" title="Retour" id="m0a-Wf-wPA">
                                             <connections>
                                                 <segue destination="aCz-HK-BYp" kind="unwind" unwindAction="AnnulerAjoutMembre:" id="zf4-77-scW"/>
                                             </connections>
@@ -427,16 +476,46 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zl9-us-8uA">
+                                <rect key="frame" x="0.0" y="94" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" showsBookmarkButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbF-Ex-1HL">
+                                <rect key="frame" x="48" y="94" width="272" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Ajouter Tchaters" id="iXG-tc-5QQ">
                         <barButtonItem key="backBarButtonItem" title="Nouv." id="T2G-zM-g6c"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="cUI-Xj-IUK"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="eRY-iW-ZGg" id="o1r-fE-JAD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybk-z1-u70" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="aCz-HK-BYp" userLabel="Exit" sceneMemberID="exit"/>
+                <searchDisplayController id="3fc-hP-uch">
+                    <connections>
+                        <outlet property="delegate" destination="WpZ-BB-oao" id="1wD-an-fYc"/>
+                        <outlet property="searchContentsController" destination="WpZ-BB-oao" id="iIF-gh-59g"/>
+                        <outlet property="searchResultsDataSource" destination="WpZ-BB-oao" id="amI-eI-ZLw"/>
+                        <outlet property="searchResultsDelegate" destination="WpZ-BB-oao" id="5sv-6j-GyF"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="eRY-iW-ZGg">
+                    <connections>
+                        <outlet property="delegate" destination="WpZ-BB-oao" id="enB-JV-V3Y"/>
+                        <outlet property="searchContentsController" destination="WpZ-BB-oao" id="VZR-zY-edh"/>
+                        <outlet property="searchResultsDataSource" destination="WpZ-BB-oao" id="bBL-VZ-n4h"/>
+                        <outlet property="searchResultsDelegate" destination="WpZ-BB-oao" id="B6S-a0-iWi"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2790" y="530"/>
         </scene>

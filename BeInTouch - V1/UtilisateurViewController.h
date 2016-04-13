@@ -10,8 +10,5 @@
 
 @interface UtilisateurViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
-{
-    NSMutableArray *maData;
-}
 
 @end
