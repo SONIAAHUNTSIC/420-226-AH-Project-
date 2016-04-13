@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EnregistrementViewController.h
 //  BeInTouch
 //
 //  Created by Aliou GUEYE on 10.04.16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface EnregistrementViewController : UIViewController
 
 @end

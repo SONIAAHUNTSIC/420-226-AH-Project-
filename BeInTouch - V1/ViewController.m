@@ -1,9 +1,9 @@
 //
 //  ViewController.m
-//  BeInTouch - V1
+//  BeInTouch
 //
-//  Created by SONIA IBARRA FLORES on 2016-04-09.
-//  Copyright © 2016 collegeahuntsic. All rights reserved.
+//  Created by Aliou GUEYE on 10.04.16.
+//  Copyright (c) 2016 Luno&&Co.inc. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -14,14 +14,26 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+}
+
+-(IBAction)returnFormAccueil:(UIStoryboardSegue*) segue{
+    
+}
+
 
 @end
