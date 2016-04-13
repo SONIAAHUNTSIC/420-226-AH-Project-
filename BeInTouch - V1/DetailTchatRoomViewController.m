@@ -1,18 +1,18 @@
 //
-//  UtilisateurViewController.m
+//  DetailTchatRoomViewController.m
 //  BeInTouch
 //
 //  Created by Aliou GUEYE on 12.04.16.
 //  Copyright (c) 2016 Luno&&Co.inc. All rights reserved.
 //
 
-#import "UtilisateurViewController.h"
+#import "DetailTchatRoomViewController.h"
 
-@interface UtilisateurViewController ()
+@interface DetailTchatRoomViewController ()
 
 @end
 
-@implementation UtilisateurViewController
+@implementation DetailTchatRoomViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,40 +45,11 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    
-    return [maData count];
-    
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *MyIdentifier = @"MyIdentifier";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    
-    if (cell == nil)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
-    
-    //NSString *cellValue = [maData objectAtIndex:indexPath.row];
-   // cell.textLabel.text = cellValue;
-    return cell;
-}
-
-
-
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
 }
 
--(IBAction)returnFormUtilisateur:(UIStoryboardSegue*) segue{
-    
-}
-
--(IBAction)returnFromAjourParticipant:(UIStoryboardSegue*) segue{
+-(IBAction)AnnulerModifierDetailTchatRoom:(UIStoryboardSegue*) segue{
     
 }
 
