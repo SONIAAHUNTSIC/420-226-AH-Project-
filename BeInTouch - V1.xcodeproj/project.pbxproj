@@ -29,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B69860781CBD79BF003DB4F3 /* UtilisateurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilisateurViewController.h; sourceTree = "<group>"; };
+		B69860791CBD79BF003DB4F3 /* UtilisateurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UtilisateurViewController.m; sourceTree = "<group>"; };
 		E3213ACF1CB9C8250016A3B4 /* BeInTouch-V1-localhost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeInTouch-V1-localhost.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3213AD31CB9C8250016A3B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3213AD51CB9C8250016A3B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +101,8 @@
 				E3213AD81CB9C8250016A3B4 /* ViewController.h */,
 				E3213AD91CB9C8250016A3B4 /* ViewController.m */,
 				E3213ADB1CB9C8250016A3B4 /* Main.storyboard */,
+				B69860781CBD79BF003DB4F3 /* UtilisateurViewController.h */,
+				B69860791CBD79BF003DB4F3 /* UtilisateurViewController.m */,
 				E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */,
 				E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */,
 				E3213AE31CB9C8250016A3B4 /* BeInTouch-V1-Info.plist */,
