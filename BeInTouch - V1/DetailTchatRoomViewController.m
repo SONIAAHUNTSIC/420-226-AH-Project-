@@ -49,7 +49,7 @@
     
 }
 
--(IBAction)AnnulerModifierDetailTchatRoom:(UIStoryboardSegue*) segue{
+-(IBAction)AnnulerModifierTchat:(UIStoryboardSegue*) segue{
     
 }
 

@@ -120,7 +120,7 @@
     
 }
 
--(IBAction)AjoutUtilisateur:(UIStoryboardSegue*) segue{
+-(IBAction)AjoutMembre:(UIStoryboardSegue*) segue{
     
 }
 
