@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Accueil-->
+        <!--View Controller - Accueil-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -14,23 +14,23 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BIENVENUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEg-9s-BRE">
-                                <rect key="frame" x="91" y="187" width="139" height="21"/>
+                                <rect key="frame" x="91" y="157" width="139" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BeInTouch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5p2-1U-16b">
-                                <rect key="frame" x="116" y="273" width="88" height="21"/>
+                                <rect key="frame" x="116" y="229" width="88" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPX-03-ctC">
-                                <rect key="frame" x="120" y="356" width="80" height="30"/>
+                                <rect key="frame" x="120" y="297" width="80" height="30"/>
                                 <state key="normal" title="ACCEPTER">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,7 +50,7 @@
             </objects>
             <point key="canvasLocation" x="-235" y="-93"/>
         </scene>
-        <!--Enregistrement-->
+        <!--Enregistrement View Controller - Enregistrement-->
         <scene sceneID="BCG-LV-2zc">
             <objects>
                 <viewController id="11r-yx-d0w" customClass="EnregistrementViewController" sceneMemberID="viewController">
@@ -59,74 +59,74 @@
                         <viewControllerLayoutGuide type="bottom" id="Yiv-Bw-05z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="13L-JV-R4L">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l36-uP-dal">
-                                <rect key="frame" x="20" y="72" width="67" height="66"/>
+                                <rect key="frame" x="20" y="59" width="67" height="66"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92W-GC-I76">
-                                <rect key="frame" x="136" y="72" width="151" height="25"/>
+                                <rect key="frame" x="136" y="60" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-jb-2XU">
-                                <rect key="frame" x="136" y="105" width="151" height="25"/>
+                                <rect key="frame" x="136" y="88" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Sexe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fns-bA-dNb">
-                                <rect key="frame" x="136" y="138" width="151" height="25"/>
+                                <rect key="frame" x="136" y="115" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Date Naissance" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-is-ltA">
-                                <rect key="frame" x="136" y="180" width="151" height="25"/>
+                                <rect key="frame" x="136" y="150" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Courriel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XjK-ZC-zR7">
-                                <rect key="frame" x="136" y="227" width="151" height="25"/>
+                                <rect key="frame" x="136" y="190" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Téléphone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-Eg-kKt">
-                                <rect key="frame" x="136" y="271" width="151" height="25"/>
+                                <rect key="frame" x="136" y="227" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Rue" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-im-YW3">
-                                <rect key="frame" x="136" y="312" width="151" height="25"/>
+                                <rect key="frame" x="136" y="261" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Code Postal" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHM-33-Fhi">
-                                <rect key="frame" x="136" y="394" width="151" height="25"/>
+                                <rect key="frame" x="136" y="330" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Province" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-19-7Ev">
-                                <rect key="frame" x="136" y="466" width="151" height="25"/>
+                                <rect key="frame" x="136" y="390" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Pays" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="asT-qi-4EN">
-                                <rect key="frame" x="136" y="499" width="151" height="22"/>
+                                <rect key="frame" x="136" y="418" width="151" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Appartement" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAD-Nt-dj4">
-                                <rect key="frame" x="136" y="353" width="151" height="25"/>
+                                <rect key="frame" x="136" y="295" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Appartement" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYG-ZV-3MY">
-                                <rect key="frame" x="136" y="353" width="151" height="25"/>
+                                <rect key="frame" x="136" y="295" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Ville" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgs-RW-iUA">
-                                <rect key="frame" x="136" y="433" width="151" height="25"/>
+                                <rect key="frame" x="136" y="362" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
@@ -155,7 +155,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Enregistrement" id="lzC-6M-L0l">
                         <barButtonItem key="backBarButtonItem" title="Accueil" id="U8t-Bx-Qzg"/>
-                        <barButtonItem key="rightBarButtonItem" title="OK &gt;" id="ijR-2H-pL1">
+                        <barButtonItem key="rightBarButtonItem" title="OK >" id="ijR-2H-pL1">
                             <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -180,7 +180,7 @@
             </objects>
             <point key="canvasLocation" x="144" y="577"/>
         </scene>
-        <!--Utilisateurs-->
+        <!--Utilisateur View Controller - Utilisateurs-->
         <scene sceneID="adD-cD-H3y">
             <objects>
                 <viewController id="yoo-9F-cXu" customClass="UtilisateurViewController" sceneMemberID="viewController">
@@ -189,20 +189,27 @@
                         <viewControllerLayoutGuide type="bottom" id="CcM-QW-sBV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZD2-kx-Qpu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Iie-xW-aaY">
-                                <rect key="frame" x="-8" y="110" width="328" height="408"/>
+                                <rect key="frame" x="-8" y="49" width="328" height="408"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBi-vM-pPf">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="yoo-9F-cXu" id="dcw-aN-Ezv"/>
                                 </connections>
                             </searchBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lX9-co-bWP">
+                                <rect key="frame" x="-4" y="5" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Utilisateurs" id="9ur-kG-czn"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -220,7 +227,6 @@
                 <searchDisplayController id="Uyx-Xc-wwh">
                     <connections>
                         <outlet property="delegate" destination="yoo-9F-cXu" id="jZf-8d-2Zl"/>
-                        <outlet property="searchBar" destination="nM8-d1-Rn9" id="HgT-fq-1Yv"/>
                         <outlet property="searchContentsController" destination="yoo-9F-cXu" id="UGo-zS-wcm"/>
                         <outlet property="searchResultsDataSource" destination="yoo-9F-cXu" id="nYF-Ni-rMx"/>
                         <outlet property="searchResultsDelegate" destination="yoo-9F-cXu" id="KHW-dS-8bN"/>
@@ -249,12 +255,12 @@
             </objects>
             <point key="canvasLocation" x="633" y="684"/>
         </scene>
-        <!--TchatRooms-->
+        <!--Tchat Room Table View Controller - TchatRooms-->
         <scene sceneID="gOG-eL-0uB">
             <objects>
                 <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L2n-QT-P6M">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -262,11 +268,11 @@
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="msv-Xb-Mys" id="Zec-Az-XzW">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wXA-zQ-rZA">
-                                            <rect key="frame" x="15" y="0.0" width="238" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="238" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -296,7 +302,7 @@
             </objects>
             <point key="canvasLocation" x="1694" y="1008"/>
         </scene>
-        <!--Nouveau TchatRoom-->
+        <!--Nouveau Tchat Room View Controller - Nouveau TchatRoom-->
         <scene sceneID="tuF-s8-duJ">
             <objects>
                 <viewController id="Zuv-Rt-5BM" customClass="NouveauTchatRoomViewController" sceneMemberID="viewController">
@@ -305,7 +311,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7yQ-kk-e4D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UZb-SV-Vcs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -322,7 +328,7 @@
             </objects>
             <point key="canvasLocation" x="2220" y="530"/>
         </scene>
-        <!--DetailTchatRoom-->
+        <!--Detail Tchat Room View Controller - Sujet du Tchat-->
         <scene sceneID="L5Y-Pd-ZvZ">
             <objects>
                 <viewController id="MYT-A3-dSu" customClass="DetailTchatRoomViewController" sceneMemberID="viewController">
@@ -331,7 +337,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LwE-i9-iOS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DL0-dA-J3p">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -348,7 +354,7 @@
             </objects>
             <point key="canvasLocation" x="2236" y="1350"/>
         </scene>
-        <!--Liste Participants-->
+        <!--View Controller - Liste Participants-->
         <scene sceneID="suh-f2-S5N">
             <objects>
                 <viewController id="TrU-yY-Y2i" sceneMemberID="viewController">
@@ -357,7 +363,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yfb-1E-VqS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ecb-K9-H19">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bp8-2S-de3">
@@ -391,7 +397,7 @@
             </objects>
             <point key="canvasLocation" x="2728" y="1350"/>
         </scene>
-        <!--Ajouter Tchaters-->
+        <!--Ajout Utilisateur View Controller - Ajouter Tchaters-->
         <scene sceneID="aao-7t-6Nh">
             <objects>
                 <viewController id="WpZ-BB-oao" customClass="AjoutUtilisateurViewController" sceneMemberID="viewController">
@@ -400,7 +406,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2HB-sU-BOZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zwj-QJ-MNd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-4w-SEn">
@@ -434,7 +440,7 @@
             </objects>
             <point key="canvasLocation" x="2790" y="530"/>
         </scene>
-        <!--TchatRooms-->
+        <!--Navigation Controller - TchatRooms-->
         <scene sceneID="4Xu-pO-5Gv">
             <objects>
                 <navigationController definesPresentationContext="YES" id="2k7-7R-5bg" sceneMemberID="viewController">
@@ -466,4 +472,9 @@
             <point key="canvasLocation" x="-673" y="235"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>
