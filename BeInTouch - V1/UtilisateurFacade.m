@@ -38,8 +38,12 @@ static UtilisateurFacade* utilisateurFacade = nil;
     int nombreEnregistrements = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
+    
+    AdresseDTO *adresseU = [[AdresseDTO alloc]init];
+    adresseU = [utilisateurDTO adresse];
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createAdresse&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO nom], [utilisateurDTO prenom], [utilisateurDTO sexe],[utilisateurDTO dateCreation],[utilisateurDTO dateNaissance],[utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone] ];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@idAdresse=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO nom], [utilisateurDTO prenom], [utilisateurDTO sexe],[utilisateurDTO dateCreation],[utilisateurDTO dateNaissance],[utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone], [adresseU idAdresse]];
+    
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -84,7 +88,7 @@ static UtilisateurFacade* utilisateurFacade = nil;
         NSDictionary* utilisateurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
         
-        utilisateurDTO = [[UtilisateurDTO alloc] initAvecIdUtilisateur:utilisateurJSON[@"idUtilisateur"] nom:utilisateurJSON[@"nom"] prenom:utilisateurJSON[@"prenom"] sexe:utilisateurJSON[@"sexe"]  dateCreation:utilisateurJSON[@"dateCreation"] dateNaissance:utilisateurJSON[@"dateNaissance"] photo:utilisateurJSON[@"photo"] courriel:utilisateurJSON[@"courriel"]  etTelephone:utilisateurJSON[@"telephone"]];
+        utilisateurDTO = [[UtilisateurDTO alloc] initAvecIdUtilisateur:utilisateurJSON[@"idUtilisateur"] nom:utilisateurJSON[@"nom"] prenom:utilisateurJSON[@"prenom"] sexe:utilisateurJSON[@"sexe"]  dateCreation:utilisateurJSON[@"dateCreation"] dateNaissance:utilisateurJSON[@"dateNaissance"] photo:utilisateurJSON[@"photo"] courriel:utilisateurJSON[@"courriel"]   telephone:utilisateurJSON[@"telephone"] etAdresse:utilisateurJSON[@"adresse"]];
     } else if([response statusCode] != 200
               &&      donnees != nil) {
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];

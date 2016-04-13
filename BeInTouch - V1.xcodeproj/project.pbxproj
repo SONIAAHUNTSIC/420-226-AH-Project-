@@ -26,6 +26,7 @@
 		E3213B011CBBA7430016A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */; };
 		E3213B021CBBA7430016A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
 		E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
+		E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -244,6 +245,7 @@
 				E3213AF81CBBA7430016A3B4 /* ViewController.m in Sources */,
 				E3213AF91CBBA7430016A3B4 /* AdresseDTO.m in Sources */,
 				E3213AFA1CBBA7430016A3B4 /* AdresseFacade.m in Sources */,
+				E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */,
 				E3213AFB1CBBA7430016A3B4 /* UtilisateurFacade.m in Sources */,
 				E3213AFC1CBBA7430016A3B4 /* AppDelegate.m in Sources */,
 				E3213AFD1CBBA7430016A3B4 /* main.m in Sources */,
