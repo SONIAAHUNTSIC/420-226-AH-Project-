@@ -27,10 +27,8 @@
 		B68544AE1CC01D65003F4BBE /* BienvenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544AC1CC01D65003F4BBE /* BienvenuViewController.m */; };
 		B68544B11CC01DE8003F4BBE /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B01CC01DE8003F4BBE /* InfosViewController.m */; };
 		B68544B21CC01DE8003F4BBE /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B01CC01DE8003F4BBE /* InfosViewController.m */; };
-		B68544B51CC02550003F4BBE /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B41CC02550003F4BBE /* AjouterAmisViewController.m */; };
-		B68544B61CC02550003F4BBE /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B41CC02550003F4BBE /* AjouterAmisViewController.m */; };
-		B68544B91CC02616003F4BBE /* VoirAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B81CC02616003F4BBE /* VoirAmisViewController.m */; };
-		B68544BA1CC02616003F4BBE /* VoirAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B81CC02616003F4BBE /* VoirAmisViewController.m */; };
+		B68544BD1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */; };
+		B68544BE1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */; };
 		B6917C471CBE83B200E2499C /* AjoutUtilisateurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */; };
 		B6917C4B1CBE83C000E2499C /* EnregistrementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */; };
 		B6917C4F1CBE842200E2499C /* ParticipantTchatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4E1CBE842200E2499C /* ParticipantTchatViewController.m */; };
@@ -82,10 +80,8 @@
 		B68544AC1CC01D65003F4BBE /* BienvenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BienvenuViewController.m; sourceTree = "<group>"; };
 		B68544AF1CC01DE8003F4BBE /* InfosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfosViewController.h; sourceTree = "<group>"; };
 		B68544B01CC01DE8003F4BBE /* InfosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfosViewController.m; sourceTree = "<group>"; };
-		B68544B31CC02550003F4BBE /* AjouterAmisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjouterAmisViewController.h; sourceTree = "<group>"; };
-		B68544B41CC02550003F4BBE /* AjouterAmisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjouterAmisViewController.m; sourceTree = "<group>"; };
-		B68544B71CC02616003F4BBE /* VoirAmisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoirAmisViewController.h; sourceTree = "<group>"; };
-		B68544B81CC02616003F4BBE /* VoirAmisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoirAmisViewController.m; sourceTree = "<group>"; };
+		B68544BB1CC029AC003F4BBE /* AjouterAmisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjouterAmisViewController.h; sourceTree = "<group>"; };
+		B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjouterAmisViewController.m; sourceTree = "<group>"; };
 		B6917C451CBE83B200E2499C /* AjoutUtilisateurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjoutUtilisateurViewController.h; sourceTree = "<group>"; };
 		B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjoutUtilisateurViewController.m; sourceTree = "<group>"; };
 		B6917C491CBE83C000E2499C /* EnregistrementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnregistrementViewController.h; sourceTree = "<group>"; };
@@ -225,10 +221,8 @@
 				B68544AC1CC01D65003F4BBE /* BienvenuViewController.m */,
 				B68544AF1CC01DE8003F4BBE /* InfosViewController.h */,
 				B68544B01CC01DE8003F4BBE /* InfosViewController.m */,
-				B68544B31CC02550003F4BBE /* AjouterAmisViewController.h */,
-				B68544B41CC02550003F4BBE /* AjouterAmisViewController.m */,
-				B68544B71CC02616003F4BBE /* VoirAmisViewController.h */,
-				B68544B81CC02616003F4BBE /* VoirAmisViewController.m */,
+				B68544BB1CC029AC003F4BBE /* AjouterAmisViewController.h */,
+				B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -364,11 +358,10 @@
 				B6917C5B1CBE84C200E2499C /* TchatRoomTableViewController.m in Sources */,
 				E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */,
 				E3213AEB1CB9C95B0016A3B4 /* UtilisateurFacade.m in Sources */,
-				B68544B91CC02616003F4BBE /* VoirAmisViewController.m in Sources */,
 				B6917C4F1CBE842200E2499C /* ParticipantTchatViewController.m in Sources */,
 				6E29DEEC1CBEE3EE00148B3F /* MembreDTO.m in Sources */,
 				6EBB362C1CBEC84700784B45 /* TchatroomFacade.m in Sources */,
-				B68544B51CC02550003F4BBE /* AjouterAmisViewController.m in Sources */,
+				B68544BD1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */,
 				E3213AD71CB9C8250016A3B4 /* AppDelegate.m in Sources */,
 				B6917C571CBE84B200E2499C /* NouveauTchatRoomViewController.m in Sources */,
 				B68544AD1CC01D65003F4BBE /* BienvenuViewController.m in Sources */,
@@ -387,11 +380,10 @@
 				6EBB362D1CBEC84700784B45 /* TchatroomFacade.m in Sources */,
 				B68544B21CC01DE8003F4BBE /* InfosViewController.m in Sources */,
 				E3213AF81CBBA7430016A3B4 /* ViewController.m in Sources */,
-				B68544B61CC02550003F4BBE /* AjouterAmisViewController.m in Sources */,
+				B68544BE1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */,
 				E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */,
 				E3213AFB1CBBA7430016A3B4 /* UtilisateurFacade.m in Sources */,
 				6E29DEED1CBEE3EE00148B3F /* MembreDTO.m in Sources */,
-				B68544BA1CC02616003F4BBE /* VoirAmisViewController.m in Sources */,
 				B6917C581CBE84B200E2499C /* NouveauTchatRoomViewController.m in Sources */,
 				B68544AE1CC01D65003F4BBE /* BienvenuViewController.m in Sources */,
 				6E29DEEF1CBEE3EE00148B3F /* MembreFacade.m in Sources */,

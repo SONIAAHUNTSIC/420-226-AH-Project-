@@ -58,7 +58,7 @@
     
 }
 
--(IBAction)returnFromCreerChatRoom:(UIStoryboardSegue*) segue{
+-(IBAction)returnFromChatRoom:(UIStoryboardSegue*) segue{
     
 }
 
