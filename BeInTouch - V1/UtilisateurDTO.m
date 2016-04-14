@@ -18,12 +18,12 @@
 @synthesize photo;
 @synthesize courriel;
 @synthesize telephone;
-@synthesize adresse;
+
 
 
 #pragma mark - Methode d'initialisation
 
--(instancetype)initAvecIdUtilisateur:(NSString *)unIdUtilisateur nom:(NSString *)unNom prenom:(NSString *)unPrenom sexe:(NSString *)unSexe   dateCreation:(NSString *)unDateCreation  dateNaissance:(NSString *)unDateNaissance photo:(NSString *)unPhoto courriel:(NSString *)unCourriel telephone:(NSString *)unTelephone etAdresse:(AdresseDTO *)unAdresse{
+-(instancetype)initAvecIdUtilisateur:(NSString *)unIdUtilisateur prenom:(NSString *)unPrenom nom:(NSString *)unNom sexe:(NSString *)unSexe   dateCreation:(NSString *)unDateCreation  dateNaissance:(NSString *)unDateNaissance photo:(NSString *)unPhoto courriel:(NSString *)unCourriel etTelephone:(NSString *)unTelephone{
     if(self = [super init]) {
         [self setIdUtilisateur:unIdUtilisateur];
         [self setNom:unNom];
@@ -34,7 +34,7 @@
         [self setPhoto:unPhoto];
         [self setCourriel:unCourriel];
         [self setTelephone:unTelephone];
-        [self setAdresse:unAdresse];
+        
         
     }
     return self;

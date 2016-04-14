@@ -73,15 +73,9 @@
     
     EnregistrementViewController* enregistrementViewController = [returnSegue sourceViewController];
     
-    AdresseDTO* adresseU = [[AdresseDTO alloc]initAvecIdAdresse:[ enregistrementViewController idAdresse]
-                                    rue:[[enregistrementViewController textRue] text]
-                                    appartement:[[enregistrementViewController textAppartement] text]
-                                    codePostal:[[enregistrementViewController textCodePostal] text]
-                                    ville:[[enregistrementViewController textVille] text]
-                                    province:[[enregistrementViewController textProvince] text]
-                                    etPays:[[enregistrementViewController textPays] text]];
     
-//    
+    
+   
 //    UtilisateurDTO* utilisateurDTO = [[[UtilisateurDTO alloc]initAvecIdUtilisateur:[ enregistrementViewController idUtilisateur]
 //                                    prenom:[[enregistrementViewController textPrenom]text]
 //                                    nom:[[enregistrementViewController textNom] text]
@@ -89,7 +83,7 @@
 //                                    dateNaissance:[[enregistrementViewController textDateNaissance] text]
 //                                    courriel:[[enregistrementViewController textCourriel] text]
 //                                    telephone:[[enregistrementViewController textTelephone] text]
-//                                                                         etAdresse:[[enregistrementViewController adresseEnregistre]];
+//                                    etAdresse:adresseU];
 //                                
 //    
 //                                      

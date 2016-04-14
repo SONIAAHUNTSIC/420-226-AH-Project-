@@ -9,8 +9,8 @@
 #import "EnregistrementViewController.h"
 #import "UtilisateurDTO.h"
 #import "UtilisateurFacade.h"
-#import "AdresseDTO.h"
-#import "AdresseFacade.h"
+
+
 
 
 @interface EnregistrementViewController ()
@@ -28,16 +28,10 @@
 @synthesize textDateNaissance;
 @synthesize textCourriel;
 @synthesize textTelephone;
-@synthesize textRue;
-@synthesize textAppartement;
-@synthesize textCodePostal;
-@synthesize textVille;
-@synthesize textProvince;
-@synthesize textPays;
+
 
 @synthesize idUtilisateur;
-@synthesize idAdresse;
-@synthesize adresseEnregistre;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,10 +51,6 @@
     UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade] readUtilisateur:[self idUtilisateur]];
     
     
-    AdresseDTO *adresseU = [[AdresseDTO alloc]init];
-    adresseU = [utilisateurDTO adresse];
-    
-    AdresseDTO *adresseDTO = [[AdresseFacade adresseFacade]readAdresse:[adresseU idAdresse]];
     
     //Met a jour les valeurs des text fields de l'interface avec les données de l'enregistrement lu
     if(utilisateurDTO != nil) {
@@ -70,12 +60,7 @@
         [[self textDateNaissance] setText:[utilisateurDTO dateNaissance]];
         [[self textCourriel] setText:[utilisateurDTO courriel]];
         [[self textTelephone] setText:[utilisateurDTO telephone]];
-        [[self textRue] setText:[adresseDTO rue]];
-        [[self textAppartement] setText:[adresseDTO appartement]];
-        [[self textCodePostal] setText:[adresseDTO codePostal]];
-        [[self textVille] setText:[adresseDTO ville]];
-        [[self textProvince] setText:[adresseDTO province]];
-        [[self textPays] setText:[adresseDTO pays]];
+        
         
         
         
@@ -100,12 +85,7 @@
     [[self textDateNaissance] setDelegate:self];
     [[self textCourriel] setDelegate:self];
     [[self textTelephone] setDelegate:self];
-    [[self textRue] setDelegate:self];
-    [[self textAppartement] setDelegate:self];
-    [[self textCodePostal] setDelegate:self];
-    [[self textVille] setDelegate:self];
-    [[self textProvince] setDelegate:self];
-    [[self textPays] setDelegate:self];
+    
     
     
     // Vérifie si le paramètre de modification d'un enregistrement a été assigné
