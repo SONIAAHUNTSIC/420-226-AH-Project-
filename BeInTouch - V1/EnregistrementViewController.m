@@ -34,7 +34,10 @@
 @synthesize textVille;
 @synthesize textProvince;
 @synthesize textPays;
+
 @synthesize idUtilisateur;
+@synthesize idAdresse;
+@synthesize adresseEnregistre;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
