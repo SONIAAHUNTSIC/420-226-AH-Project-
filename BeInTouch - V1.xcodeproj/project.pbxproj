@@ -151,55 +151,18 @@
 		E3213AD11CB9C8250016A3B4 /* BeInTouch - V1 */ = {
 			isa = PBXGroup;
 			children = (
-				6E29DEE01CBEE3EE00148B3F /* EnvoiDTO.h */,
-				6E29DEE11CBEE3EE00148B3F /* EnvoiDTO.m */,
-				6E29DEE21CBEE3EE00148B3F /* EnvoiFacade.h */,
-				6E29DEE31CBEE3EE00148B3F /* EnvoiFacade.m */,
-				6E29DEE41CBEE3EE00148B3F /* MembreDTO.h */,
-				6E29DEE51CBEE3EE00148B3F /* MembreDTO.m */,
-				6E29DEE61CBEE3EE00148B3F /* MembreFacade.h */,
-				6E29DEE71CBEE3EE00148B3F /* MembreFacade.m */,
-				6EBB361E1CBEC84700784B45 /* MessageDTO.h */,
-				6EBB361F1CBEC84700784B45 /* MessageDTO.m */,
-				6EBB36201CBEC84700784B45 /* MessageFacade.h */,
-				6EBB36211CBEC84700784B45 /* MessageFacade.m */,
-				6EBB36221CBEC84700784B45 /* TchatroomDTO.h */,
-				6EBB36231CBEC84700784B45 /* TchatroomDTO.m */,
-				6EBB36241CBEC84700784B45 /* TchatroomFacade.h */,
-				6EBB36251CBEC84700784B45 /* TchatroomFacade.m */,
-				E39B71441CBD503400B15382 /* UtilisateurDTO.h */,
-				E39B71421CBD502900B15382 /* UtilisateurDTO.m */,
+				E39B71481CBFA70E00B15382 /* Facade */,
+				E39B71471CBFA2BB00B15382 /* ViewController */,
+				E39B71461CBFA1EA00B15382 /* DTO */,
 				E39B71401CBD502900B15382 /* BeInTouch-V1-localhost-Prefix.pch */,
 				E39B71411CBD502900B15382 /* BeInTouch-V1-hosting-Prefix.pch */,
-				B6917C5D1CBE875800E2499C /* UtilisateurViewController.h */,
-				B6917C5E1CBE875800E2499C /* UtilisateurViewController.m */,
-				B6917C451CBE83B200E2499C /* AjoutUtilisateurViewController.h */,
-				B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */,
-				B6917C4D1CBE842200E2499C /* ParticipantTchatViewController.h */,
-				B6917C4E1CBE842200E2499C /* ParticipantTchatViewController.m */,
-				B6917C551CBE84B200E2499C /* NouveauTchatRoomViewController.h */,
-				B6917C561CBE84B200E2499C /* NouveauTchatRoomViewController.m */,
-				B6917C591CBE84C200E2499C /* TchatRoomTableViewController.h */,
-				B6917C5A1CBE84C200E2499C /* TchatRoomTableViewController.m */,
-				B6917C511CBE84A000E2499C /* DetailTchatRoomViewController.h */,
-				B6917C521CBE84A000E2499C /* DetailTchatRoomViewController.m */,
-				B6917C491CBE83C000E2499C /* EnregistrementViewController.h */,
-				B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */,
 				E3213AD51CB9C8250016A3B4 /* AppDelegate.h */,
 				E3213AD61CB9C8250016A3B4 /* AppDelegate.m */,
-				E3213AD81CB9C8250016A3B4 /* ViewController.h */,
-				E3213AD91CB9C8250016A3B4 /* ViewController.m */,
 				E3213ADB1CB9C8250016A3B4 /* Main.storyboard */,
 				E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */,
 				E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */,
 				E3213AE31CB9C8250016A3B4 /* BeInTouch-V1-Info.plist */,
 				E3213AD21CB9C8250016A3B4 /* Supporting Files */,
-				E3213AE91CB9C95B0016A3B4 /* UtilisateurFacade.h */,
-				E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */,
-				E3213AEC1CB9CAA00016A3B4 /* AdresseFacade.h */,
-				E3213AED1CB9CAA00016A3B4 /* AdresseFacade.m */,
-				E3213AEF1CB9D5C70016A3B4 /* AdresseDTO.h */,
-				E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */,
 				E3213AF21CBB34B50016A3B4 /* Constants-hosting.h */,
 				E3213AF41CBB4ABE0016A3B4 /* Constants-localhost.h */,
 			);
@@ -212,6 +175,67 @@
 				E3213AD31CB9C8250016A3B4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E39B71461CBFA1EA00B15382 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				6E29DEE41CBEE3EE00148B3F /* MembreDTO.h */,
+				6E29DEE51CBEE3EE00148B3F /* MembreDTO.m */,
+				6EBB36221CBEC84700784B45 /* TchatroomDTO.h */,
+				6EBB36231CBEC84700784B45 /* TchatroomDTO.m */,
+				6E29DEE01CBEE3EE00148B3F /* EnvoiDTO.h */,
+				E3213AEF1CB9D5C70016A3B4 /* AdresseDTO.h */,
+				E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */,
+				6EBB361E1CBEC84700784B45 /* MessageDTO.h */,
+				E39B71441CBD503400B15382 /* UtilisateurDTO.h */,
+				E39B71421CBD502900B15382 /* UtilisateurDTO.m */,
+				6EBB361F1CBEC84700784B45 /* MessageDTO.m */,
+				6E29DEE11CBEE3EE00148B3F /* EnvoiDTO.m */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+		E39B71471CBFA2BB00B15382 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6917C5D1CBE875800E2499C /* UtilisateurViewController.h */,
+				B6917C5E1CBE875800E2499C /* UtilisateurViewController.m */,
+				E3213AD81CB9C8250016A3B4 /* ViewController.h */,
+				E3213AD91CB9C8250016A3B4 /* ViewController.m */,
+				B6917C451CBE83B200E2499C /* AjoutUtilisateurViewController.h */,
+				B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */,
+				B6917C4D1CBE842200E2499C /* ParticipantTchatViewController.h */,
+				B6917C4E1CBE842200E2499C /* ParticipantTchatViewController.m */,
+				B6917C551CBE84B200E2499C /* NouveauTchatRoomViewController.h */,
+				B6917C561CBE84B200E2499C /* NouveauTchatRoomViewController.m */,
+				B6917C591CBE84C200E2499C /* TchatRoomTableViewController.h */,
+				B6917C5A1CBE84C200E2499C /* TchatRoomTableViewController.m */,
+				B6917C511CBE84A000E2499C /* DetailTchatRoomViewController.h */,
+				B6917C521CBE84A000E2499C /* DetailTchatRoomViewController.m */,
+				B6917C491CBE83C000E2499C /* EnregistrementViewController.h */,
+				B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E39B71481CBFA70E00B15382 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				6E29DEE21CBEE3EE00148B3F /* EnvoiFacade.h */,
+				E3213AE91CB9C95B0016A3B4 /* UtilisateurFacade.h */,
+				E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */,
+				E3213AEC1CB9CAA00016A3B4 /* AdresseFacade.h */,
+				E3213AED1CB9CAA00016A3B4 /* AdresseFacade.m */,
+				6E29DEE31CBEE3EE00148B3F /* EnvoiFacade.m */,
+				6E29DEE61CBEE3EE00148B3F /* MembreFacade.h */,
+				6E29DEE71CBEE3EE00148B3F /* MembreFacade.m */,
+				6EBB36201CBEC84700784B45 /* MessageFacade.h */,
+				6EBB36211CBEC84700784B45 /* MessageFacade.m */,
+				6EBB36241CBEC84700784B45 /* TchatroomFacade.h */,
+				6EBB36251CBEC84700784B45 /* TchatroomFacade.m */,
+			);
+			name = Facade;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
