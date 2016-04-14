@@ -51,7 +51,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return [maData count];
+    return 0;
     
 }
 
