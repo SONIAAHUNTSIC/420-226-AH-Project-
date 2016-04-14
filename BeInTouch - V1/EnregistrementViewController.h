@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdresseDTO.h"
 
 @interface EnregistrementViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *textNom;
@@ -23,5 +24,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *textPays;
 
 @property (nonatomic) NSString *idUtilisateur;
+@property (nonatomic) NSString *idAdresse;
+@property (nonatomic) AdresseDTO *adresseEnregistre;
+
+
 
 @end

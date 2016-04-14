@@ -7,6 +7,8 @@
 //
 
 #import "UtilisateurViewController.h"
+#import "UtilisateurFacade.h"
+#import "EnregistrementViewController.h"
 
 @interface UtilisateurViewController ()
 
@@ -66,6 +68,66 @@
    // cell.textLabel.text = cellValue;
     return cell;
 }
+
+- (IBAction)segueEnregistrer:(UIStoryboardSegue*)returnSegue {
+    
+    EnregistrementViewController* enregistrementViewController = [returnSegue sourceViewController];
+    
+    AdresseDTO* adresseU = [[AdresseDTO alloc]initAvecIdAdresse:[ enregistrementViewController idAdresse]
+                                    rue:[[enregistrementViewController textRue] text]
+                                    appartement:[[enregistrementViewController textAppartement] text]
+                                    codePostal:[[enregistrementViewController textCodePostal] text]
+                                    ville:[[enregistrementViewController textVille] text]
+                                    province:[[enregistrementViewController textProvince] text]
+                                    etPays:[[enregistrementViewController textPays] text]];
+    
+//    
+//    UtilisateurDTO* utilisateurDTO = [[[UtilisateurDTO alloc]initAvecIdUtilisateur:[ enregistrementViewController idUtilisateur]
+//                                    prenom:[[enregistrementViewController textPrenom]text]
+//                                    nom:[[enregistrementViewController textNom] text]
+//                                    sexe:[[enregistrementViewController textSexe] text]
+//                                    dateNaissance:[[enregistrementViewController textDateNaissance] text]
+//                                    courriel:[[enregistrementViewController textCourriel] text]
+//                                    telephone:[[enregistrementViewController textTelephone] text]
+//                                                                         etAdresse:[[enregistrementViewController adresseEnregistre]];
+//                                
+//    
+//                                      
+//
+//    if([[utilisateurDTO prenom] length] != 0
+//       && [[utilisateurDTO nom] length] != 0
+//       && [[utilisateurDTO sexe]length] > 0) {
+//        int nombreEnregistrements = 0;
+//        NSString* typeRequete = [utilisateurDTO idUtilisateur] != nil ? @"mise a jour ":@"création";
+//        
+//        NSString* typeRequeteAction = [utilisateurDTO idUtilisateur] != nil ? @"mis a jour " : @"crée(s)";
+//        
+//        
+//        
+//        // Si la personne à un id diferente de nil, on fait  une mise à jour. Sinon, on fait un ajout
+//        //Parler de save vs create update
+//        if ([utilisateurDTO idUtilisateur] !=nil){
+//            nombreEnregistrements = [[UtilisateurFacade utilisateurFacade] updateUtilisateur:utilisateurDTO];
+//            
+//        }
+//        else {
+//            nombreEnregistrements = [[UtilisateurFacade utilisateurFacade] createUtilisateur:utilisateurDTO];
+//            NSLog(@"Requete de %@ , %d enregistrement(s) %@\n\n",typeRequete,nombreEnregistrements,typeRequeteAction);
+//        }
+//        if (nombreEnregistrements > 0){
+//            NSLog(@"Requete de %@ reussie, %d enregistrement(s) %@\n\n",typeRequete,nombreEnregistrements,typeRequeteAction);
+//            
+//        }
+//        else {
+//            NSLog(@"Impossible d'exécuter la requêtede %@ \n\n",typeRequete);
+//        }
+//        
+//        
+//        // Recharge la table view
+//        [self chargerDonnees];
+//}
+                                   
+    }
 
 
 

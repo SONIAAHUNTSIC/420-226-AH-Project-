@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Accueil-->
+        <!--Accueil-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
             </objects>
             <point key="canvasLocation" x="-235" y="-93"/>
         </scene>
-        <!--Enregistrement View Controller - Enregistrement-->
+        <!--Enregistrement-->
         <scene sceneID="BCG-LV-2zc">
             <objects>
                 <viewController id="11r-yx-d0w" customClass="EnregistrementViewController" sceneMemberID="viewController">
@@ -132,7 +132,6 @@
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLF-7f-8qL">
                                 <rect key="frame" x="0.0" y="12" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Enregistrement" id="a1X-Zz-0aN">
                                         <barButtonItem key="leftBarButtonItem" title="Accueil" id="Tfx-WM-5wP">
@@ -140,7 +139,7 @@
                                                 <segue destination="LrY-bf-aaO" kind="unwind" unwindAction="returnFromEnregistrement:" id="yKc-eE-2mg"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="OK >" id="c5e-Rm-4JG">
+                                        <barButtonItem key="rightBarButtonItem" title="OK &gt;" id="c5e-Rm-4JG">
                                             <connections>
                                                 <segue destination="nIZ-aR-0hu" kind="modal" identifier="segueEnregistrer" id="2NM-iP-Asg"/>
                                             </connections>
@@ -155,7 +154,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Enregistrement" id="lzC-6M-L0l">
                         <barButtonItem key="backBarButtonItem" title="Accueil" id="U8t-Bx-Qzg"/>
-                        <barButtonItem key="rightBarButtonItem" title="OK >" id="ijR-2H-pL1">
+                        <barButtonItem key="rightBarButtonItem" title="OK &gt;" id="ijR-2H-pL1">
                             <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -180,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="144" y="577"/>
         </scene>
-        <!--Utilisateur View Controller - Utilisateurs-->
+        <!--Utilisateurs-->
         <scene sceneID="adD-cD-H3y">
             <objects>
                 <viewController id="yoo-9F-cXu" customClass="UtilisateurViewController" sceneMemberID="viewController">
@@ -205,7 +204,6 @@
                             </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lX9-co-bWP">
                                 <rect key="frame" x="-4" y="5" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Utilisateurs" id="9ur-kG-czn"/>
                                 </items>
@@ -255,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="633" y="684"/>
         </scene>
-        <!--Tchat Room Table View Controller - TchatRooms-->
+        <!--TchatRooms-->
         <scene sceneID="gOG-eL-0uB">
             <objects>
                 <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableViewController" sceneMemberID="viewController">
@@ -268,11 +266,11 @@
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="msv-Xb-Mys" id="Zec-Az-XzW">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wXA-zQ-rZA">
-                                            <rect key="frame" x="15" y="0.0" width="238" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="238" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -302,7 +300,7 @@
             </objects>
             <point key="canvasLocation" x="1694" y="1008"/>
         </scene>
-        <!--Nouveau Tchat Room View Controller - Nouveau TchatRoom-->
+        <!--Nouveau TchatRoom-->
         <scene sceneID="tuF-s8-duJ">
             <objects>
                 <viewController id="Zuv-Rt-5BM" customClass="NouveauTchatRoomViewController" sceneMemberID="viewController">
@@ -317,7 +315,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Nouveau TchatRoom" id="e9B-vF-lXm">
                         <barButtonItem key="backBarButtonItem" title="Disc." id="7tI-xm-TrS"/>
-                        <barButtonItem key="rightBarButtonItem" title="- >>" id="mfJ-CH-JaM">
+                        <barButtonItem key="rightBarButtonItem" title="- &gt;&gt;" id="mfJ-CH-JaM">
                             <connections>
                                 <segue destination="WpZ-BB-oao" kind="modal" id="weN-pF-a0P"/>
                             </connections>
@@ -328,7 +326,7 @@
             </objects>
             <point key="canvasLocation" x="2220" y="530"/>
         </scene>
-        <!--Detail Tchat Room View Controller - Sujet du Tchat-->
+        <!--Sujet du Tchat-->
         <scene sceneID="L5Y-Pd-ZvZ">
             <objects>
                 <viewController id="MYT-A3-dSu" customClass="DetailTchatRoomViewController" sceneMemberID="viewController">
@@ -354,7 +352,7 @@
             </objects>
             <point key="canvasLocation" x="2236" y="1350"/>
         </scene>
-        <!--View Controller - Liste Participants-->
+        <!--Liste Participants-->
         <scene sceneID="suh-f2-S5N">
             <objects>
                 <viewController id="TrU-yY-Y2i" sceneMemberID="viewController">
@@ -368,7 +366,6 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bp8-2S-de3">
                                 <rect key="frame" x="0.0" y="24" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Liste membres" id="y5Z-DN-GV7">
                                         <barButtonItem key="leftBarButtonItem" title="Disc" id="jxo-UB-Cbk">
@@ -397,7 +394,7 @@
             </objects>
             <point key="canvasLocation" x="2728" y="1350"/>
         </scene>
-        <!--Ajout Utilisateur View Controller - Ajouter Tchaters-->
+        <!--Ajouter Tchaters-->
         <scene sceneID="aao-7t-6Nh">
             <objects>
                 <viewController id="WpZ-BB-oao" customClass="AjoutUtilisateurViewController" sceneMemberID="viewController">
@@ -411,7 +408,6 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-4w-SEn">
                                 <rect key="frame" x="0.0" y="27" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Ajouter membre(s)" id="SKH-ki-QQd">
                                         <barButtonItem key="leftBarButtonItem" title="Annuler" id="m0a-Wf-wPA">
@@ -440,7 +436,7 @@
             </objects>
             <point key="canvasLocation" x="2790" y="530"/>
         </scene>
-        <!--Navigation Controller - TchatRooms-->
+        <!--TchatRooms-->
         <scene sceneID="4Xu-pO-5Gv">
             <objects>
                 <navigationController definesPresentationContext="YES" id="2k7-7R-5bg" sceneMemberID="viewController">
