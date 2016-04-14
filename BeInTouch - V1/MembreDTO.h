@@ -14,7 +14,7 @@
 
 @property (strong,nonatomic) TchatroomDTO* tchatroom;
 @property (strong,nonatomic) UtilisateurDTO* utilisateur;
-@property (strong,nonatomic) NSString* dateDepuis;
+@property (strong,nonatomic) NSString* dateDebut;
 @property (strong,nonatomic) NSString* dateDepart;
 @property (strong,nonatomic) NSString* swAdministrateur;
 @property (strong,nonatomic) NSString* swCreateur;
@@ -23,5 +23,5 @@
 
 #pragma mark - Méthode d'initialisation
 
--(instancetype)initAvecUtilisateur:(UtilisateurDTO*)unUtilisateurDTO tchatroom:(TchatroomDTO*)unTchatroomDTO dateDepuis:(NSString*)unDateDepuis dateDepart:(NSString*)undateDepart swAdministrateur:(NSString*)unSwAdministrateur swCreateur:(NSString*)unSwCreateur etSwActif:(NSString*)unSwActif;
+-(instancetype)initAvecUtilisateur:(UtilisateurDTO*)unUtilisateurDTO tchatroom:(TchatroomDTO*)unTchatroomDTO dateDebut:(NSString*)unDateDebut dateDepart:(NSString*)undateDepart swAdministrateur:(NSString*)unSwAdministrateur swCreateur:(NSString*)unSwCreateur etSwActif:(NSString*)unSwActif;
 @end
