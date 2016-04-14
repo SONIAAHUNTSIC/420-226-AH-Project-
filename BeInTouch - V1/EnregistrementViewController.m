@@ -62,12 +62,6 @@
         [[self textTelephone] setText:[utilisateurDTO telephone]];
         
         
-        
-        
-        
-        
-        
-        
         NSLog(@"Requête de lecture réussie pour l'enregistrement %@\n\n", [utilisateurDTO idUtilisateur]);
     }
     else {
@@ -80,8 +74,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[self textNom] setDelegate:self];
+    
     [[self textPrenom] setDelegate:self];
+    [[self textNom] setDelegate:self];
+    [[self textSexe] setDelegate:self];
     [[self textDateNaissance] setDelegate:self];
     [[self textCourriel] setDelegate:self];
     [[self textTelephone] setDelegate:self];

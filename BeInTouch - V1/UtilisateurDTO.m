@@ -10,8 +10,8 @@
 
 #pragma mark - Propiétes
 @synthesize idUtilisateur;
-@synthesize nom;
 @synthesize prenom;
+@synthesize nom;
 @synthesize sexe;
 @synthesize dateCreation;
 @synthesize dateNaissance;
@@ -23,11 +23,19 @@
 
 #pragma mark - Methode d'initialisation
 
--(instancetype)initAvecIdUtilisateur:(NSString *)unIdUtilisateur prenom:(NSString *)unPrenom nom:(NSString *)unNom sexe:(NSString *)unSexe   dateCreation:(NSString *)unDateCreation  dateNaissance:(NSString *)unDateNaissance photo:(NSString *)unPhoto courriel:(NSString *)unCourriel etTelephone:(NSString *)unTelephone{
+-(instancetype)initAvecIdUtilisateur:(NSString *)unIdUtilisateur
+               prenom:(NSString *)unPrenom
+               nom:(NSString *)unNom
+               sexe:(NSString *)unSexe
+               dateCreation:(NSString *)unDateCreation
+               dateNaissance:(NSString *)unDateNaissance
+               photo:(NSString *)unPhoto
+               courriel:(NSString *)unCourriel
+               etTelephone:(NSString *)unTelephone{
     if(self = [super init]) {
         [self setIdUtilisateur:unIdUtilisateur];
-        [self setNom:unNom];
         [self setPrenom:unPrenom];
+        [self setNom:unNom];
         [self setSexe:unSexe];
         [self setDateCreation:unDateCreation];
         [self setDateNaissance:unDateNaissance];
