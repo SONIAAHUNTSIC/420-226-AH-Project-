@@ -440,7 +440,7 @@
             </objects>
             <point key="canvasLocation" x="1050" y="836"/>
         </scene>
-        <!--Nouveau Tchat Room View Controller - Nouveau TchatRoom-->
+        <!--Nouveau Tchat Room View Controller - Nouveau ChatRoom-->
         <scene sceneID="tuF-s8-duJ">
             <objects>
                 <viewController id="Zuv-Rt-5BM" customClass="NouveauTchatRoomViewController" sceneMemberID="viewController">
@@ -468,7 +468,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sujet du tchat" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-w8-mGs">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sujet du Chat" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-w8-mGs">
                                 <rect key="frame" x="20" y="156" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
@@ -486,8 +486,8 @@
                             <constraint firstItem="Ig1-w8-mGs" firstAttribute="leading" secondItem="UZb-SV-Vcs" secondAttribute="leading" constant="20" id="sRu-O0-zpz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Nouveau TchatRoom" id="e9B-vF-lXm">
-                        <barButtonItem key="backBarButtonItem" title="Disc." id="7tI-xm-TrS"/>
+                    <navigationItem key="navigationItem" title="Nouveau ChatRoom" id="e9B-vF-lXm">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="7tI-xm-TrS"/>
                         <barButtonItem key="rightBarButtonItem" title="- >>" id="mfJ-CH-JaM">
                             <connections>
                                 <segue destination="WpZ-BB-oao" kind="modal" id="weN-pF-a0P"/>
@@ -499,7 +499,7 @@
             </objects>
             <point key="canvasLocation" x="1924" y="742"/>
         </scene>
-        <!--Detail Tchat Room View Controller - Sujet du Tchat-->
+        <!--Detail Tchat Room View Controller - Sujet du Chat-->
         <scene sceneID="L5Y-Pd-ZvZ">
             <objects>
                 <viewController id="MYT-A3-dSu" customClass="DetailTchatRoomViewController" sceneMemberID="viewController">
@@ -525,8 +525,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sujet du Tchat" id="Ags-3I-ltJ">
-                        <barButtonItem key="backBarButtonItem" title="&lt;-" id="OSH-rS-QRe"/>
+                    <navigationItem key="navigationItem" title="Sujet du Chat" id="Ags-3I-ltJ">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="OSH-rS-QRe"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="hnt-5L-0MU">
                             <connections>
                                 <segue destination="TrU-yY-Y2i" kind="modal" id="uVs-TM-Vt2"/>
