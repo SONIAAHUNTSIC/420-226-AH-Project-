@@ -42,11 +42,7 @@
 		E3213ADF1CB9C8250016A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */; };
 		E3213AE21CB9C8250016A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */; };
 		E3213AEB1CB9C95B0016A3B4 /* UtilisateurFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */; };
-		E3213AEE1CB9CAA00016A3B4 /* AdresseFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AED1CB9CAA00016A3B4 /* AdresseFacade.m */; };
-		E3213AF11CB9D5C70016A3B4 /* AdresseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */; };
 		E3213AF81CBBA7430016A3B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD91CB9C8250016A3B4 /* ViewController.m */; };
-		E3213AF91CBBA7430016A3B4 /* AdresseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */; };
-		E3213AFA1CBBA7430016A3B4 /* AdresseFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AED1CB9CAA00016A3B4 /* AdresseFacade.m */; };
 		E3213AFB1CBBA7430016A3B4 /* UtilisateurFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */; };
 		E3213AFC1CBBA7430016A3B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD61CB9C8250016A3B4 /* AppDelegate.m */; };
 		E3213AFD1CBBA7430016A3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD31CB9C8250016A3B4 /* main.m */; };
@@ -100,10 +96,6 @@
 		E3213AE31CB9C8250016A3B4 /* BeInTouch-V1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeInTouch-V1-Info.plist"; sourceTree = "<group>"; };
 		E3213AE91CB9C95B0016A3B4 /* UtilisateurFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilisateurFacade.h; sourceTree = "<group>"; };
 		E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurFacade.m; sourceTree = "<group>"; };
-		E3213AEC1CB9CAA00016A3B4 /* AdresseFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdresseFacade.h; sourceTree = "<group>"; };
-		E3213AED1CB9CAA00016A3B4 /* AdresseFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdresseFacade.m; sourceTree = "<group>"; };
-		E3213AEF1CB9D5C70016A3B4 /* AdresseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdresseDTO.h; sourceTree = "<group>"; };
-		E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdresseDTO.m; sourceTree = "<group>"; };
 		E3213AF21CBB34B50016A3B4 /* Constants-hosting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-hosting.h"; sourceTree = "<group>"; };
 		E3213AF41CBB4ABE0016A3B4 /* Constants-localhost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-localhost.h"; sourceTree = "<group>"; };
 		E3213B061CBBA7430016A3B4 /* BeInTouch-V1-hosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeInTouch-V1-hosting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,8 +177,6 @@
 				6EBB36221CBEC84700784B45 /* TchatroomDTO.h */,
 				6EBB36231CBEC84700784B45 /* TchatroomDTO.m */,
 				6E29DEE01CBEE3EE00148B3F /* EnvoiDTO.h */,
-				E3213AEF1CB9D5C70016A3B4 /* AdresseDTO.h */,
-				E3213AF01CB9D5C70016A3B4 /* AdresseDTO.m */,
 				6EBB361E1CBEC84700784B45 /* MessageDTO.h */,
 				E39B71441CBD503400B15382 /* UtilisateurDTO.h */,
 				E39B71421CBD502900B15382 /* UtilisateurDTO.m */,
@@ -199,22 +189,22 @@
 		E39B71471CBFA2BB00B15382 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B6917C451CBE83B200E2499C /* AjoutUtilisateurViewController.h */,
+				B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */,
+				B6917C491CBE83C000E2499C /* EnregistrementViewController.h */,
+				B6917C511CBE84A000E2499C /* DetailTchatRoomViewController.h */,
+				B6917C521CBE84A000E2499C /* DetailTchatRoomViewController.m */,
+				B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */,
 				B6917C5D1CBE875800E2499C /* UtilisateurViewController.h */,
 				B6917C5E1CBE875800E2499C /* UtilisateurViewController.m */,
 				E3213AD81CB9C8250016A3B4 /* ViewController.h */,
 				E3213AD91CB9C8250016A3B4 /* ViewController.m */,
-				B6917C451CBE83B200E2499C /* AjoutUtilisateurViewController.h */,
-				B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */,
 				B6917C4D1CBE842200E2499C /* ParticipantTchatViewController.h */,
 				B6917C4E1CBE842200E2499C /* ParticipantTchatViewController.m */,
 				B6917C551CBE84B200E2499C /* NouveauTchatRoomViewController.h */,
 				B6917C561CBE84B200E2499C /* NouveauTchatRoomViewController.m */,
 				B6917C591CBE84C200E2499C /* TchatRoomTableViewController.h */,
 				B6917C5A1CBE84C200E2499C /* TchatRoomTableViewController.m */,
-				B6917C511CBE84A000E2499C /* DetailTchatRoomViewController.h */,
-				B6917C521CBE84A000E2499C /* DetailTchatRoomViewController.m */,
-				B6917C491CBE83C000E2499C /* EnregistrementViewController.h */,
-				B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -223,11 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				6E29DEE21CBEE3EE00148B3F /* EnvoiFacade.h */,
+				6E29DEE31CBEE3EE00148B3F /* EnvoiFacade.m */,
 				E3213AE91CB9C95B0016A3B4 /* UtilisateurFacade.h */,
 				E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */,
-				E3213AEC1CB9CAA00016A3B4 /* AdresseFacade.h */,
-				E3213AED1CB9CAA00016A3B4 /* AdresseFacade.m */,
-				6E29DEE31CBEE3EE00148B3F /* EnvoiFacade.m */,
 				6E29DEE61CBEE3EE00148B3F /* MembreFacade.h */,
 				6E29DEE71CBEE3EE00148B3F /* MembreFacade.m */,
 				6EBB36201CBEC84700784B45 /* MessageFacade.h */,
@@ -349,8 +337,6 @@
 				6E29DEE81CBEE3EE00148B3F /* EnvoiDTO.m in Sources */,
 				6EBB36281CBEC84700784B45 /* MessageFacade.m in Sources */,
 				B6917C5B1CBE84C200E2499C /* TchatRoomTableViewController.m in Sources */,
-				E3213AF11CB9D5C70016A3B4 /* AdresseDTO.m in Sources */,
-				E3213AEE1CB9CAA00016A3B4 /* AdresseFacade.m in Sources */,
 				E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */,
 				E3213AEB1CB9C95B0016A3B4 /* UtilisateurFacade.m in Sources */,
 				B6917C4F1CBE842200E2499C /* ParticipantTchatViewController.m in Sources */,
@@ -372,8 +358,6 @@
 				6EBB36271CBEC84700784B45 /* MessageDTO.m in Sources */,
 				6EBB362D1CBEC84700784B45 /* TchatroomFacade.m in Sources */,
 				E3213AF81CBBA7430016A3B4 /* ViewController.m in Sources */,
-				E3213AF91CBBA7430016A3B4 /* AdresseDTO.m in Sources */,
-				E3213AFA1CBBA7430016A3B4 /* AdresseFacade.m in Sources */,
 				E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */,
 				E3213AFB1CBBA7430016A3B4 /* UtilisateurFacade.m in Sources */,
 				6E29DEED1CBEE3EE00148B3F /* MembreDTO.m in Sources */,
@@ -507,7 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Aliou Gueye (34W2VVPNYN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SONIA IBARRA FLORES (H5BXBQPGZ9)";
 				GCC_PREFIX_HEADER = "BeInTouch - V1/BeInTouch-V1-localhost-Prefix.pch";
 				INFOPLIST_FILE = "BeInTouch - V1/BeInTouch-V1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
@@ -521,7 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Aliou Gueye (34W2VVPNYN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SONIA IBARRA FLORES (H5BXBQPGZ9)";
 				GCC_PREFIX_HEADER = "BeInTouch - V1/BeInTouch-V1-localhost-Prefix.pch";
 				INFOPLIST_FILE = "BeInTouch - V1/BeInTouch-V1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
