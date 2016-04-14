@@ -13,7 +13,7 @@
 
 @synthesize utilisateur;
 @synthesize tchatroom;
-@synthesize dateDepuis;
+@synthesize dateDebut;
 @synthesize dateDepart;
 @synthesize swAdministrateur;
 @synthesize swCreateur;
@@ -21,12 +21,12 @@
 
 #pragma mark - Methode d'initialisation
 
--(instancetype)initAvecUtilisateur:(UtilisateurDTO *)unUtilisateur tchatroom:(TchatroomDTO *)unTchatroomDTO dateDepuis:(NSString *)unDateDepuis dateDepart:(NSString *)undateDepart swAdministrateur:(NSString*)unSwAdministrateur swCreateur:(NSString*)unSwCreateur etSwActif:(NSString*)unSwActif
+-(instancetype)initAvecUtilisateur:(UtilisateurDTO *)unUtilisateur tchatroom:(TchatroomDTO *)unTchatroomDTO dateDebut:(NSString *)unDateDebut dateDepart:(NSString *)undateDepart swAdministrateur:(NSString*)unSwAdministrateur swCreateur:(NSString*)unSwCreateur etSwActif:(NSString*)unSwActif
 {
     if(self = [super init]) {
         [self setUtilisateur:unUtilisateur];
         [self setTchatroom:unTchatroomDTO];
-        [self setDateDepuis:unDateDepuis];
+        [self setDateDebut:unDateDebut];
         [self setDateDepart:undateDepart];
         [self setSwAdministrateur:unSwAdministrateur];
         [self setSwCreateur:unSwCreateur];
