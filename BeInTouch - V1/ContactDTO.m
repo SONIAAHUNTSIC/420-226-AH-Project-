@@ -10,4 +10,18 @@
 
 @implementation ContactDTO
 
+@synthesize idUtilisateur;
+@synthesize idUtilisateurContact;
+
+
+-(instancetype) initAvecIdUtilisateur:(UtilisateurDTO *)unIdUtilisateur etUtilisateurContact:(UtilisateurDTO *)unIdUtilisateurContact
+{
+    if (self = [super init]) {
+        [self setIdUtilisateur:unIdUtilisateur];
+        [self setIdUtilisateurContact:unIdUtilisateurContact];
+    }
+    return self;
+}
+
+
 @end
