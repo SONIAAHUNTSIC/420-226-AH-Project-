@@ -8,7 +8,7 @@
 
 
 #ifndef URL_SERVICE_WEB
-#define URL_SERVICE_WEB "http://www.soniaif-softwaredevelopper.ca/BeInTouch - V1/adresse.php"
+#define URL_SERVICE_WEB "http://www.soniaif-softwaredeveloper.ca/BeInTouch/utilisateur.php"
 
 #endif
 
@@ -26,7 +26,7 @@
 #endif
 
 #ifndef BASE_DE_DONNEES
-#define BASE_DE_DONNEES "ahuntsic"
+#define BASE_DE_DONNEES "beintouch"
 #endif
 #ifndef PORT
 #define PORT 3306

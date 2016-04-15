@@ -15,7 +15,6 @@
 
 -(instancetype) initAvecIdMessage: (NSString*) unIdMessage dateMessage:(NSString*)unDateMessage etContenu:(NSString*)unContenu
 {
-    //initialisation de l'instance personne
     if (self = [super init]) {
         [self setIdMessage:unIdMessage];
         [self setDateMessage:unDateMessage];

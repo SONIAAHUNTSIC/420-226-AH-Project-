@@ -8,7 +8,7 @@
 
 
 #ifndef URL_SERVICE_WEB
-        #define URL_SERVICE_WEB "http://localhost:8888/BeInTouch-V1/adresse.php"
+        #define URL_SERVICE_WEB "http://localhost:8888/BeInTouch/utilisateur.php"
 #endif
 
 #ifndef  SERVEUR
@@ -25,7 +25,7 @@
 #endif
 
 #ifndef BASE_DE_DONNEES
-#define BASE_DE_DONNEES "ahuntsic"
+#define BASE_DE_DONNEES "beintouch"
 #endif
 #ifndef PORT
 #define PORT 3306

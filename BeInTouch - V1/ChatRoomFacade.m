@@ -1,47 +1,43 @@
 //
-//  UtilisateurFacade.m
+//  ChatRoomFacade.m
 //  BeInTouch - V1
 //
-//  Created by SONIA IBARRA FLORES on 2016-04-09.
-//  Copyright © 2016 collegeahuntsic. All rights reserved.
+//  Created by tamadje patrick on 14/04/2016.
+//  Copyright (c) 2016 collegeahuntsic. All rights reserved.
 //
 
+#import "ChatRoomFacade.h"
 
-#import "UtilisateurFacade.h"
-#import "UtilisateurDTO.h"
-
-static UtilisateurFacade* utilisateurFacade = nil;
+static ChatRoomFacade* chatRoomFacade = nil;
 
 #pragma mark - Membres publics
 
-@implementation UtilisateurFacade
+@implementation ChatRoomFacade
 
-#pragma mark - Méthodes d'initialisation
 + (void)initialize {
-    utilisateurFacade = [[UtilisateurFacade alloc] init];
+    chatRoomFacade = [[ChatRoomFacade alloc] init];
 }
 
 - (instancetype)init {
-    if(utilisateurFacade == nil) {
-        utilisateurFacade = [super init];
+    if(chatRoomFacade == nil) {
+        chatRoomFacade = [super init];
     }
-    return utilisateurFacade;
+    return chatRoomFacade;
 }
 
 #pragma mark - Méthodes métier
-+ (UtilisateurFacade*)utilisateurFacade {
-    return utilisateurFacade;
++ (ChatRoomFacade*)chatRoomFacade {
+    return chatRoomFacade;
 }
 
-- (int)createUtilisateur:(UtilisateurDTO*)utilisateurDTO {
-    NSLog(@"test utilisateur");
+- (int)createChatRoom:(ChatRoomDTO *)chatRoomDTO
+{
+    NSLog(@"test ChatRoom");
     int nombreEnregistrements = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
-    
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO prenom], [utilisateurDTO nom], [utilisateurDTO sexe],[utilisateurDTO dateCreation],[utilisateurDTO dateNaissance],[utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
-    
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&sujet=%@&dateCreation=%@&dateFermeture=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO sujet], [chatRoomDTO dateCreation], [chatRoomDTO dateFermeture]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -69,12 +65,13 @@ static UtilisateurFacade* utilisateurFacade = nil;
     return nombreEnregistrements;
 }
 
-- (UtilisateurDTO*)readUtilisateur:(NSString*)idUtilisateur {
-    UtilisateurDTO* utilisateurDTO = nil;
+- (ChatRoomDTO *)readChatRoom:(NSString *)idChatRoom
+{
+    ChatRoomDTO* chatRoomDTO = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idUtilisateur];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idMessage=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idChatRoom];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -83,10 +80,9 @@ static UtilisateurFacade* utilisateurFacade = nil;
     donnees = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     if([response statusCode] == 200
        && donnees != nil) {
-        NSDictionary* utilisateurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
-        
-        
-        utilisateurDTO = [[UtilisateurDTO alloc] initAvecIdUtilisateur:utilisateurJSON[@"idUtilisateur"] prenom:utilisateurJSON[@"prenom"] nom:utilisateurJSON[@"nom"] sexe:utilisateurJSON[@"sexe"]  dateCreation:utilisateurJSON[@"dateCreation"] dateNaissance:utilisateurJSON[@"dateNaissance"] photo:utilisateurJSON[@"photo"] courriel:utilisateurJSON[@"courriel"]   etTelephone:utilisateurJSON[@"telephone"]];
+        NSDictionary* chatRoomJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
+    
+        chatRoomDTO = [[ChatRoomDTO alloc] initAvecIdChatRoom:chatRoomJSON[@"idChaRoom"]  sujet:chatRoomJSON[@"sujet"] dateCreation:chatRoomJSON[@"dateCreation"] etDateFermeture:chatRoomJSON[@"dateFermeture"]];
     } else if([response statusCode] != 200
               &&      donnees != nil) {
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
@@ -99,15 +95,16 @@ static UtilisateurFacade* utilisateurFacade = nil;
     } else {
         NSLog(@"[Code d'erreur %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
-    return utilisateurDTO;
+    return chatRoomDTO;
 }
 
-- (int)updateUtilisateur:(UtilisateurDTO*)utilisateurDTO {
+- (int)updateChatRoom:(ChatRoomDTO *)chatRoomDTO
+{
     int nombreEnregistrements = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO idUtilisateur], [utilisateurDTO nom], [utilisateurDTO prenom], [utilisateurDTO sexe] , [utilisateurDTO dateCreation], [utilisateurDTO dateNaissance], [utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idChatRoom=%@&sujet=%@&dateCreation=%@&dateFermeture=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO idChatRoom], [chatRoomDTO sujet], [chatRoomDTO dateCreation], [chatRoomDTO dateFermeture]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -134,12 +131,13 @@ static UtilisateurFacade* utilisateurFacade = nil;
     return nombreEnregistrements;
 }
 
-- (int)deleteUtilisateur:(UtilisateurDTO*)utilisateurDTO {
+- (int)deleteChatRoom:(ChatRoomDTO *)chatRoomDTO
+{
     int nombreEnregistrements = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=delete&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO idUtilisateur]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=deleteChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idChatRoom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO idChatRoom]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -166,13 +164,13 @@ static UtilisateurFacade* utilisateurFacade = nil;
     return nombreEnregistrements;
 }
 
-- (NSMutableArray*)getAllUtilisateurs {
+- (NSMutableArray*)getAllChatRooms {
     NSLog(@"get all ");
-    NSMutableArray* utilisateurs = [[NSMutableArray alloc] init];
+    NSMutableArray* chatRooms = [[NSMutableArray alloc] init];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllUtilisateurs&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllChatRooms&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -185,20 +183,16 @@ static UtilisateurFacade* utilisateurFacade = nil;
         NSLog(@"== 200");
         NSArray* resultats = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
-        for (NSDictionary* utilisateurJSON in resultats) {
-            UtilisateurDTO* utilisateurDTO = [[UtilisateurDTO alloc] init];
+        for (NSDictionary* chatRoomJSON in resultats) {
+            ChatRoomDTO* chatRoomDTO = [[ChatRoomDTO alloc] init];
             
-            [utilisateurDTO setIdUtilisateur:utilisateurJSON[@"idUtilisateur"]];
-            [utilisateurDTO setPrenom:utilisateurJSON[@"prenom"]];
-            [utilisateurDTO setNom:utilisateurJSON[@"nom"]];
-            [utilisateurDTO setSexe:utilisateurJSON[@"sexe"]];
-            [utilisateurDTO setDateCreation:utilisateurJSON[@"dateCreation"]];
-            [utilisateurDTO setDateNaissance:utilisateurJSON[@"dateNaissance"]];
-            [utilisateurDTO setPhoto:utilisateurJSON[@"photo"]];
-            [utilisateurDTO setCourriel:utilisateurJSON[@"courriel"]];
-            [utilisateurDTO setTelephone:utilisateurJSON[@"telephone"]];
+            [chatRoomDTO setIdChatRoom:chatRoomJSON[@"idChatRoom"]];
             
-            [utilisateurs addObject:utilisateurDTO];
+            [chatRoomDTO setSujet:chatRoomJSON[@"sujet"]];
+            [chatRoomDTO setDateCreation:chatRoomJSON[@"dateCreation"]];
+            [chatRoomDTO setDateFermeture:chatRoomJSON[@"dateFermeture"]];
+            
+            [chatRooms addObject:chatRoomDTO];
         }
     } else if([response statusCode] != 200
               &&      donnees != nil) {
@@ -213,7 +207,8 @@ static UtilisateurFacade* utilisateurFacade = nil;
     } else {
         NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
-    return utilisateurs;
+    return chatRooms;
 }
 
 @end
+
