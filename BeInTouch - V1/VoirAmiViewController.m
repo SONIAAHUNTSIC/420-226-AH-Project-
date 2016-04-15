@@ -1,18 +1,18 @@
 //
-//  AjoutUtilisateurViewController.m
-//  BeInTouch
+//  VoirAmiViewController.m
+//  BeInTouch - V1
 //
-//  Created by Aliou GUEYE on 12.04.16.
-//  Copyright (c) 2016 Luno&&Co.inc. All rights reserved.
+//  Created by Aliou GUEYE on 14.04.16.
+//  Copyright (c) 2016 collegeahuntsic. All rights reserved.
 //
 
-#import "AjoutUtilisateurViewController.h"
+#import "VoirAmiViewController.h"
 
-@interface AjoutUtilisateurViewController ()
+@interface VoirAmiViewController ()
 
 @end
 
-@implementation AjoutUtilisateurViewController
+@implementation VoirAmiViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -66,6 +66,5 @@
     // cell.textLabel.text = cellValue;
     return cell;
 }
-
 
 @end

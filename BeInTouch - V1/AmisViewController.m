@@ -1,18 +1,18 @@
 //
-//  BienvenuViewController.m
+//  AmisViewController.m
 //  BeInTouch - V1
 //
 //  Created by Aliou GUEYE on 14.04.16.
 //  Copyright (c) 2016 collegeahuntsic. All rights reserved.
 //
 
-#import "BienvenuViewController.h"
+#import "AmisViewController.h"
 
-@interface BienvenuViewController ()
+@interface AmisViewController ()
 
 @end
 
-@implementation BienvenuViewController
+@implementation AmisViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,23 +45,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(IBAction)returnFromInfos:(UIStoryboardSegue*) segue{
-    
-}
-
--(IBAction)returnFromAjouterAmis:(UIStoryboardSegue*) segue{
-    
-}
-
--(IBAction)returnFromVoirAmis:(UIStoryboardSegue*) segue{
-    
-}
-
-
--(IBAction)returnFromChatRoom:(UIStoryboardSegue*) segue{
-    
-}
-
 
 @end

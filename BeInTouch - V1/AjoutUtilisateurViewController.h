@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AjoutUtilisateurViewController : UIViewController
+@interface AjoutUtilisateurViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @end
