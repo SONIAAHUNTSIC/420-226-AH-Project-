@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-859" y="227"/>
+            <point key="canvasLocation" x="-883" y="219"/>
         </scene>
         <!--Enregistrement View Controller - Enregistrement-->
         <scene sceneID="BCG-LV-2zc">
@@ -59,12 +59,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l36-uP-dal">
                                 <rect key="frame" x="28" y="67" width="67" height="66"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92W-GC-I76">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92W-GC-I76">
                                 <rect key="frame" x="136" y="67" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-jb-2XU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nom" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-jb-2XU">
                                 <rect key="frame" x="136" y="100" width="151" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
@@ -100,12 +100,22 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="OK >" id="c5e-Rm-4JG">
                                             <connections>
-                                                <segue destination="rYv-v9-4Oi" kind="modal" id="cQk-oq-jfn"/>
+                                                <segue destination="rYv-v9-4Oi" kind="modal" identifier="segueEnregistrement" id="cQk-oq-jfn"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oI-Vv-mK9">
+                                <rect key="frame" x="123" y="318" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enregistrer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEnregistrer:" destination="11r-yx-d0w" eventType="touchUpInside" id="m7q-y0-Dbh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -130,7 +140,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxk-ID-1bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LrY-bf-aaO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-450" y="219"/>
+            <point key="canvasLocation" x="-470" y="219"/>
         </scene>
         <!--Bienvenu View Controller-->
         <scene sceneID="T9r-se-lSq">
@@ -192,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4X-jG-oCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="237"/>
+            <point key="canvasLocation" x="-96" y="229"/>
         </scene>
         <!--Infos View Controller-->
         <scene sceneID="hl1-ga-D3C">
@@ -261,7 +271,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rww-zT-Z97" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sR0-D6-ZSn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="42" y="-489"/>
+            <point key="canvasLocation" x="90" y="-584"/>
         </scene>
         <!--Ajouter Amis View Controller-->
         <scene sceneID="Bba-bF-1FC">
@@ -367,12 +377,12 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="636" y="177"/>
+            <point key="canvasLocation" x="636" y="77"/>
         </scene>
-        <!--Tchat Room Table View Controller - ChatRooms-->
+        <!--Tchat Room Table Vgiew Controller - ChatRooms-->
         <scene sceneID="gOG-eL-0uB">
             <objects>
-                <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableViewController" sceneMemberID="viewController">
+                <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableVgiewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L2n-QT-P6M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -479,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAU-iW-weW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="698"/>
+            <point key="canvasLocation" x="1534" y="598"/>
         </scene>
         <!--Detail Tchat Room View Controller - Sujet du Chat-->
         <scene sceneID="L5Y-Pd-ZvZ">
@@ -518,7 +528,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IG5-Xh-kOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="1268"/>
+            <point key="canvasLocation" x="1546" y="1248"/>
         </scene>
         <!--Participant Tchat View Controller - Liste Participants-->
         <scene sceneID="suh-f2-S5N">
@@ -564,7 +574,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzC-Gi-j3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NtX-nj-obc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1934" y="1292"/>
+            <point key="canvasLocation" x="1962" y="1248"/>
         </scene>
         <!--Ajout Utilisateur View Controller - Ajouter Tchaters-->
         <scene sceneID="aao-7t-6Nh">
@@ -647,7 +657,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1944" y="698"/>
+            <point key="canvasLocation" x="1948" y="598"/>
         </scene>
         <!--Navigation Controller - TchatRooms-->
         <scene sceneID="4Xu-pO-5Gv">
@@ -663,7 +673,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zys-Nf-H36" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488" y="664"/>
+            <point key="canvasLocation" x="636" y="866"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f3t-Dv-SDY">
@@ -687,6 +697,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wUx-5e-bUa"/>
+        <segue reference="yfr-hN-DND"/>
     </inferredMetricsTieBreakers>
 </document>

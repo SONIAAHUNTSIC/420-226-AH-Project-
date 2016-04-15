@@ -19,5 +19,6 @@
 
 
 @property (nonatomic) NSString *idUtilisateur;
+- (IBAction)btnEnregistrer:(id)sender;
 
 @end
