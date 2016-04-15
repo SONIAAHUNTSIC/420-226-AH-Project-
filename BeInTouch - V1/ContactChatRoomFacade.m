@@ -76,7 +76,7 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
      NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
      NSHTTPURLResponse* response = nil;
      NSError* error = nil;
-     NSString* parametresRequete = [NSString stringWithFormat:@"methode=readContactChatRoomAvecIdUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@&idChatRoom=%@&idUtilisateurContact=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idUtilisateur,idChatRoom, idUtilisateur];
+     NSString* parametresRequete = [NSString stringWithFormat:@"methode=readContactChatRoomAvecIdUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@&idChatRoom=%@&idUtilisateurContact=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idUtilisateur,idChatRoom, idUtilisateurContact];
      NSData* donnees = nil;
  
      [request setHTTPMethod:@"POST"];
