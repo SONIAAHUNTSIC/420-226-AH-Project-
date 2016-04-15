@@ -7,11 +7,10 @@
 //
 
 #import "ChatRoomFacade.h"
-#import "ChatRoomDTO.h"
 
 static ChatRoomFacade* chatRoomFacade = nil;
 
-
+#pragma mark - Membres publics
 
 @implementation ChatRoomFacade
 

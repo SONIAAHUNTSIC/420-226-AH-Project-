@@ -11,7 +11,7 @@
 
 @interface ChatRoomFacade : NSObject
 
-+ (ChatRoomFacade*) ChatRoomFacade;
++ (ChatRoomFacade*) chatRoomFacade;
 
 -(int) createChatRoom:(ChatRoomDTO*) chatRoomDTO;
 -(ChatRoomDTO*) readChatRoom:(NSString*) idChatRoom;

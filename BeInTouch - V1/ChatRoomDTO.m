@@ -17,7 +17,6 @@
 
 -(instancetype) initAvecIdChatRoom:(NSString *)unIdChatRoom sujet:(NSString *)unSujet dateCreation:(NSString *)unDateCreation etDateFermeture:(NSString *)unDateFermeture
 {
-    //initialisation de l'instance personne
     if (self = [super init]) {
         [self setIdChatRoom:unIdChatRoom];
         [self setSujet:unSujet];

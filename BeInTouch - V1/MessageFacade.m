@@ -7,7 +7,6 @@
 //
 
 #import "MessageFacade.h"
-#import "MessageDTO.h"
 
 static MessageFacade* messageFacade = nil;
 
