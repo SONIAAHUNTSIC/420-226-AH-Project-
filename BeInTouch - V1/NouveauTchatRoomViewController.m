@@ -13,9 +13,9 @@
 @end
 
 @implementation NouveauTchatRoomViewController
-
 #pragma mark - Propriétés
-@synthesize txtId;
+@synthesize txtSujetChat;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +30,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[[self navigationController] navigationBar] setTintColor:[[[self navigationItem] rightBarButtonItem] tintColor]];
+    
+    [[self txtSujetChat] setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,8 +40,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
-    [[[self navigationController] navigationBar] setTintColor:[[[self navigationItem] rightBarButtonItem] tintColor]];
-    [[self txtId] setDelegate:self];
+    
 }
 
 /*

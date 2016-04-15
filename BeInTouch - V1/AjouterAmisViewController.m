@@ -14,6 +14,9 @@
 
 @implementation AjouterAmisViewController
 
+#pragma mark - Propriétés
+@synthesize txtId;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+     [[self txtId] setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AjouterAmisViewController : UIViewController
+@interface AjouterAmisViewController : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *txtId;
 
 @end

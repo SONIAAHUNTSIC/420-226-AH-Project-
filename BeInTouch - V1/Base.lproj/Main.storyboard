@@ -69,7 +69,7 @@
                                 <rect key="frame" x="136" y="165" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fns-bA-dNb">
                                 <rect key="frame" x="136" y="56" width="151" height="25"/>
@@ -81,7 +81,7 @@
                                 <rect key="frame" x="136" y="122" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Courriel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XjK-ZC-zR7">
                                 <rect key="frame" x="136" y="215" width="151" height="25"/>
@@ -331,6 +331,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtId" destination="nhy-qg-HqE" id="BRm-ve-80I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZe-99-EiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nVH-oi-Hfb" userLabel="Exit" sceneMemberID="exit"/>
@@ -401,10 +404,10 @@
             </objects>
             <point key="canvasLocation" x="636" y="77"/>
         </scene>
-        <!--Tchat Room Table Vgiew Controller - ChatRooms-->
+        <!--Tchat Room Table View Controller - ChatRooms-->
         <scene sceneID="gOG-eL-0uB">
             <objects>
-                <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableVgiewController" sceneMemberID="viewController">
+                <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L2n-QT-P6M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -515,7 +518,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="txtId" destination="Ig1-w8-mGs" id="j8O-ef-28Y"/>
+                        <outlet property="txtSujetChat" destination="Ig1-w8-mGs" id="ruh-Dy-tJK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAU-iW-weW" userLabel="First Responder" sceneMemberID="firstResponder"/>

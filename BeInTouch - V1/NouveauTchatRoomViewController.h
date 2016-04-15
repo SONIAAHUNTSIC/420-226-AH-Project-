@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NouveauTchatRoomViewController : UIViewController <UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *txtId;
+
+@property (strong, nonatomic) IBOutlet UITextField *txtSujetChat;
 
 @end
