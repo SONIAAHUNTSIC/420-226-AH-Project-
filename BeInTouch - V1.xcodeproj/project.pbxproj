@@ -65,6 +65,7 @@
 		E3213B021CBBA7430016A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
 		E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
 		E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
+		E39B71491CC1500600B15382 /* EnregistrementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -408,6 +409,7 @@
 				B68544B21CC01DE8003F4BBE /* InfosViewController.m in Sources */,
 				E3213AF81CBBA7430016A3B4 /* ViewController.m in Sources */,
 				6E90C5C91CC0E6570026B92D /* ContactChatRoomMessageFacade.m in Sources */,
+				E39B71491CC1500600B15382 /* EnregistrementViewController.m in Sources */,
 				6E90C5C31CC0E6570026B92D /* ContactChatRoomDTO.m in Sources */,
 				6E90C5CD1CC0E6570026B92D /* ContactFacade.m in Sources */,
 				B68544BE1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */,

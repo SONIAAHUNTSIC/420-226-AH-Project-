@@ -40,7 +40,7 @@ static UtilisateurFacade* utilisateurFacade = nil;
     NSHTTPURLResponse* response = nil;
     
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO prenom], [utilisateurDTO nom], [utilisateurDTO sexe],[utilisateurDTO dateCreation],[utilisateurDTO dateNaissance],[utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&prenom=%@&nom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO prenom], [utilisateurDTO nom], [utilisateurDTO sexe],[utilisateurDTO dateCreation],[utilisateurDTO dateNaissance],[utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
     
     NSData* donnees = nil;
     
@@ -56,15 +56,18 @@ static UtilisateurFacade* utilisateurFacade = nil;
         nombreEnregistrements = (int) [resultatJSON[@"nombreEnregistrements"] integerValue];
     } else if([response statusCode] != 200
               &&      donnees != nil) {
+            NSLog(@"test diferente");
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         NSString* codeErreur = erreurJSON[@"codeErreur"];
         NSString* messageErreur = erreurJSON[@"messageErreur"];
         
-        NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête %@?%@ -> [Code d'erreur MySQL %@] %@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete, codeErreur, messageErreur);
+        NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête 1 %@?%@ -> [Code d'erreur MySQL %@] %@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete, codeErreur, messageErreur);
     } else if(error != nil) {
-        NSLog(@"[Code d'erreur %ld] Échec de la requête %@?%@ : %@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete, [error localizedDescription]);
+        
+        NSLog(@"error not nil");
+        NSLog(@"[Code d'erreur %ld] Échec de la requête x %@?%@ : %@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete, [error localizedDescription]);
     } else {
-        NSLog(@"[Code d'erreur %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
+        NSLog(@"[Code d'erreur %ld] Échec de la requête y %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
     return nombreEnregistrements;
 }
@@ -107,7 +110,7 @@ static UtilisateurFacade* utilisateurFacade = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO idUtilisateur], [utilisateurDTO nom], [utilisateurDTO prenom], [utilisateurDTO sexe] , [utilisateurDTO dateCreation], [utilisateurDTO dateNaissance], [utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idUtilisateur=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO idUtilisateur], [utilisateurDTO prenom], [utilisateurDTO nom], [utilisateurDTO sexe] , [utilisateurDTO dateCreation], [utilisateurDTO dateNaissance], [utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
