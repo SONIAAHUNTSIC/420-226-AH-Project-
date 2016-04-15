@@ -12,12 +12,12 @@
 #endif
 
 #ifndef  SERVEUR
-#define SERVEUR "127.0.0.1"
+#define SERVEUR "localhost"
 #endif
 
 
 #ifndef UTILISATEUR
-#define UTILISATEUR "ahuntsic"
+#define UTILISATEUR "sonia"
 #endif
 
 #ifndef MOT_DE_PASSE

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Accueil-->
+        <!--Accueil-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="-883" y="219"/>
         </scene>
-        <!--Enregistrement View Controller - Enregistrement-->
+        <!--Enregistrement-->
         <scene sceneID="BCG-LV-2zc">
             <objects>
                 <viewController id="11r-yx-d0w" customClass="EnregistrementViewController" sceneMemberID="viewController">
@@ -59,33 +59,39 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l36-uP-dal">
                                 <rect key="frame" x="28" y="67" width="67" height="66"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92W-GC-I76">
-                                <rect key="frame" x="136" y="67" width="151" height="25"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92W-GC-I76">
+                                <rect key="frame" x="136" y="89" width="151" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nom" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-jb-2XU">
-                                <rect key="frame" x="136" y="100" width="151" height="25"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Date de naissance" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-jb-2XU">
+                                <rect key="frame" x="136" y="165" width="151" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Sexe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fns-bA-dNb">
-                                <rect key="frame" x="136" y="138" width="151" height="25"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fns-bA-dNb">
+                                <rect key="frame" x="136" y="56" width="151" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Date Naissance" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-is-ltA">
-                                <rect key="frame" x="136" y="176" width="151" height="25"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Sexe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-is-ltA">
+                                <rect key="frame" x="136" y="122" width="151" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Courriel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XjK-ZC-zR7">
                                 <rect key="frame" x="136" y="215" width="151" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Téléphone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-Eg-kKt">
                                 <rect key="frame" x="136" y="254" width="151" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
@@ -94,11 +100,13 @@
                                 <items>
                                     <navigationItem title="Enregistrement" id="a1X-Zz-0aN">
                                         <barButtonItem key="leftBarButtonItem" title="Accueil" id="Tfx-WM-5wP">
+                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="LrY-bf-aaO" kind="unwind" unwindAction="returnFromEnregistrement:" id="yKc-eE-2mg"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="OK >" id="c5e-Rm-4JG">
+                                        <barButtonItem key="rightBarButtonItem" title="&gt;&gt;" id="c5e-Rm-4JG">
+                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="rYv-v9-4Oi" kind="modal" identifier="segueEnregistrement" id="cQk-oq-jfn"/>
                                             </connections>
@@ -108,8 +116,8 @@
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oI-Vv-mK9">
                                 <rect key="frame" x="123" y="318" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enregistrer">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -123,14 +131,14 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Enregistrement" id="lzC-6M-L0l">
                         <barButtonItem key="backBarButtonItem" title="Accueil" id="U8t-Bx-Qzg"/>
-                        <barButtonItem key="rightBarButtonItem" title="OK >" id="ijR-2H-pL1">
+                        <barButtonItem key="rightBarButtonItem" title="OK &gt;" id="ijR-2H-pL1">
                             <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="textCourriel" destination="XjK-ZC-zR7" id="1OH-mi-e6L"/>
-                        <outlet property="textDateNaissance" destination="p8e-is-ltA" id="kWi-Ow-ifv"/>
+                        <outlet property="textDateNaissance" destination="RuI-jb-2XU" id="wrb-hr-uBU"/>
                         <outlet property="textNom" destination="92W-GC-I76" id="ePp-K1-zaq"/>
                         <outlet property="textPrenom" destination="Fns-bA-dNb" id="Ecz-HF-oPi"/>
                         <outlet property="textSexe" destination="p8e-is-ltA" id="eL4-On-xgh"/>
@@ -221,6 +229,7 @@
                                 <items>
                                     <navigationItem title="Infos" id="5QK-OY-nIL">
                                         <barButtonItem key="leftBarButtonItem" title="Retour" id="wvo-fw-izJ">
+                                            <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="sR0-D6-ZSn" kind="unwind" unwindAction="returnFromInfos:" id="apQ-7b-tT2"/>
                                             </connections>
@@ -228,41 +237,41 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enr-Hm-vhB">
-                                <rect key="frame" x="150" y="86" width="20" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQe-It-2Jr">
-                                <rect key="frame" x="139" y="115" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prénom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQJ-I8-8at">
-                                <rect key="frame" x="126" y="144" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sexe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4z-uB-aOs">
-                                <rect key="frame" x="139" y="173" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date de naissance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCf-MS-3gG">
-                                <rect key="frame" x="89" y="202" width="143" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Courriel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpa-kV-hJc">
-                                <rect key="frame" x="112" y="229" width="97" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Téléphone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sy-3w-29z">
-                                <rect key="frame" x="114" y="258" width="92" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="id " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwB-hk-WWs">
+                                <rect key="frame" x="74" y="91" width="152" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XYU-MJ-dVK">
+                                <rect key="frame" x="74" y="129" width="152" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nom " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-8V-iL5">
+                                <rect key="frame" x="74" y="167" width="152" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Sexe " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="px3-L7-V7u">
+                                <rect key="frame" x="74" y="211" width="152" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Date de naissance" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8J-s0-M6e">
+                                <rect key="frame" x="74" y="249" width="152" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Courriel " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-EH-Ym0">
+                                <rect key="frame" x="74" y="293" width="152" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Téléphone " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j27-oU-UvB">
+                                <rect key="frame" x="74" y="331" width="152" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -290,6 +299,7 @@
                                 <items>
                                     <navigationItem title="Ajouter amis" id="Hhs-E0-826">
                                         <barButtonItem key="leftBarButtonItem" title="Retour" id="U8e-o6-Ejt">
+                                            <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="nVH-oi-Hfb" kind="unwind" unwindAction="returnFromAjouterAmis:" id="DRe-z5-VDE"/>
                                             </connections>
@@ -299,11 +309,13 @@
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhy-qg-HqE">
                                 <rect key="frame" x="112" y="122" width="97" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpW-tH-8qx">
                                 <rect key="frame" x="137" y="197" width="46" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="OK">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -311,6 +323,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtId" destination="nhy-qg-HqE" id="BRm-ve-80I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZe-99-EiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nVH-oi-Hfb" userLabel="Exit" sceneMemberID="exit"/>
@@ -334,11 +349,13 @@
                                 <items>
                                     <navigationItem title="Voir ou ajouter amis" id="ro7-BQ-tnX">
                                         <barButtonItem key="leftBarButtonItem" title="Retour" id="vDK-cr-fBk">
+                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="4Kg-PB-Clt" kind="unwind" unwindAction="returnFromVoirAmis:" id="n7P-4H-ekW"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pkx-gI-qmB">
+                                            <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="CSr-ae-5Vn" kind="modal" id="wUx-5e-bUa"/>
                                             </connections>
@@ -352,7 +369,6 @@
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxn-u5-YXy">
                                 <rect key="frame" x="0.0" y="60" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="f51-Lw-nyp" id="TEu-Ae-7r2"/>
@@ -379,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="636" y="77"/>
         </scene>
-        <!--Tchat Room Table Vgiew Controller - ChatRooms-->
+        <!--ChatRooms-->
         <scene sceneID="gOG-eL-0uB">
             <objects>
-                <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableVgiewController" sceneMemberID="viewController">
+                <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L2n-QT-P6M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -392,11 +408,11 @@
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="msv-Xb-Mys" id="Zec-Az-XzW">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wXA-zQ-rZA">
-                                            <rect key="frame" x="15" y="0.0" width="238" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="238" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -416,11 +432,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="ChatRooms" id="qFu-KW-2bf">
                         <barButtonItem key="leftBarButtonItem" title="Retour" id="lQz-n7-jVP">
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="62K-ll-eu2" kind="unwind" unwindAction="returnFromChatRoom:" id="Slt-Nt-eR6"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Ug-yE-OXo">
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="Zuv-Rt-5BM" kind="push" identifier="nouveauTchatRoom" id="kYx-Xl-g48"/>
                             </connections>
@@ -432,7 +450,7 @@
             </objects>
             <point key="canvasLocation" x="1030" y="866"/>
         </scene>
-        <!--Nouveau Tchat Room View Controller - Nouveau ChatRoom-->
+        <!--Nouveau ChatRoom-->
         <scene sceneID="tuF-s8-duJ">
             <objects>
                 <viewController id="Zuv-Rt-5BM" customClass="NouveauTchatRoomViewController" sceneMemberID="viewController">
@@ -462,6 +480,7 @@
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sujet du Chat" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-w8-mGs">
                                 <rect key="frame" x="20" y="156" width="280" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
@@ -479,19 +498,26 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nouveau ChatRoom" id="e9B-vF-lXm">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="7tI-xm-TrS"/>
-                        <barButtonItem key="rightBarButtonItem" title="- >>" id="mfJ-CH-JaM">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="7tI-xm-TrS">
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="&gt;&gt;" id="mfJ-CH-JaM">
+                            <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="WpZ-BB-oao" kind="modal" id="weN-pF-a0P"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="txtId" destination="Ig1-w8-mGs" id="j8O-ef-28Y"/>
+                        <outlet property="txtSujetChat" destination="Ig1-w8-mGs" id="ruh-Dy-tJK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAU-iW-weW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1534" y="598"/>
         </scene>
-        <!--Detail Tchat Room View Controller - Sujet du Chat-->
+        <!--Sujet du Chat-->
         <scene sceneID="L5Y-Pd-ZvZ">
             <objects>
                 <viewController id="MYT-A3-dSu" customClass="DetailTchatRoomViewController" sceneMemberID="viewController">
@@ -518,7 +544,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sujet du Chat" id="Ags-3I-ltJ">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="OSH-rS-QRe"/>
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="OSH-rS-QRe">
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="hnt-5L-0MU">
                             <connections>
                                 <segue destination="TrU-yY-Y2i" kind="modal" id="uVs-TM-Vt2"/>
@@ -530,7 +558,7 @@
             </objects>
             <point key="canvasLocation" x="1546" y="1248"/>
         </scene>
-        <!--Participant Tchat View Controller - Liste Participants-->
+        <!--Liste Participants-->
         <scene sceneID="suh-f2-S5N">
             <objects>
                 <viewController id="TrU-yY-Y2i" customClass="ParticipantTchatViewController" sceneMemberID="viewController">
@@ -547,6 +575,7 @@
                                 <items>
                                     <navigationItem title="Liste membres" id="y5Z-DN-GV7">
                                         <barButtonItem key="leftBarButtonItem" title="Retour" id="jxo-UB-Cbk">
+                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="NtX-nj-obc" kind="unwind" unwindAction="AnnulerModifierTchat:" id="jLh-xj-lzn"/>
                                             </connections>
@@ -576,7 +605,7 @@
             </objects>
             <point key="canvasLocation" x="1962" y="1248"/>
         </scene>
-        <!--Ajout Utilisateur View Controller - Ajouter Tchaters-->
+        <!--Ajouter Tchaters-->
         <scene sceneID="aao-7t-6Nh">
             <objects>
                 <viewController id="WpZ-BB-oao" customClass="AjoutUtilisateurViewController" sceneMemberID="viewController">
@@ -593,13 +622,15 @@
                                 <items>
                                     <navigationItem title="Ajouter membre(s)" id="SKH-ki-QQd">
                                         <barButtonItem key="leftBarButtonItem" title="Retour" id="m0a-Wf-wPA">
+                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="aCz-HK-BYp" kind="unwind" unwindAction="AnnulerAjoutMembre:" id="zf4-77-scW"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Créer" id="pfh-LQ-04c">
+                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="aCz-HK-BYp" kind="unwind" unwindAction="AjoutMembre:" id="aHX-aQ-oDg"/>
+                                                <segue destination="aCz-HK-BYp" kind="unwind" unwindAction="AjoutMembre:" id="vHM-YN-VPv"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -610,7 +641,6 @@
                             </imageView>
                             <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQw-6o-14K">
                                 <rect key="frame" x="47" y="94" width="273" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="WpZ-BB-oao" id="pK6-Sm-kJ4"/>
@@ -659,7 +689,7 @@
             </objects>
             <point key="canvasLocation" x="1948" y="598"/>
         </scene>
-        <!--Navigation Controller - TchatRooms-->
+        <!--TchatRooms-->
         <scene sceneID="4Xu-pO-5Gv">
             <objects>
                 <navigationController definesPresentationContext="YES" id="2k7-7R-5bg" sceneMemberID="viewController">
@@ -697,6 +727,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yfr-hN-DND"/>
+        <segue reference="wUx-5e-bUa"/>
     </inferredMetricsTieBreakers>
 </document>

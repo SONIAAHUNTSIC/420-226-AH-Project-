@@ -14,6 +14,9 @@
 
 @implementation NouveauTchatRoomViewController
 
+#pragma mark - Propriétés
+@synthesize txtId;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,6 +36,9 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    [[[self navigationController] navigationBar] setTintColor:[[[self navigationItem] rightBarButtonItem] tintColor]];
+    [[self txtId] setDelegate:self];
 }
 
 /*
@@ -45,6 +51,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Gestion du clavier
+- (BOOL)textFieldShouldReturn:(UITextField*)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
