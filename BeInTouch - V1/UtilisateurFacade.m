@@ -40,7 +40,7 @@ static UtilisateurFacade* utilisateurFacade = nil;
     NSHTTPURLResponse* response = nil;
     
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO nom], [utilisateurDTO prenom], [utilisateurDTO sexe],[utilisateurDTO dateCreation],[utilisateurDTO dateNaissance],[utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createUtilisateur&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&nom=%@&prenom=%@&sexe=%@&dateCreation=%@&dateNaissance=%@&photo=%@&courriel=%@&telephone=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurDTO prenom], [utilisateurDTO nom], [utilisateurDTO sexe],[utilisateurDTO dateCreation],[utilisateurDTO dateNaissance],[utilisateurDTO photo], [utilisateurDTO courriel], [utilisateurDTO telephone]];
     
     NSData* donnees = nil;
     
@@ -189,8 +189,8 @@ static UtilisateurFacade* utilisateurFacade = nil;
             UtilisateurDTO* utilisateurDTO = [[UtilisateurDTO alloc] init];
             
             [utilisateurDTO setIdUtilisateur:utilisateurJSON[@"idUtilisateur"]];
-            [utilisateurDTO setNom:utilisateurJSON[@"nom"]];
             [utilisateurDTO setPrenom:utilisateurJSON[@"prenom"]];
+            [utilisateurDTO setNom:utilisateurJSON[@"nom"]];
             [utilisateurDTO setSexe:utilisateurJSON[@"sexe"]];
             [utilisateurDTO setDateCreation:utilisateurJSON[@"dateCreation"]];
             [utilisateurDTO setDateNaissance:utilisateurJSON[@"dateNaissance"]];
