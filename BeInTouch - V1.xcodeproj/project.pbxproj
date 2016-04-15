@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E29DEE81CBEE3EE00148B3F /* EnvoiDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29DEE11CBEE3EE00148B3F /* EnvoiDTO.m */; };
-		6E29DEE91CBEE3EE00148B3F /* EnvoiDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29DEE11CBEE3EE00148B3F /* EnvoiDTO.m */; };
-		6E29DEEA1CBEE3EE00148B3F /* EnvoiFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29DEE31CBEE3EE00148B3F /* EnvoiFacade.m */; };
-		6E29DEEB1CBEE3EE00148B3F /* EnvoiFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29DEE31CBEE3EE00148B3F /* EnvoiFacade.m */; };
 		6E29DEEC1CBEE3EE00148B3F /* MembreDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29DEE51CBEE3EE00148B3F /* MembreDTO.m */; };
 		6E29DEED1CBEE3EE00148B3F /* MembreDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29DEE51CBEE3EE00148B3F /* MembreDTO.m */; };
 		6E29DEEE1CBEE3EE00148B3F /* MembreFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29DEE71CBEE3EE00148B3F /* MembreFacade.m */; };
@@ -60,10 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6E29DEE01CBEE3EE00148B3F /* EnvoiDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvoiDTO.h; sourceTree = "<group>"; };
-		6E29DEE11CBEE3EE00148B3F /* EnvoiDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvoiDTO.m; sourceTree = "<group>"; };
-		6E29DEE21CBEE3EE00148B3F /* EnvoiFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvoiFacade.h; sourceTree = "<group>"; };
-		6E29DEE31CBEE3EE00148B3F /* EnvoiFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvoiFacade.m; sourceTree = "<group>"; };
 		6E29DEE41CBEE3EE00148B3F /* MembreDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembreDTO.h; sourceTree = "<group>"; };
 		6E29DEE51CBEE3EE00148B3F /* MembreDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembreDTO.m; sourceTree = "<group>"; };
 		6E29DEE61CBEE3EE00148B3F /* MembreFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembreFacade.h; sourceTree = "<group>"; };
@@ -184,16 +176,14 @@
 		E39B71461CBFA1EA00B15382 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				6EBB361E1CBEC84700784B45 /* MessageDTO.h */,
+				6EBB361F1CBEC84700784B45 /* MessageDTO.m */,
 				6E29DEE41CBEE3EE00148B3F /* MembreDTO.h */,
 				6E29DEE51CBEE3EE00148B3F /* MembreDTO.m */,
 				6EBB36221CBEC84700784B45 /* TchatroomDTO.h */,
 				6EBB36231CBEC84700784B45 /* TchatroomDTO.m */,
-				6E29DEE01CBEE3EE00148B3F /* EnvoiDTO.h */,
-				6EBB361E1CBEC84700784B45 /* MessageDTO.h */,
 				E39B71441CBD503400B15382 /* UtilisateurDTO.h */,
 				E39B71421CBD502900B15382 /* UtilisateurDTO.m */,
-				6EBB361F1CBEC84700784B45 /* MessageDTO.m */,
-				6E29DEE11CBEE3EE00148B3F /* EnvoiDTO.m */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -230,14 +220,12 @@
 		E39B71481CBFA70E00B15382 /* Facade */ = {
 			isa = PBXGroup;
 			children = (
-				6E29DEE21CBEE3EE00148B3F /* EnvoiFacade.h */,
-				6E29DEE31CBEE3EE00148B3F /* EnvoiFacade.m */,
-				E3213AE91CB9C95B0016A3B4 /* UtilisateurFacade.h */,
-				E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */,
-				6E29DEE61CBEE3EE00148B3F /* MembreFacade.h */,
-				6E29DEE71CBEE3EE00148B3F /* MembreFacade.m */,
 				6EBB36201CBEC84700784B45 /* MessageFacade.h */,
 				6EBB36211CBEC84700784B45 /* MessageFacade.m */,
+				6E29DEE61CBEE3EE00148B3F /* MembreFacade.h */,
+				6E29DEE71CBEE3EE00148B3F /* MembreFacade.m */,
+				E3213AE91CB9C95B0016A3B4 /* UtilisateurFacade.h */,
+				E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */,
 				6EBB36241CBEC84700784B45 /* TchatroomFacade.h */,
 				6EBB36251CBEC84700784B45 /* TchatroomFacade.m */,
 			);
@@ -347,12 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EBB362A1CBEC84700784B45 /* TchatroomDTO.m in Sources */,
-				6E29DEEA1CBEE3EE00148B3F /* EnvoiFacade.m in Sources */,
 				B6917C471CBE83B200E2499C /* AjoutUtilisateurViewController.m in Sources */,
 				6E29DEEE1CBEE3EE00148B3F /* MembreFacade.m in Sources */,
 				E3213ADA1CB9C8250016A3B4 /* ViewController.m in Sources */,
 				6EBB36261CBEC84700784B45 /* MessageDTO.m in Sources */,
-				6E29DEE81CBEE3EE00148B3F /* EnvoiDTO.m in Sources */,
 				6EBB36281CBEC84700784B45 /* MessageFacade.m in Sources */,
 				B68544B11CC01DE8003F4BBE /* InfosViewController.m in Sources */,
 				B6917C5B1CBE84C200E2499C /* TchatRoomTableViewController.m in Sources */,
@@ -388,11 +374,9 @@
 				B68544AE1CC01D65003F4BBE /* BienvenuViewController.m in Sources */,
 				6E29DEEF1CBEE3EE00148B3F /* MembreFacade.m in Sources */,
 				E3213AFC1CBBA7430016A3B4 /* AppDelegate.m in Sources */,
-				6E29DEE91CBEE3EE00148B3F /* EnvoiDTO.m in Sources */,
 				6EBB362B1CBEC84700784B45 /* TchatroomDTO.m in Sources */,
 				E3213AFD1CBBA7430016A3B4 /* main.m in Sources */,
 				B6917C5C1CBE84C200E2499C /* TchatRoomTableViewController.m in Sources */,
-				6E29DEEB1CBEE3EE00148B3F /* EnvoiFacade.m in Sources */,
 				B6917C501CBE842200E2499C /* ParticipantTchatViewController.m in Sources */,
 				B6917C541CBE84A000E2499C /* DetailTchatRoomViewController.m in Sources */,
 				B6917C601CBE875800E2499C /* UtilisateurViewController.m in Sources */,
