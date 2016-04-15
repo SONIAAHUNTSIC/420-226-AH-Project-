@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ContactChatRoomDTO.h"
 
 @interface ContactChatRoomFacade : NSObject
+
++ (ContactChatRoomFacade*) contactChatRoomFacade;
+
+-(int) createContactChatRoom:(ContactChatRoomDTO*) contactChatRoomDTO ;
+- (ContactChatRoomDTO*)readContactChatRoomAvecIdUtilisateur:(NSString*) idUtilisateur chatRoom:(NSString*)idChatRoom etIdUtilisateurContact:(NSString*) idUtilisateurContact;
+-(int) updateContactChatRoom:(ContactChatRoomDTO*) contactChatRoomDTO ;
+-(int) deleteContactChatRoom:(ContactChatRoomDTO*) contactChatRoomDTO ;
+-(NSMutableArray*)getAllContactChatRooms;
 
 @end

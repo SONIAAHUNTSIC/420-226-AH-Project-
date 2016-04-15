@@ -75,6 +75,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [[[self navigationController] navigationBar] setTintColor:[[[self navigationItem] rightBarButtonItem] tintColor]];
+    
     [[self textPrenom] setDelegate:self];
     [[self textNom] setDelegate:self];
     [[self textSexe] setDelegate:self];
@@ -96,6 +98,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Gestion du clavier
+- (BOOL)textFieldShouldReturn:(UITextField*)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*
