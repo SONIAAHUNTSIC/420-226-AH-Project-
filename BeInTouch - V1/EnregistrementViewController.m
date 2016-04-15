@@ -118,5 +118,57 @@
 */
 
 - (IBAction)btnEnregistrer:(id)sender {
+    
+    
+    
+    UtilisateurDTO* utilisateurDTO = [[UtilisateurDTO alloc]initAvecIdUtilisateur:idUtilisateur
+                                    prenom: textPrenom.text
+                                    nom: textNom.text
+                                    sexe:textSexe.text
+                                    dateCreation: @"2016 "
+                                    dateNaissance:textDateNaissance.text
+                                    photo:@"Un photo"
+                                    courriel:textCourriel.text
+                                    etTelephone:textTelephone.text];
+    
+    
+        
+    
+    
+    if([[utilisateurDTO prenom] length] != 0
+       && [[utilisateurDTO nom] length] != 0
+       && [[utilisateurDTO sexe]length] != 0) {
+        int nombreEnregistrements = 0;
+        NSString* typeRequete = [utilisateurDTO idUtilisateur] != nil ? @"mise a jour ":@"création";
+        
+        NSString* typeRequeteAction = [utilisateurDTO idUtilisateur] != nil ? @"mis a jour " : @"crée(s)";
+        
+        
+        
+        // Si la personne à un id diferente de nil, on fait  une mise à jour. Sinon, on fait un ajout
+        //Parler de save vs create update
+        if ([utilisateurDTO idUtilisateur] !=nil){
+            nombreEnregistrements = [[UtilisateurFacade utilisateurFacade] updateUtilisateur:utilisateurDTO];
+            
+        }
+        else {
+            nombreEnregistrements = [[UtilisateurFacade utilisateurFacade] createUtilisateur:utilisateurDTO];
+            NSLog(@"test enregistrer");
+            NSLog(@"Requete de %@ , %d enregistrement(s) %@\n\n",typeRequete,nombreEnregistrements,typeRequeteAction);
+        }
+        if (nombreEnregistrements > 0){
+            NSLog(@"Requete de %@ reussie, %d enregistrement(s) %@\n\n",typeRequete,nombreEnregistrements,typeRequeteAction);
+            
+        }
+        else {
+            NSLog(@"Impossible d'exécuter la requêtede %@ \n\n",typeRequete);
+        }
+        
+        
+        // Recharge la table view
+        // [self chargerDonnees];
+    }
+
+    
 }
 @end

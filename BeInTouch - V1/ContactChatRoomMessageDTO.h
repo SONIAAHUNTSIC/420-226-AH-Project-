@@ -13,12 +13,12 @@
 
 @interface ContactChatRoomMessageDTO : NSObject
 
-@property (strong, nonatomic) UtilisateurDTO* idUtilisateur;
-@property (strong, nonatomic) UtilisateurDTO* idUtilisateurContact;
-@property (strong, nonatomic) ChatRoomDTO* idChatRoom;
-@property (strong, nonatomic) MessageDTO* idMessage;
+@property (strong, nonatomic) UtilisateurDTO* utilisateur;
+@property (strong, nonatomic) UtilisateurDTO* utilisateurContact;
+@property (strong, nonatomic) ChatRoomDTO* chatRoom;
+@property (strong, nonatomic) MessageDTO* message;
 
--(instancetype) initAvecIdUtilisateur: (UtilisateurDTO*) unIdUtilisateur utilisateurContact:(UtilisateurDTO*)unIdUtilisateurContact chatRoom:(ChatRoomDTO*)unIdChatRoom etMessage:(MessageDTO*)unIdMessage;
+-(instancetype) initAvecUtilisateur: (UtilisateurDTO*) unUtilisateur utilisateurContact:(UtilisateurDTO*)unUtilisateurContact chatRoom:(ChatRoomDTO*)unChatRoom etMessage:(MessageDTO*)unMessage;
 
 
 @end

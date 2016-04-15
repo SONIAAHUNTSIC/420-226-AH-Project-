@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ContactDTO.h"
 
 @interface ContactFacade : NSObject
+
++ (ContactFacade*) contactFacade;
+
+-(int) createContact:(ContactDTO*) contactDTO;
+-(ContactDTO*) readContactAvecIdUtilisateur:(NSString*) idUtilisateur etIdUtilisateurContact:(NSString*) idUtilisateurContact;
+-(int) updateContact:(ContactDTO*) contactDTO;
+-(int) deleteContact:(ContactDTO*) contactDTO;
+-(NSMutableArray*)getAllContacts;
+
 
 @end

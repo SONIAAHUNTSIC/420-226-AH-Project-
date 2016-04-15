@@ -18,7 +18,7 @@
 
 
 #ifndef UTILISATEUR
-#define UTILISATEUR "ahuntsic"
+#define UTILISATEUR "soniaifs"
 #endif
 
 #ifndef MOT_DE_PASSE
@@ -26,7 +26,7 @@
 #endif
 
 #ifndef BASE_DE_DONNEES
-#define BASE_DE_DONNEES "beintouch"
+#define BASE_DE_DONNEES "soniaifs_beintouch"
 #endif
 #ifndef PORT
 #define PORT 3306

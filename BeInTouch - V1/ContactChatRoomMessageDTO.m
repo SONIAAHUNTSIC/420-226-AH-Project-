@@ -10,19 +10,19 @@
 
 @implementation ContactChatRoomMessageDTO
 
-@synthesize idUtilisateur;
-@synthesize idUtilisateurContact;
-@synthesize idChatRoom;
-@synthesize idMessage;
+@synthesize utilisateur;
+@synthesize utilisateurContact;
+@synthesize chatRoom;
+@synthesize message;
 
 
--(instancetype) initAvecIdUtilisateur:(UtilisateurDTO *)unIdUtilisateur utilisateurContact:(UtilisateurDTO *)unIdUtilisateurContact chatRoom:(ChatRoomDTO *)unIdChatRoom etMessage:(MessageDTO *)unIdMessage
+-(instancetype) initAvecUtilisateur:(UtilisateurDTO *)unUtilisateur utilisateurContact:(UtilisateurDTO *)unUtilisateurContact chatRoom:(ChatRoomDTO *)unChatRoom etMessage:(MessageDTO *)unMessage
 {
     if (self = [super init]) {
-        [self setIdUtilisateur:unIdUtilisateur];
-        [self setIdUtilisateurContact:unIdUtilisateurContact];
-        [self setIdChatRoom:unIdChatRoom];
-        [self setIdMessage:unIdMessage];
+        [self setUtilisateur:unUtilisateur];
+        [self setUtilisateurContact:unUtilisateurContact];
+        [self setChatRoom:unChatRoom];
+        [self setMessage:unMessage];
     }
     return self;
 }
