@@ -42,6 +42,30 @@
     return self;
 }
 
+-(IBAction)PrendreUnePhoto{
+    
+    pickerPhoto = [[UIImagePickerController alloc] init];
+    pickerPhoto.delegate = self;
+    [pickerPhoto setSourceType:UIImagePickerControllerSourceTypeCamera];
+    [self presentViewController:pickerPhoto animated:YES completion:NULL];
+}
+
+-(IBAction)ChoisirUnePhoto{
+    pickerPhoto2 = [[UIImagePickerController alloc] init];
+    pickerPhoto2.delegate = self;
+    [pickerPhoto2 setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    [self presentViewController:pickerPhoto2 animated:YES completion:NULL];
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [ imageView setImage:image];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 #pragma mark - Méthodes privées
 - (void)chargerInfo {
@@ -84,6 +108,33 @@
     [[self textCourriel] setDelegate:self];
     [[self textTelephone] setDelegate:self];
     
+    // Gestion du genre (PickerView)
+    dataArray=[[NSArray alloc]initWithObjects:@"Femme",@"Homme",nil];
+    picker=[[UIPickerView alloc]init];
+    picker.dataSource=self;
+    picker.delegate=self;
+    [picker setShowsSelectionIndicator:YES];
+    [self.textSexe setInputView:picker];
+    
+    UIToolbar *toolBar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    [toolBar setTintColor:[UIColor greenColor]];
+    UIBarButtonItem *validerBtn=[[UIBarButtonItem alloc]initWithTitle:@"Valider" style:UIBarButtonItemStyleBordered target:self action:@selector(masquerPicker)];
+    UIBarButtonItem *space=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolBar setItems:[NSArray arrayWithObjects:space,validerBtn, nil]];
+    [self.textSexe setInputAccessoryView:toolBar];
+    
+    // Gestion du DatePicker
+    datePicker=[[UIDatePicker alloc]init];
+    datePicker.datePickerMode=UIDatePickerModeDate;
+    [self.textDateNaissance setInputView:datePicker];
+    
+    UIToolbar *toolbar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    [toolbar setTintColor:[UIColor greenColor]];
+    UIBarButtonItem *btn=[[UIBarButtonItem alloc]initWithTitle:@"Valider" style:UIBarButtonItemStyleBordered
+        target:self action:@selector(montrerDateSelectionner)];
+    UIBarButtonItem *espace=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolbar setItems:[NSArray arrayWithObjects:espace,btn, nil]];
+    [self.textDateNaissance setInputAccessoryView:toolbar];
     
     
     // Vérifie si le paramètre de modification d'un enregistrement a été assigné
@@ -92,6 +143,43 @@
         [self chargerInfo];
     }
     
+}
+
+#pragma mark - Gestion du clavier pour le textField du sexe
+-(void)masquerPicker
+{
+    [self.textSexe resignFirstResponder];
+}
+
+#pragma mark - Gestion des données du pickerView
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [dataArray count];
+}
+
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [dataArray objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    self.textSexe.text=[dataArray objectAtIndex:row];
+}
+
+#pragma mark - Gestion de la date de naissance
+-(void)montrerDateSelectionner
+{
+    NSDateFormatter *format=[[NSDateFormatter alloc]init];
+    [format setDateFormat:@"dd/MMM/YYY"];
+    self.textDateNaissance.text=[NSString stringWithFormat:@"%@",[format stringFromDate:datePicker.date]];
+    [self.textDateNaissance resignFirstResponder];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -170,5 +258,10 @@
     }
 
     
+}
+- (IBAction)PrendreUnePhoto:(id)sender {
+}
+
+- (IBAction)ChoisirUnePhot:(id)sender {
 }
 @end

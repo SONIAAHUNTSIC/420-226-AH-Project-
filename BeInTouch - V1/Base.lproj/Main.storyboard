@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Accueil-->
+        <!--View Controller - Accueil-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="-883" y="219"/>
         </scene>
-        <!--Enregistrement-->
+        <!--Enregistrement View Controller - Enregistrement-->
         <scene sceneID="BCG-LV-2zc">
             <objects>
                 <viewController id="11r-yx-d0w" customClass="EnregistrementViewController" sceneMemberID="viewController">
@@ -56,41 +56,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l36-uP-dal">
-                                <rect key="frame" x="28" y="67" width="67" height="66"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="l36-uP-dal">
+                                <rect key="frame" x="10" y="100" width="66" height="66"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92W-GC-I76">
-                                <rect key="frame" x="136" y="89" width="151" height="25"/>
+                                <rect key="frame" x="136" y="120" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Date de naissance" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-jb-2XU">
-                                <rect key="frame" x="136" y="165" width="151" height="25"/>
+                                <rect key="frame" x="136" y="202" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fns-bA-dNb">
-                                <rect key="frame" x="136" y="56" width="151" height="25"/>
+                                <rect key="frame" x="136" y="76" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Sexe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-is-ltA">
-                                <rect key="frame" x="136" y="122" width="151" height="25"/>
+                                <rect key="frame" x="136" y="163" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Courriel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XjK-ZC-zR7">
-                                <rect key="frame" x="136" y="215" width="151" height="25"/>
+                                <rect key="frame" x="136" y="243" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Téléphone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-Eg-kKt">
-                                <rect key="frame" x="136" y="254" width="151" height="25"/>
+                                <rect key="frame" x="136" y="282" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -105,7 +105,7 @@
                                                 <segue destination="LrY-bf-aaO" kind="unwind" unwindAction="returnFromEnregistrement:" id="yKc-eE-2mg"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="&gt;&gt;" id="c5e-Rm-4JG">
+                                        <barButtonItem key="rightBarButtonItem" title=">>" id="c5e-Rm-4JG">
                                             <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="rYv-v9-4Oi" kind="modal" identifier="segueEnregistrement" id="cQk-oq-jfn"/>
@@ -115,13 +115,35 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oI-Vv-mK9">
-                                <rect key="frame" x="123" y="318" width="74" height="30"/>
+                                <rect key="frame" x="102" y="347" width="74" height="30"/>
                                 <state key="normal" title="Enregistrer">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="btnEnregistrer:" destination="11r-yx-d0w" eventType="touchUpInside" id="m7q-y0-Dbh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOR-ci-eWK">
+                                <rect key="frame" x="10" y="74" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PrendrePhoto">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PrendreUnePhoto" destination="hxk-ID-1bg" eventType="touchUpInside" id="szp-vM-KzH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG9-q3-Ach">
+                                <rect key="frame" x="10" y="174" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ChoisirPhoto">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChoisirUnePhoto" destination="hxk-ID-1bg" eventType="touchUpInside" id="gFs-iO-xOE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,12 +153,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Enregistrement" id="lzC-6M-L0l">
                         <barButtonItem key="backBarButtonItem" title="Accueil" id="U8t-Bx-Qzg"/>
-                        <barButtonItem key="rightBarButtonItem" title="OK &gt;" id="ijR-2H-pL1">
+                        <barButtonItem key="rightBarButtonItem" title="OK >" id="ijR-2H-pL1">
                             <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="imageView" destination="l36-uP-dal" id="gNr-3a-4AH"/>
                         <outlet property="textCourriel" destination="XjK-ZC-zR7" id="1OH-mi-e6L"/>
                         <outlet property="textDateNaissance" destination="RuI-jb-2XU" id="wrb-hr-uBU"/>
                         <outlet property="textNom" destination="92W-GC-I76" id="ePp-K1-zaq"/>
@@ -408,11 +431,11 @@
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="msv-Xb-Mys" id="Zec-Az-XzW">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wXA-zQ-rZA">
-                                            <rect key="frame" x="15" y="0.0" width="238" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="238" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -450,7 +473,7 @@
             </objects>
             <point key="canvasLocation" x="1030" y="866"/>
         </scene>
-        <!--Nouveau ChatRoom-->
+        <!--Nouveau Tchat Room View Controller - Nouveau ChatRoom-->
         <scene sceneID="tuF-s8-duJ">
             <objects>
                 <viewController id="Zuv-Rt-5BM" customClass="NouveauTchatRoomViewController" sceneMemberID="viewController">
@@ -469,7 +492,7 @@
                                     <constraint firstAttribute="width" constant="46" id="q4l-XT-DNV"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Veuillez spécifier le sujet du TchatRoom et éventuellement lui donner une icône." translatesAutoresizingMaskIntoConstraints="NO" id="Orf-8M-Gz0">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Veuillez spécifier le sujet du ChatRoom et éventuellement lui donner une icône." translatesAutoresizingMaskIntoConstraints="NO" id="Orf-8M-Gz0">
                                 <rect key="frame" x="74" y="86" width="226" height="62"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -501,7 +524,7 @@
                         <barButtonItem key="backBarButtonItem" title="Retour" id="7tI-xm-TrS">
                             <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="&gt;&gt;" id="mfJ-CH-JaM">
+                        <barButtonItem key="rightBarButtonItem" title=">>" id="mfJ-CH-JaM">
                             <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="WpZ-BB-oao" kind="modal" id="weN-pF-a0P"/>
@@ -516,7 +539,7 @@
             </objects>
             <point key="canvasLocation" x="1534" y="598"/>
         </scene>
-        <!--Sujet du Chat-->
+        <!--Detail Tchat Room View Controller - Sujet du Chat-->
         <scene sceneID="L5Y-Pd-ZvZ">
             <objects>
                 <viewController id="MYT-A3-dSu" customClass="DetailTchatRoomViewController" sceneMemberID="viewController">
@@ -557,7 +580,7 @@
             </objects>
             <point key="canvasLocation" x="1546" y="1248"/>
         </scene>
-        <!--Liste Participants-->
+        <!--Participant Tchat View Controller - Liste Participants-->
         <scene sceneID="suh-f2-S5N">
             <objects>
                 <viewController id="TrU-yY-Y2i" customClass="ParticipantTchatViewController" sceneMemberID="viewController">
@@ -580,6 +603,7 @@
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Ajout." id="zBP-Uq-EIv">
+                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="NtX-nj-obc" kind="unwind" unwindAction="returnFromListeMembres:" id="khW-Tu-I1t"/>
                                             </connections>
@@ -604,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="1962" y="1248"/>
         </scene>
-        <!--Ajouter Tchaters-->
+        <!--Ajout Utilisateur View Controller - Ajouter Tchaters-->
         <scene sceneID="aao-7t-6Nh">
             <objects>
                 <viewController id="WpZ-BB-oao" customClass="AjoutUtilisateurViewController" sceneMemberID="viewController">
@@ -688,7 +712,7 @@
             </objects>
             <point key="canvasLocation" x="1948" y="598"/>
         </scene>
-        <!--TchatRooms-->
+        <!--Navigation Controller - TchatRooms-->
         <scene sceneID="4Xu-pO-5Gv">
             <objects>
                 <navigationController definesPresentationContext="YES" id="2k7-7R-5bg" sceneMemberID="viewController">
@@ -720,6 +744,9 @@
             <point key="canvasLocation" x="-1313" y="219"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_photo.png" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
