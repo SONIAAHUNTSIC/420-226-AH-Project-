@@ -24,14 +24,14 @@
 #pragma mark - Methode d'initialisation
 
 -(instancetype)initAvecIdUtilisateur:(NSString *)unIdUtilisateur
-               prenom:(NSString *)unPrenom
-               nom:(NSString *)unNom
-               sexe:(NSString *)unSexe
-               dateCreation:(NSString *)unDateCreation
-               dateNaissance:(NSString *)unDateNaissance
-               photo:(NSString *)unPhoto
-               courriel:(NSString *)unCourriel
-               etTelephone:(NSString *)unTelephone{
+                              prenom:(NSString *)unPrenom
+                                 nom:(NSString *)unNom
+                                sexe:(NSString *)unSexe
+                        dateCreation:(NSString *)unDateCreation
+                       dateNaissance:(NSString *)unDateNaissance
+                               photo:(NSString *)unPhoto
+                            courriel:(NSString *)unCourriel
+                         etTelephone:(NSString *)unTelephone{
     if(self = [super init]) {
         [self setIdUtilisateur:unIdUtilisateur];
         [self setPrenom:unPrenom];

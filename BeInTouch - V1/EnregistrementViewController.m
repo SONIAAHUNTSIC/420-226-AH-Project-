@@ -9,12 +9,9 @@
 #import "EnregistrementViewController.h"
 #import "UtilisateurDTO.h"
 #import "UtilisateurFacade.h"
-
-
-
+#import "BienvenuViewController.h"
 
 @interface EnregistrementViewController ()
-
 
 
 @end
@@ -31,6 +28,7 @@
 
 
 @synthesize idUtilisateur;
+@synthesize idEnregistre;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -205,6 +203,22 @@
 }
 */
 
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
+    
+    NSLog(@"prepare for Segue");
+    
+    if([segue.identifier isEqualToString:@"segueEnregistrement"]){
+        
+        
+        BienvenuViewController* bienvenuViewController = [segue destinationViewController];
+        
+        bienvenuViewController.idUtilisateur =  idEnregistre;
+        NSLog(@"Prepare for Segue : %@ = id\n",idEnregistre);
+        
+        
+    }
+}
+
 - (IBAction)btnEnregistrer:(id)sender {
     
     
@@ -213,9 +227,9 @@
                                     prenom: textPrenom.text
                                     nom: textNom.text
                                     sexe:textSexe.text
-                                    dateCreation: @"2016 "
+                                    dateCreation: @""
                                     dateNaissance:textDateNaissance.text
-                                    photo:@"Un photo"
+                                    photo:@"UnPhoto"
                                     courriel:textCourriel.text
                                     etTelephone:textTelephone.text];
     
@@ -227,6 +241,8 @@
        && [[utilisateurDTO nom] length] != 0
        && [[utilisateurDTO sexe]length] != 0) {
         int nombreEnregistrements = 0;
+        int intEnregistre = 0;
+        
         NSString* typeRequete = [utilisateurDTO idUtilisateur] != nil ? @"mise a jour ":@"création";
         
         NSString* typeRequeteAction = [utilisateurDTO idUtilisateur] != nil ? @"mis a jour " : @"crée(s)";
@@ -240,17 +256,25 @@
             
         }
         else {
-            nombreEnregistrements = [[UtilisateurFacade utilisateurFacade] createUtilisateur:utilisateurDTO];
-            NSLog(@"test enregistrer");
-            NSLog(@"Requete de %@ , %d enregistrement(s) %@\n\n",typeRequete,nombreEnregistrements,typeRequeteAction);
+            intEnregistre = [[UtilisateurFacade utilisateurFacade] createUtilisateur:utilisateurDTO];
+            idEnregistre = [NSString stringWithFormat:@"%d", intEnregistre];
+            
+            
+            NSLog(@"Requete de %@ , %d enregistrement(s) %@\n\n",typeRequete,intEnregistre,typeRequeteAction);
+            
         }
         if (nombreEnregistrements > 0){
             NSLog(@"Requete de %@ reussie, %d enregistrement(s) %@\n\n",typeRequete,nombreEnregistrements,typeRequeteAction);
             
         }
+        else if (idEnregistre !=0){
+            NSLog(@"Requete de %@ reussie, %d enregistre  %@\n\n",typeRequete,intEnregistre,typeRequeteAction);
+            
+        }
         else {
             NSLog(@"Impossible d'exécuter la requêtede %@ \n\n",typeRequete);
         }
+        
         
         
         // Recharge la table view
