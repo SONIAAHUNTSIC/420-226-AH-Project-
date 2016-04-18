@@ -17,11 +17,13 @@
 
 
 #ifndef UTILISATEUR
-#define UTILISATEUR "sonia"
+//#define UTILISATEUR "sonia"
+#define UTILISATEUR "root"
 #endif
 
 #ifndef MOT_DE_PASSE
-#define MOT_DE_PASSE "123456"
+//#define MOT_DE_PASSE "123456"
+#define MOT_DE_PASSE "root"
 #endif
 
 #ifndef BASE_DE_DONNEES
