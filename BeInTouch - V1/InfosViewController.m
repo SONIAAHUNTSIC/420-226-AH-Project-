@@ -31,13 +31,13 @@
 - (void)chargerInfo {
     
     UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:[self idUtilisateur]];
-   // [[self lblIdUtilisateur] setText:[utilisateurDTO idUtilisateur]];
-   // [[self textPrenom] setText:[utilisateurDTO prenom]];
-   // [[self textNom] setText:[utilisateurDTO nom]];
-   // [[self textSexe] setText:[utilisateurDTO sexe]];
-   // [[self textDateNaissance] setText:[utilisateurDTO dateNaissance]];
-   // [[self textCourriel] setText:[utilisateurDTO courriel]];
-   // [[self textTelephone] setText:[utilisateurDTO telephone]];
+    [[self lblIdUtilisateur] setText:[utilisateurDTO idUtilisateur]];
+    [[self textPrenom] setText:[utilisateurDTO prenom]];
+    [[self textNom] setText:[utilisateurDTO nom]];
+    [[self textSexe] setText:[utilisateurDTO sexe]];
+    [[self textDateNaissance] setText:[utilisateurDTO dateNaissance]];
+    [[self textCourriel] setText:[utilisateurDTO courriel]];
+    [[self textTelephone] setText:[utilisateurDTO telephone]];
     
 }
 
