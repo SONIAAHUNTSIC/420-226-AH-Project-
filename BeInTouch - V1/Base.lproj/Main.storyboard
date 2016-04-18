@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BeInTouch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5p2-1U-16b">
-                                <rect key="frame" x="96" y="229" width="128" height="21"/>
+                                <rect key="frame" x="96" y="123" width="128" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPX-03-ctC">
-                                <rect key="frame" x="120" y="297" width="80" height="30"/>
+                                <rect key="frame" x="120" y="200" width="80" height="30"/>
                                 <state key="normal" title="Accepter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -32,12 +32,32 @@
                                     <segue destination="11r-yx-d0w" kind="modal" id="Erw-Gb-U1s"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AC3-0e-ElA">
+                                <rect key="frame" x="123" y="363" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Connecter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnConnecter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qNQ-fy-nqx"/>
+                                    <segue destination="rYv-v9-4Oi" kind="modal" identifier="segueConnecter" id="TGD-Fi-nDU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpA-LD-qRe">
+                                <rect key="frame" x="112" y="310" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Accueil" id="KmM-2g-9CU">
                         <barButtonItem key="backBarButtonItem" title="Accueil" id="cRJ-6k-0lb"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textIdConnecter" destination="gpA-LD-qRe" id="0Lg-Xn-1IK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +190,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxk-ID-1bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LrY-bf-aaO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-470" y="219"/>
+            <point key="canvasLocation" x="-470" y="-91"/>
         </scene>
         <!--Bienvenu View Controller-->
         <scene sceneID="T9r-se-lSq">
@@ -205,7 +225,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CSr-ae-5Vn" kind="modal" id="yfr-hN-DND"/>
+                                    <segue destination="CSr-ae-5Vn" kind="modal" identifier="segueAjouter1" id="yfr-hN-DND"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-ak-97H">
@@ -214,7 +234,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f51-Lw-nyp" kind="modal" id="Eqf-ob-Ksh"/>
+                                    <segue destination="f51-Lw-nyp" kind="modal" identifier="segueVoirAmis" id="Eqf-ob-Ksh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwU-kC-G73">
@@ -223,7 +243,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2k7-7R-5bg" kind="modal" id="raQ-oP-Vka"/>
+                                    <segue destination="2k7-7R-5bg" kind="modal" identifier="segueCreerChatRoom" id="raQ-oP-Vka"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -404,12 +424,15 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpW-tH-8qx">
-                                <rect key="frame" x="137" y="197" width="46" height="30"/>
+                                <rect key="frame" x="132" y="192" width="56" height="30"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="OK">
+                                <state key="normal" title="Ajouter">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnAjouter:" destination="CSr-ae-5Vn" eventType="touchUpInside" id="4dR-lB-gO0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -448,7 +471,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pkx-gI-qmB">
                                             <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="CSr-ae-5Vn" kind="modal" id="wUx-5e-bUa"/>
+                                                <segue destination="CSr-ae-5Vn" kind="modal" identifier="segueAjouter2" id="wUx-5e-bUa"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -727,16 +750,21 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="zl9-us-8uA">
-                                <rect key="frame" x="0.0" y="94" width="46" height="44"/>
-                            </imageView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQw-6o-14K">
-                                <rect key="frame" x="47" y="94" width="273" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="WpZ-BB-oao" id="pK6-Sm-kJ4"/>
-                                </connections>
-                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7T4-1w-w0L">
+                                <rect key="frame" x="0.0" y="71" width="320" height="368"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YYj-vR-by3">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YYj-vR-by3" id="99p-HF-O5b">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -771,7 +799,6 @@
                 <searchDisplayController id="vcp-Mq-YGB">
                     <connections>
                         <outlet property="delegate" destination="WpZ-BB-oao" id="cnh-Rf-a9T"/>
-                        <outlet property="searchBar" destination="CQw-6o-14K" id="Ttg-BB-YrZ"/>
                         <outlet property="searchContentsController" destination="WpZ-BB-oao" id="dLC-bg-MHW"/>
                         <outlet property="searchResultsDataSource" destination="WpZ-BB-oao" id="TgR-KD-Fal"/>
                         <outlet property="searchResultsDelegate" destination="WpZ-BB-oao" id="LfI-Jg-8tp"/>
@@ -821,6 +848,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="TGD-Fi-nDU"/>
         <segue reference="wUx-5e-bUa"/>
     </inferredMetricsTieBreakers>
 </document>

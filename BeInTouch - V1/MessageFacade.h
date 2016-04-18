@@ -14,7 +14,7 @@
 + (MessageFacade*) messageFacade;
 
 -(int) createMessage:(MessageDTO*)messageDTO;
--(MessageDTO*) readMesaage:(NSString*)idMessage;
+-(MessageDTO*) readMessage:(NSString*)idMessage;
 -(int) updateMessage:(MessageDTO*)messageDTO;
 -(int) deleteMessage:(MessageDTO*)messageDTO;
 -(NSMutableArray*)getAllMessages;

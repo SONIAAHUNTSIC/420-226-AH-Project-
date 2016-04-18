@@ -10,5 +10,6 @@
 
 @interface AjouterAmisViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *txtId;
+- (IBAction)btnAjouter:(id)sender;
 
 @end

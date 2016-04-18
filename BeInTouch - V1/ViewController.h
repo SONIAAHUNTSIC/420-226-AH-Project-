@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *textIdConnecter;
+- (IBAction)btnConnecter:(id)sender;
 
 @end

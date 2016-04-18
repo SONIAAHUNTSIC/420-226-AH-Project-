@@ -66,7 +66,7 @@ static MessageFacade* messageFacade = nil;
     return nombreEnregistrements;
 }
 
-- (MessageDTO*)readMesaage:(NSString *)idMessage
+- (MessageDTO*)readMessage:(NSString *)idMessage
 {
     MessageDTO* messageDTO = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
