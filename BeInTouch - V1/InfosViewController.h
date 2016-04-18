@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface InfosViewController : UIViewController
+@property (nonatomic) NSString *idUtilisateur;
 
 @end

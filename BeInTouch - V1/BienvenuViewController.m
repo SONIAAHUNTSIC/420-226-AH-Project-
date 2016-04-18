@@ -5,14 +5,19 @@
 //  Created by Aliou GUEYE on 14.04.16.
 //  Copyright (c) 2016 collegeahuntsic. All rights reserved.
 //
-
 #import "BienvenuViewController.h"
+#import "InfosViewController.h"
 
 @interface BienvenuViewController ()
+
 
 @end
 
 @implementation BienvenuViewController
+
+
+#pragma mark - Propriétés
+@synthesize idUtilisateur;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,25 +41,46 @@
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
+    
+    NSLog(@"prepare for Segue to ");
+    
+    if([segue.identifier isEqualToString:@"segueInfo"]){
+        
+        
+        InfosViewController* infosViewController = [segue destinationViewController];
+        [infosViewController setIdUtilisateur:[self idUtilisateur]];
+        NSLog(@"Requete , %@",idUtilisateur);
+        
+        
+        
+    }
 }
-*/
 
 -(IBAction)returnFromInfos:(UIStoryboardSegue*) segue{
+    
+    NSLog(@"Return From Info");
     
 }
 
 -(IBAction)returnFromAjouterAmis:(UIStoryboardSegue*) segue{
+    NSLog(@"Return from Ajouter Amis");
     
 }
 
 -(IBAction)returnFromVoirAmis:(UIStoryboardSegue*) segue{
+    
+    NSLog(@"Return from Voir Amis");
     
 }
 
@@ -62,6 +88,5 @@
 -(IBAction)returnFromChatRoom:(UIStoryboardSegue*) segue{
     
 }
-
 
 @end

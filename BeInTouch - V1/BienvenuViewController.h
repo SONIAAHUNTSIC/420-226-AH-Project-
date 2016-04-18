@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BienvenuViewController : UIViewController
-
+@property (nonatomic) NSString *idUtilisateur;
 @end
