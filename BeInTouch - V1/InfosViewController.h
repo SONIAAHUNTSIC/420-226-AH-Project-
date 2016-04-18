@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InfosViewController : UIViewController
+@interface InfosViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic) NSString *idUtilisateur;
 @property (strong, nonatomic) IBOutlet UILabel *lblIdUtilisateur;
 @property (strong, nonatomic) IBOutlet UITextField *textPrenom;
 @property (strong, nonatomic) IBOutlet UITextField *textNom;
