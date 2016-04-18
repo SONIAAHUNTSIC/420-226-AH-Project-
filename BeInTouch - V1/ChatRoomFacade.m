@@ -37,7 +37,7 @@ static ChatRoomFacade* chatRoomFacade = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&sujet=%@&dateCreation=%@&dateFermeture=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO sujet], [chatRoomDTO dateCreation], [chatRoomDTO dateFermeture]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&sujet=%@&date_creation=%@&date_fermeture=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO sujet], [chatRoomDTO dateCreation], [chatRoomDTO dateFermeture]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -71,7 +71,7 @@ static ChatRoomFacade* chatRoomFacade = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idMessage=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idChatRoom];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_chatroom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idChatRoom];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -104,7 +104,7 @@ static ChatRoomFacade* chatRoomFacade = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idChatRoom=%@&sujet=%@&dateCreation=%@&dateFermeture=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO idChatRoom], [chatRoomDTO sujet], [chatRoomDTO dateCreation], [chatRoomDTO dateFermeture]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_chatroom=%@&sujet=%@&date_creation=%@&date_fermeture=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO idChatRoom], [chatRoomDTO sujet], [chatRoomDTO dateCreation], [chatRoomDTO dateFermeture]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -137,7 +137,7 @@ static ChatRoomFacade* chatRoomFacade = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=deleteChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&idChatRoom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO idChatRoom]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=deleteChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_chatroom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [chatRoomDTO idChatRoom]];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
