@@ -14,6 +14,11 @@
 
 @implementation VoirAmiViewController
 
+
+#pragma mark - Propriétés
+
+@synthesize idUtilisateur;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -65,6 +70,11 @@
     //NSString *cellValue = [maData objectAtIndex:indexPath.row];
     // cell.textLabel.text = cellValue;
     return cell;
+}
+
+
+-(IBAction)returnFromVoirAmis:(UIStoryboardSegue*) segue{
+    
 }
 
 @end

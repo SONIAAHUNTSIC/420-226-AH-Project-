@@ -7,6 +7,9 @@
 //
 #import "BienvenuViewController.h"
 #import "InfosViewController.h"
+#import "VoirAmiViewController.h"
+#import "AjouterAmisViewController.h"
+#import "NouveauChatRoomViewController.h"
 
 @interface BienvenuViewController ()
 
@@ -57,13 +60,31 @@
     
     if([segue.identifier isEqualToString:@"segueInfo"]){
         
-        
         InfosViewController* infosViewController = [segue destinationViewController];
         [infosViewController setIdUtilisateur:[self idUtilisateur]];
         NSLog(@"Requete , %@",idUtilisateur);
+    }
+    else if ([segue.identifier isEqualToString:@"segueAjouter1"]){
+
+            AjouterAmisViewController* ajouterAmisViewController = [segue destinationViewController];
+            [ajouterAmisViewController setIdUtilisateur:[self idUtilisateur]];
+            NSLog(@"Requete , %@",idUtilisateur);
         
         
+    }
+    else if ([segue.identifier isEqualToString:@"segueVoirAmis"]){
         
+        
+        VoirAmiViewController* voirAmiViewController = [segue destinationViewController];
+        [voirAmiViewController setIdUtilisateur:[self idUtilisateur]];
+        NSLog(@"Requete , %@",idUtilisateur);
+    }
+    else if ([segue.identifier isEqualToString:@"segueCreerChatRoom"]){
+        
+        
+        //NouveauChatRoomViewController* nouveauTchatRoomViewController = [segue destinationViewController];
+        //[nouveauTchatRoomViewController setIdUtilisateur:[self idUtilisateur]];
+        NSLog(@"Requete , %@",idUtilisateur);
     }
 }
 

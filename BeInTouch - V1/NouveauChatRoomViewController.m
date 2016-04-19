@@ -1,20 +1,22 @@
 //
-//  NouveauTchatRoomViewController.m
-//  BeInTouch
+//  NouveauChatRoomViewController.m
+//  BeInTouch - V1
 //
-//  Created by Aliou GUEYE on 12.04.16.
-//  Copyright (c) 2016 Luno&&Co.inc. All rights reserved.
+//  Created by SONIA IBARRA FLORES on 2016-04-19.
+//  Copyright © 2016 collegeahuntsic. All rights reserved.
 //
 
-#import "NouveauTchatRoomViewController.h"
+#import "NouveauChatRoomViewController.h"
 
-@interface NouveauTchatRoomViewController ()
+@interface NouveauChatRoomViewController ()
 
 @end
 
-@implementation NouveauTchatRoomViewController
+@implementation NouveauChatRoomViewController
 #pragma mark - Propriétés
 @synthesize txtSujetChat;
+@synthesize idUtilisateur;
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -26,34 +28,29 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     [[[self navigationController] navigationBar] setTintColor:[[[self navigationItem] rightBarButtonItem] tintColor]];
     
     [[self txtSujetChat] setDelegate:self];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
-    
 }
 
 /*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
 */
-
 #pragma mark - Gestion du clavier
 - (BOOL)textFieldShouldReturn:(UITextField*)textField {
     [textField resignFirstResponder];
@@ -67,5 +64,6 @@
 -(IBAction)AnnulerAjoutMembre:(UIStoryboardSegue*) segue{
     
 }
+
 
 @end

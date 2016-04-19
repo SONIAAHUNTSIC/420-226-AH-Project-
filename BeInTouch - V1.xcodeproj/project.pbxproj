@@ -33,18 +33,7 @@
 		B68544B21CC01DE8003F4BBE /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B01CC01DE8003F4BBE /* InfosViewController.m */; };
 		B68544BD1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */; };
 		B68544BE1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */; };
-		B6917C471CBE83B200E2499C /* AjoutUtilisateurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */; };
 		B6917C4B1CBE83C000E2499C /* EnregistrementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */; };
-		B6917C4F1CBE842200E2499C /* ParticipantTchatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4E1CBE842200E2499C /* ParticipantTchatViewController.m */; };
-		B6917C501CBE842200E2499C /* ParticipantTchatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4E1CBE842200E2499C /* ParticipantTchatViewController.m */; };
-		B6917C531CBE84A000E2499C /* DetailTchatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C521CBE84A000E2499C /* DetailTchatRoomViewController.m */; };
-		B6917C541CBE84A000E2499C /* DetailTchatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C521CBE84A000E2499C /* DetailTchatRoomViewController.m */; };
-		B6917C571CBE84B200E2499C /* NouveauTchatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C561CBE84B200E2499C /* NouveauTchatRoomViewController.m */; };
-		B6917C581CBE84B200E2499C /* NouveauTchatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C561CBE84B200E2499C /* NouveauTchatRoomViewController.m */; };
-		B6917C5B1CBE84C200E2499C /* TchatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C5A1CBE84C200E2499C /* TchatRoomTableViewController.m */; };
-		B6917C5C1CBE84C200E2499C /* TchatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C5A1CBE84C200E2499C /* TchatRoomTableViewController.m */; };
-		B6917C5F1CBE875800E2499C /* UtilisateurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C5E1CBE875800E2499C /* UtilisateurViewController.m */; };
-		B6917C601CBE875800E2499C /* UtilisateurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C5E1CBE875800E2499C /* UtilisateurViewController.m */; };
 		B6A993E71CC40627005CE052 /* icon_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A993E61CC40627005CE052 /* icon_photo.png */; };
 		B6A993E81CC40627005CE052 /* icon_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A993E61CC40627005CE052 /* icon_photo.png */; };
 		B6D017081CC08851003BC41E /* VoirAmiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D017071CC08851003BC41E /* VoirAmiViewController.m */; };
@@ -53,12 +42,10 @@
 		B6D0170D1CC089E0003BC41E /* AmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0170B1CC089E0003BC41E /* AmisViewController.m */; };
 		E3213AD41CB9C8250016A3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD31CB9C8250016A3B4 /* main.m */; };
 		E3213AD71CB9C8250016A3B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD61CB9C8250016A3B4 /* AppDelegate.m */; };
-		E3213ADA1CB9C8250016A3B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD91CB9C8250016A3B4 /* ViewController.m */; };
 		E3213ADD1CB9C8250016A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
 		E3213ADF1CB9C8250016A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */; };
 		E3213AE21CB9C8250016A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */; };
 		E3213AEB1CB9C95B0016A3B4 /* UtilisateurFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */; };
-		E3213AF81CBBA7430016A3B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD91CB9C8250016A3B4 /* ViewController.m */; };
 		E3213AFB1CBBA7430016A3B4 /* UtilisateurFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */; };
 		E3213AFC1CBBA7430016A3B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD61CB9C8250016A3B4 /* AppDelegate.m */; };
 		E3213AFD1CBBA7430016A3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD31CB9C8250016A3B4 /* main.m */; };
@@ -68,6 +55,18 @@
 		E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
 		E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
 		E39B71491CC1500600B15382 /* EnregistrementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */; };
+		E3EFC02F1CC6559600C41932 /* DetailChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC02E1CC6559600C41932 /* DetailChatRoomViewController.m */; };
+		E3EFC0301CC6559600C41932 /* DetailChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC02E1CC6559600C41932 /* DetailChatRoomViewController.m */; };
+		E3EFC0331CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0321CC669F700C41932 /* NouveauChatRoomViewController.m */; };
+		E3EFC0341CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0321CC669F700C41932 /* NouveauChatRoomViewController.m */; };
+		E3EFC0371CC66C9500C41932 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0361CC66C9500C41932 /* AccueilViewController.m */; };
+		E3EFC0381CC66C9500C41932 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0361CC66C9500C41932 /* AccueilViewController.m */; };
+		E3EFC03F1CC67DCE00C41932 /* AjoutMembreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC03E1CC67DCE00C41932 /* AjoutMembreViewController.m */; };
+		E3EFC0401CC67DCE00C41932 /* AjoutMembreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC03E1CC67DCE00C41932 /* AjoutMembreViewController.m */; };
+		E3EFC0431CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */; };
+		E3EFC0441CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */; };
+		E3EFC0471CC6842300C41932 /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */; };
+		E3EFC0481CC6842300C41932 /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,20 +96,8 @@
 		B68544B01CC01DE8003F4BBE /* InfosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfosViewController.m; sourceTree = "<group>"; };
 		B68544BB1CC029AC003F4BBE /* AjouterAmisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjouterAmisViewController.h; sourceTree = "<group>"; };
 		B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjouterAmisViewController.m; sourceTree = "<group>"; };
-		B6917C451CBE83B200E2499C /* AjoutUtilisateurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjoutUtilisateurViewController.h; sourceTree = "<group>"; };
-		B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjoutUtilisateurViewController.m; sourceTree = "<group>"; };
 		B6917C491CBE83C000E2499C /* EnregistrementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnregistrementViewController.h; sourceTree = "<group>"; };
 		B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnregistrementViewController.m; sourceTree = "<group>"; };
-		B6917C4D1CBE842200E2499C /* ParticipantTchatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantTchatViewController.h; sourceTree = "<group>"; };
-		B6917C4E1CBE842200E2499C /* ParticipantTchatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantTchatViewController.m; sourceTree = "<group>"; };
-		B6917C511CBE84A000E2499C /* DetailTchatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTchatRoomViewController.h; sourceTree = "<group>"; };
-		B6917C521CBE84A000E2499C /* DetailTchatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTchatRoomViewController.m; sourceTree = "<group>"; };
-		B6917C551CBE84B200E2499C /* NouveauTchatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouveauTchatRoomViewController.h; sourceTree = "<group>"; };
-		B6917C561CBE84B200E2499C /* NouveauTchatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouveauTchatRoomViewController.m; sourceTree = "<group>"; };
-		B6917C591CBE84C200E2499C /* TchatRoomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TchatRoomTableViewController.h; sourceTree = "<group>"; };
-		B6917C5A1CBE84C200E2499C /* TchatRoomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TchatRoomTableViewController.m; sourceTree = "<group>"; };
-		B6917C5D1CBE875800E2499C /* UtilisateurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilisateurViewController.h; sourceTree = "<group>"; };
-		B6917C5E1CBE875800E2499C /* UtilisateurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurViewController.m; sourceTree = "<group>"; };
 		B6A993E61CC40627005CE052 /* icon_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_photo.png; sourceTree = "<group>"; };
 		B6D017061CC08851003BC41E /* VoirAmiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoirAmiViewController.h; sourceTree = "<group>"; };
 		B6D017071CC08851003BC41E /* VoirAmiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoirAmiViewController.m; sourceTree = "<group>"; };
@@ -120,8 +107,6 @@
 		E3213AD31CB9C8250016A3B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3213AD51CB9C8250016A3B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3213AD61CB9C8250016A3B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E3213AD81CB9C8250016A3B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E3213AD91CB9C8250016A3B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E3213ADC1CB9C8250016A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3213AE11CB9C8250016A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,6 +120,18 @@
 		E39B71411CBD502900B15382 /* BeInTouch-V1-hosting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeInTouch-V1-hosting-Prefix.pch"; sourceTree = "<group>"; };
 		E39B71421CBD502900B15382 /* UtilisateurDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurDTO.m; sourceTree = "<group>"; };
 		E39B71441CBD503400B15382 /* UtilisateurDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilisateurDTO.h; sourceTree = "<group>"; };
+		E3EFC02D1CC6559600C41932 /* DetailChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailChatRoomViewController.h; sourceTree = "<group>"; };
+		E3EFC02E1CC6559600C41932 /* DetailChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailChatRoomViewController.m; sourceTree = "<group>"; };
+		E3EFC0311CC669F700C41932 /* NouveauChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouveauChatRoomViewController.h; sourceTree = "<group>"; };
+		E3EFC0321CC669F700C41932 /* NouveauChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouveauChatRoomViewController.m; sourceTree = "<group>"; };
+		E3EFC0351CC66C9500C41932 /* AccueilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccueilViewController.h; sourceTree = "<group>"; };
+		E3EFC0361CC66C9500C41932 /* AccueilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccueilViewController.m; sourceTree = "<group>"; };
+		E3EFC03D1CC67DCE00C41932 /* AjoutMembreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjoutMembreViewController.h; sourceTree = "<group>"; };
+		E3EFC03E1CC67DCE00C41932 /* AjoutMembreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjoutMembreViewController.m; sourceTree = "<group>"; };
+		E3EFC0411CC67EFA00C41932 /* ListeMembreChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListeMembreChatRoomViewController.h; sourceTree = "<group>"; };
+		E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeMembreChatRoomViewController.m; sourceTree = "<group>"; };
+		E3EFC0451CC6842300C41932 /* ChatRoomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomTableViewController.h; sourceTree = "<group>"; };
+		E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,32 +230,30 @@
 		E39B71471CBFA2BB00B15382 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B6917C451CBE83B200E2499C /* AjoutUtilisateurViewController.h */,
-				B6917C461CBE83B200E2499C /* AjoutUtilisateurViewController.m */,
-				B68544AB1CC01D65003F4BBE /* BienvenuViewController.h */,
-				B68544AC1CC01D65003F4BBE /* BienvenuViewController.m */,
-				B6917C511CBE84A000E2499C /* DetailTchatRoomViewController.h */,
-				B6917C521CBE84A000E2499C /* DetailTchatRoomViewController.m */,
-				B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */,
-				B6917C491CBE83C000E2499C /* EnregistrementViewController.h */,
-				B6917C5D1CBE875800E2499C /* UtilisateurViewController.h */,
-				B6917C5E1CBE875800E2499C /* UtilisateurViewController.m */,
-				E3213AD81CB9C8250016A3B4 /* ViewController.h */,
-				E3213AD91CB9C8250016A3B4 /* ViewController.m */,
-				B6917C4D1CBE842200E2499C /* ParticipantTchatViewController.h */,
-				B6917C4E1CBE842200E2499C /* ParticipantTchatViewController.m */,
-				B6917C551CBE84B200E2499C /* NouveauTchatRoomViewController.h */,
-				B6917C561CBE84B200E2499C /* NouveauTchatRoomViewController.m */,
-				B6917C591CBE84C200E2499C /* TchatRoomTableViewController.h */,
-				B6917C5A1CBE84C200E2499C /* TchatRoomTableViewController.m */,
-				B68544AF1CC01DE8003F4BBE /* InfosViewController.h */,
-				B68544B01CC01DE8003F4BBE /* InfosViewController.m */,
+				E3EFC0351CC66C9500C41932 /* AccueilViewController.h */,
+				E3EFC0361CC66C9500C41932 /* AccueilViewController.m */,
+				B6D0170B1CC089E0003BC41E /* AmisViewController.m */,
+				B6D0170A1CC089E0003BC41E /* AmisViewController.h */,
 				B68544BB1CC029AC003F4BBE /* AjouterAmisViewController.h */,
 				B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */,
+				E3EFC03D1CC67DCE00C41932 /* AjoutMembreViewController.h */,
+				E3EFC03E1CC67DCE00C41932 /* AjoutMembreViewController.m */,
+				B68544AB1CC01D65003F4BBE /* BienvenuViewController.h */,
+				B68544AC1CC01D65003F4BBE /* BienvenuViewController.m */,
+				E3EFC0451CC6842300C41932 /* ChatRoomTableViewController.h */,
+				E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */,
+				E3EFC02D1CC6559600C41932 /* DetailChatRoomViewController.h */,
+				E3EFC02E1CC6559600C41932 /* DetailChatRoomViewController.m */,
+				B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */,
+				B6917C491CBE83C000E2499C /* EnregistrementViewController.h */,
+				B68544AF1CC01DE8003F4BBE /* InfosViewController.h */,
+				B68544B01CC01DE8003F4BBE /* InfosViewController.m */,
+				E3EFC0411CC67EFA00C41932 /* ListeMembreChatRoomViewController.h */,
+				E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */,
+				E3EFC0311CC669F700C41932 /* NouveauChatRoomViewController.h */,
+				E3EFC0321CC669F700C41932 /* NouveauChatRoomViewController.m */,
 				B6D017061CC08851003BC41E /* VoirAmiViewController.h */,
 				B6D017071CC08851003BC41E /* VoirAmiViewController.m */,
-				B6D0170A1CC089E0003BC41E /* AmisViewController.h */,
-				B6D0170B1CC089E0003BC41E /* AmisViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -386,31 +381,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6917C471CBE83B200E2499C /* AjoutUtilisateurViewController.m in Sources */,
-				E3213ADA1CB9C8250016A3B4 /* ViewController.m in Sources */,
 				6E90C5CC1CC0E6570026B92D /* ContactFacade.m in Sources */,
 				B6D017081CC08851003BC41E /* VoirAmiViewController.m in Sources */,
 				6EBB36261CBEC84700784B45 /* MessageDTO.m in Sources */,
+				E3EFC0371CC66C9500C41932 /* AccueilViewController.m in Sources */,
 				6EBB36281CBEC84700784B45 /* MessageFacade.m in Sources */,
 				B68544B11CC01DE8003F4BBE /* InfosViewController.m in Sources */,
+				E3EFC0331CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */,
+				E3EFC0471CC6842300C41932 /* ChatRoomTableViewController.m in Sources */,
 				6E90C5CA1CC0E6570026B92D /* ContactDTO.m in Sources */,
-				B6917C5B1CBE84C200E2499C /* TchatRoomTableViewController.m in Sources */,
 				6E90C5C21CC0E6570026B92D /* ContactChatRoomDTO.m in Sources */,
 				E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */,
 				6E90C5BE1CC0E6570026B92D /* ChatRoomDTO.m in Sources */,
 				E3213AEB1CB9C95B0016A3B4 /* UtilisateurFacade.m in Sources */,
-				B6917C4F1CBE842200E2499C /* ParticipantTchatViewController.m in Sources */,
 				6E90C5C01CC0E6570026B92D /* ChatRoomFacade.m in Sources */,
 				6E90C5C81CC0E6570026B92D /* ContactChatRoomMessageFacade.m in Sources */,
 				B68544BD1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */,
 				E3213AD71CB9C8250016A3B4 /* AppDelegate.m in Sources */,
-				B6917C571CBE84B200E2499C /* NouveauTchatRoomViewController.m in Sources */,
+				E3EFC03F1CC67DCE00C41932 /* AjoutMembreViewController.m in Sources */,
+				E3EFC02F1CC6559600C41932 /* DetailChatRoomViewController.m in Sources */,
 				B68544AD1CC01D65003F4BBE /* BienvenuViewController.m in Sources */,
 				E3213AD41CB9C8250016A3B4 /* main.m in Sources */,
+				E3EFC0431CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */,
 				B6D0170C1CC089E0003BC41E /* AmisViewController.m in Sources */,
 				6E90C5C61CC0E6570026B92D /* ContactChatRoomMessageDTO.m in Sources */,
-				B6917C531CBE84A000E2499C /* DetailTchatRoomViewController.m in Sources */,
-				B6917C5F1CBE875800E2499C /* UtilisateurViewController.m in Sources */,
 				6E90C5C41CC0E6570026B92D /* ContactChatRoomFacade.m in Sources */,
 				B6917C4B1CBE83C000E2499C /* EnregistrementViewController.m in Sources */,
 			);
@@ -422,28 +416,28 @@
 			files = (
 				6EBB36271CBEC84700784B45 /* MessageDTO.m in Sources */,
 				B68544B21CC01DE8003F4BBE /* InfosViewController.m in Sources */,
-				E3213AF81CBBA7430016A3B4 /* ViewController.m in Sources */,
+				E3EFC0381CC66C9500C41932 /* AccueilViewController.m in Sources */,
 				6E90C5C91CC0E6570026B92D /* ContactChatRoomMessageFacade.m in Sources */,
 				E39B71491CC1500600B15382 /* EnregistrementViewController.m in Sources */,
 				6E90C5C31CC0E6570026B92D /* ContactChatRoomDTO.m in Sources */,
 				6E90C5CD1CC0E6570026B92D /* ContactFacade.m in Sources */,
+				E3EFC0481CC6842300C41932 /* ChatRoomTableViewController.m in Sources */,
 				B68544BE1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */,
 				E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */,
 				E3213AFB1CBBA7430016A3B4 /* UtilisateurFacade.m in Sources */,
 				6E90C5C51CC0E6570026B92D /* ContactChatRoomFacade.m in Sources */,
-				B6917C581CBE84B200E2499C /* NouveauTchatRoomViewController.m in Sources */,
 				6E90C5CB1CC0E6570026B92D /* ContactDTO.m in Sources */,
 				B68544AE1CC01D65003F4BBE /* BienvenuViewController.m in Sources */,
+				E3EFC0401CC67DCE00C41932 /* AjoutMembreViewController.m in Sources */,
 				6E90C5C11CC0E6570026B92D /* ChatRoomFacade.m in Sources */,
 				B6D017091CC08851003BC41E /* VoirAmiViewController.m in Sources */,
+				E3EFC0301CC6559600C41932 /* DetailChatRoomViewController.m in Sources */,
 				E3213AFC1CBBA7430016A3B4 /* AppDelegate.m in Sources */,
 				6E90C5C71CC0E6570026B92D /* ContactChatRoomMessageDTO.m in Sources */,
 				6E90C5BF1CC0E6570026B92D /* ChatRoomDTO.m in Sources */,
+				E3EFC0441CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */,
 				E3213AFD1CBBA7430016A3B4 /* main.m in Sources */,
-				B6917C5C1CBE84C200E2499C /* TchatRoomTableViewController.m in Sources */,
-				B6917C501CBE842200E2499C /* ParticipantTchatViewController.m in Sources */,
-				B6917C541CBE84A000E2499C /* DetailTchatRoomViewController.m in Sources */,
-				B6917C601CBE875800E2499C /* UtilisateurViewController.m in Sources */,
+				E3EFC0341CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */,
 				6EBB36291CBEC84700784B45 /* MessageFacade.m in Sources */,
 				B6D0170D1CC089E0003BC41E /* AmisViewController.m in Sources */,
 			);

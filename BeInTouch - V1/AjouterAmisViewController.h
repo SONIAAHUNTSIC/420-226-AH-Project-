@@ -10,6 +10,7 @@
 
 @interface AjouterAmisViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *txtId;
+@property (nonatomic) NSString *idUtilisateur;
 - (IBAction)btnAjouter:(id)sender;
 
 @end

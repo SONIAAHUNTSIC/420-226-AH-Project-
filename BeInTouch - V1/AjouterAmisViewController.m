@@ -16,6 +16,8 @@
 
 #pragma mark - Propriétés
 @synthesize txtId;
+@synthesize idUtilisateur;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

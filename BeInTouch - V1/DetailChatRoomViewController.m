@@ -1,18 +1,18 @@
 //
-//  DetailTchatRoomViewController.m
-//  BeInTouch
+//  DetailChatRoomViewController.m
+//  BeInTouch - V1
 //
-//  Created by Aliou GUEYE on 12.04.16.
-//  Copyright (c) 2016 Luno&&Co.inc. All rights reserved.
+//  Created by SONIA IBARRA FLORES on 2016-04-19.
+//  Copyright © 2016 collegeahuntsic. All rights reserved.
 //
 
-#import "DetailTchatRoomViewController.h"
+#import "DetailChatRoomViewController.h"
 
-@interface DetailTchatRoomViewController ()
+@interface DetailChatRoomViewController ()
 
 @end
 
-@implementation DetailTchatRoomViewController
+@implementation DetailChatRoomViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,14 +23,12 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -39,8 +37,7 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
@@ -52,5 +49,6 @@
 -(IBAction)AnnulerModifierTchat:(UIStoryboardSegue*) segue{
     
 }
+
 
 @end
