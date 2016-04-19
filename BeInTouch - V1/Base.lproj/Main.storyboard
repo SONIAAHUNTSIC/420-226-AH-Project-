@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zGa-LR-SuZ">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Accueil-->
+        <!--Accueil View Controller - Accueil-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="AccueilViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -467,10 +467,10 @@
             </objects>
             <point key="canvasLocation" x="636" y="-584"/>
         </scene>
-        <!--Utilisateur View Controller-->
+        <!--Voir Ami View Controller-->
         <scene sceneID="cd7-b4-L43">
             <objects>
-                <viewController id="f51-Lw-nyp" customClass="UtilisateurViewController" sceneMemberID="viewController">
+                <viewController id="f51-Lw-nyp" customClass="VoirAmiViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NzS-5X-7Xd"/>
                         <viewControllerLayoutGuide type="bottom" id="FjM-uU-oke"/>
@@ -530,10 +530,10 @@
             </objects>
             <point key="canvasLocation" x="636" y="77"/>
         </scene>
-        <!--Tchat Room Table View Controller - ChatRooms-->
+        <!--Chat Room Table View Controller - ChatRooms-->
         <scene sceneID="gOG-eL-0uB">
             <objects>
-                <tableViewController id="zfZ-A8-i0p" customClass="TchatRoomTableViewController" sceneMemberID="viewController">
+                <tableViewController id="zfZ-A8-i0p" customClass="ChatRoomTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L2n-QT-P6M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -556,7 +556,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="MYT-A3-dSu" kind="push" identifier="sujetTchat" trigger="accessoryAction" id="Ut2-c1-cL2"/>
+                                    <segue destination="MYT-A3-dSu" kind="push" identifier="sujetChat" id="sGS-wG-yfm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -575,7 +575,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Ug-yE-OXo">
                             <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="Zuv-Rt-5BM" kind="push" identifier="nouveauTchatRoom" id="kYx-Xl-g48"/>
+                                <segue destination="Zuv-Rt-5BM" kind="push" identifier="nouveauChatRoom" id="GZK-RL-jLc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -585,10 +585,10 @@
             </objects>
             <point key="canvasLocation" x="1030" y="866"/>
         </scene>
-        <!--Nouveau Tchat Room View Controller - Nouveau ChatRoom-->
+        <!--Nouveau Chat Room View Controller - Nouveau ChatRoom-->
         <scene sceneID="tuF-s8-duJ">
             <objects>
-                <viewController id="Zuv-Rt-5BM" customClass="NouveauTchatRoomViewController" sceneMemberID="viewController">
+                <viewController id="Zuv-Rt-5BM" customClass="NouveauChatRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jh3-v1-SVv"/>
                         <viewControllerLayoutGuide type="bottom" id="7yQ-kk-e4D"/>
@@ -639,22 +639,22 @@
                         <barButtonItem key="rightBarButtonItem" title=">>" id="mfJ-CH-JaM">
                             <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="WpZ-BB-oao" kind="modal" id="weN-pF-a0P"/>
+                                <segue destination="WpZ-BB-oao" kind="modal" identifier="ajoutMembre" id="Jsx-5c-MEC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="txtSujetChat" destination="Ig1-w8-mGs" id="ruh-Dy-tJK"/>
+                        <outlet property="textSujetChat" destination="Ig1-w8-mGs" id="dvV-Gy-4FI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAU-iW-weW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1534" y="598"/>
         </scene>
-        <!--Detail Tchat Room View Controller - Sujet du Chat-->
+        <!--Detail Chat Room View Controller - Sujet du Chat-->
         <scene sceneID="L5Y-Pd-ZvZ">
             <objects>
-                <viewController id="MYT-A3-dSu" customClass="DetailTchatRoomViewController" sceneMemberID="viewController">
+                <viewController id="MYT-A3-dSu" customClass="DetailChatRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uVW-lm-XMO"/>
                         <viewControllerLayoutGuide type="bottom" id="LwE-i9-iOS"/>
@@ -683,7 +683,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="hnt-5L-0MU">
                             <connections>
-                                <segue destination="TrU-yY-Y2i" kind="modal" id="uVs-TM-Vt2"/>
+                                <segue destination="TrU-yY-Y2i" kind="modal" identifier="listeMembreChatRoom" id="uVs-TM-Vt2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -692,10 +692,10 @@
             </objects>
             <point key="canvasLocation" x="1546" y="1248"/>
         </scene>
-        <!--Participant Tchat View Controller - Liste Participants-->
+        <!--Liste Membre Chat Room View Controller-->
         <scene sceneID="suh-f2-S5N">
             <objects>
-                <viewController id="TrU-yY-Y2i" customClass="ParticipantTchatViewController" sceneMemberID="viewController">
+                <viewController id="TrU-yY-Y2i" customClass="ListeMembreChatRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HZn-DL-ZtS"/>
                         <viewControllerLayoutGuide type="bottom" id="yfb-1E-VqS"/>
@@ -730,20 +730,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Liste Participants" id="Z0E-wr-Or4">
-                        <barButtonItem key="backBarButtonItem" title="Annuler" id="qrH-bj-HeO"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bSC-hg-vxi"/>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzC-Gi-j3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NtX-nj-obc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1962" y="1248"/>
         </scene>
-        <!--Ajout Utilisateur View Controller - Ajouter Tchaters-->
+        <!--Ajout Membre View Controller-->
         <scene sceneID="aao-7t-6Nh">
             <objects>
-                <viewController id="WpZ-BB-oao" customClass="AjoutUtilisateurViewController" sceneMemberID="viewController">
+                <viewController id="WpZ-BB-oao" customClass="AjoutMembreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z2W-N3-t0l"/>
                         <viewControllerLayoutGuide type="bottom" id="2HB-sU-BOZ"/>
@@ -790,10 +786,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Ajouter Tchaters" id="iXG-tc-5QQ">
-                        <barButtonItem key="backBarButtonItem" title="Nouv." id="T2G-zM-g6c"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="cUI-Xj-IUK"/>
-                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybk-z1-u70" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -842,7 +834,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="TGD-Fi-nDU"/>
+        <segue reference="cQk-oq-jfn"/>
         <segue reference="wUx-5e-bUa"/>
     </inferredMetricsTieBreakers>
 </document>
