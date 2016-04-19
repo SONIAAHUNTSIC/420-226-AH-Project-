@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BienvenuViewController.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [[[self navigationController] navigationBar] setTintColor:[[[self navigationItem] rightBarButtonItem] tintColor]];
+    
+    [[self textIdConnecter] setDelegate:self];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,8 +32,19 @@
 }
 
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
     
+    NSLog(@"prepare for Segue");
+    
+    if([segue.identifier isEqualToString:@"segueConnecter"]){
+        
+        
+        BienvenuViewController* bienvenuViewController = [segue destinationViewController];
+        
+        bienvenuViewController.idUtilisateur =  _textIdConnecter.text;
+        NSLog(@"Prepare for Segue : %@ = id\n",_textIdConnecter.text);
+        
+    }
 }
 
 -(IBAction)returnFromEnregistrement:(UIStoryboardSegue*) segue{
@@ -37,5 +53,7 @@
 
 
 - (IBAction)btnConnecter:(id)sender {
+    
+    
 }
 @end
