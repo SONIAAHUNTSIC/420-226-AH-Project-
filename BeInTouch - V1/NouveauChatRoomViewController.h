@@ -10,7 +10,7 @@
 
 @interface NouveauChatRoomViewController : UIViewController <UITextFieldDelegate>
 
-@property (strong, nonatomic) IBOutlet UITextField *txtSujetChat;
+@property (strong, nonatomic) IBOutlet UITextField *textSujetChat;
 @property (nonatomic) NSString *idUtilisateur;
 
 

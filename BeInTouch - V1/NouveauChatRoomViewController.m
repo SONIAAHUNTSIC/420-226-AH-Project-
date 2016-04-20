@@ -14,7 +14,7 @@
 
 @implementation NouveauChatRoomViewController
 #pragma mark - Propriétés
-@synthesize txtSujetChat;
+@synthesize textSujetChat;
 @synthesize idUtilisateur;
 
 
@@ -34,7 +34,7 @@
 
     [[[self navigationController] navigationBar] setTintColor:[[[self navigationItem] rightBarButtonItem] tintColor]];
     
-    [[self txtSujetChat] setDelegate:self];
+    [[self textSujetChat] setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {

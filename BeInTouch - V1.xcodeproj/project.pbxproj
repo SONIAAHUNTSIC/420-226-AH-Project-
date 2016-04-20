@@ -38,8 +38,6 @@
 		B6A993E81CC40627005CE052 /* icon_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A993E61CC40627005CE052 /* icon_photo.png */; };
 		B6D017081CC08851003BC41E /* VoirAmiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D017071CC08851003BC41E /* VoirAmiViewController.m */; };
 		B6D017091CC08851003BC41E /* VoirAmiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D017071CC08851003BC41E /* VoirAmiViewController.m */; };
-		B6D0170C1CC089E0003BC41E /* AmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0170B1CC089E0003BC41E /* AmisViewController.m */; };
-		B6D0170D1CC089E0003BC41E /* AmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0170B1CC089E0003BC41E /* AmisViewController.m */; };
 		E3213AD41CB9C8250016A3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD31CB9C8250016A3B4 /* main.m */; };
 		E3213AD71CB9C8250016A3B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD61CB9C8250016A3B4 /* AppDelegate.m */; };
 		E3213ADD1CB9C8250016A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
@@ -101,8 +99,6 @@
 		B6A993E61CC40627005CE052 /* icon_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_photo.png; sourceTree = "<group>"; };
 		B6D017061CC08851003BC41E /* VoirAmiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoirAmiViewController.h; sourceTree = "<group>"; };
 		B6D017071CC08851003BC41E /* VoirAmiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoirAmiViewController.m; sourceTree = "<group>"; };
-		B6D0170A1CC089E0003BC41E /* AmisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmisViewController.h; sourceTree = "<group>"; };
-		B6D0170B1CC089E0003BC41E /* AmisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmisViewController.m; sourceTree = "<group>"; };
 		E3213ACF1CB9C8250016A3B4 /* BeInTouch-V1-localhost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeInTouch-V1-localhost.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3213AD31CB9C8250016A3B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3213AD51CB9C8250016A3B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -232,8 +228,6 @@
 			children = (
 				E3EFC0351CC66C9500C41932 /* AccueilViewController.h */,
 				E3EFC0361CC66C9500C41932 /* AccueilViewController.m */,
-				B6D0170B1CC089E0003BC41E /* AmisViewController.m */,
-				B6D0170A1CC089E0003BC41E /* AmisViewController.h */,
 				B68544BB1CC029AC003F4BBE /* AjouterAmisViewController.h */,
 				B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */,
 				E3EFC03D1CC67DCE00C41932 /* AjoutMembreViewController.h */,
@@ -403,7 +397,6 @@
 				B68544AD1CC01D65003F4BBE /* BienvenuViewController.m in Sources */,
 				E3213AD41CB9C8250016A3B4 /* main.m in Sources */,
 				E3EFC0431CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */,
-				B6D0170C1CC089E0003BC41E /* AmisViewController.m in Sources */,
 				6E90C5C61CC0E6570026B92D /* ContactChatRoomMessageDTO.m in Sources */,
 				6E90C5C41CC0E6570026B92D /* ContactChatRoomFacade.m in Sources */,
 				B6917C4B1CBE83C000E2499C /* EnregistrementViewController.m in Sources */,
@@ -439,7 +432,6 @@
 				E3213AFD1CBBA7430016A3B4 /* main.m in Sources */,
 				E3EFC0341CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */,
 				6EBB36291CBEC84700784B45 /* MessageFacade.m in Sources */,
-				B6D0170D1CC089E0003BC41E /* AmisViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
