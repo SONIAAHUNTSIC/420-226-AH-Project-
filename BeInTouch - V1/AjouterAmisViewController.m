@@ -7,6 +7,7 @@
 //
 
 #import "AjouterAmisViewController.h"
+#import "UtilisateurFacade.h"
 
 @interface AjouterAmisViewController ()
 
@@ -60,5 +61,10 @@
 */
 
 - (IBAction)btnAjouter:(id)sender {
+    
+   // UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:[self idUtilisateur]];
+    //
+    
+    
 }
 @end
