@@ -205,36 +205,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
     
-    NSLog(@"prepare for Segue");
-    
-    if([segue.identifier isEqualToString:@"segueEnregistrement"]){
-        
-        
-        BienvenuViewController* bienvenuViewController = [segue destinationViewController];
-        
-        bienvenuViewController.idUtilisateur =  idEnregistre;
-        NSLog(@"Prepare for Segue : %@ = id\n",idEnregistre);
-        
-        
-    }
-}
-
-- (IBAction)btnEnregistrer:(id)sender {
-    
-    
-    
     UtilisateurDTO* utilisateurDTO = [[UtilisateurDTO alloc]initAvecIdUtilisateur:idUtilisateur
-                                    prenom: textPrenom.text
-                                    nom: textNom.text
-                                    sexe:textSexe.text
-                                    dateCreation: @""
-                                    dateNaissance:textDateNaissance.text
-                                    photo:@"UnPhoto"
-                                    courriel:textCourriel.text
-                                    etTelephone:textTelephone.text];
+                                                                           prenom: textPrenom.text
+                                                                              nom: textNom.text
+                                                                             sexe:textSexe.text
+                                                                     dateCreation: @""
+                                                                    dateNaissance:textDateNaissance.text
+                                                                            photo:@"UnPhoto"
+                                                                         courriel:textCourriel.text
+                                                                      etTelephone:textTelephone.text];
     
     
-        
+    
     
     
     if([[utilisateurDTO prenom] length] != 0
@@ -282,8 +264,20 @@
         // [self chargerDonnees];
     }
 
+    NSLog(@"prepare for Segue");
     
+    if([segue.identifier isEqualToString:@"segueEnregistrement"]){
+        
+        
+        BienvenuViewController* bienvenuViewController = [segue destinationViewController];
+        
+        bienvenuViewController.idUtilisateur =  idEnregistre;
+        NSLog(@"Prepare for Segue Enregistre: %@ = id\n",idEnregistre);
+        
+        
+    }
 }
+
 - (IBAction)PrendreUnePhoto:(id)sender {
 }
 

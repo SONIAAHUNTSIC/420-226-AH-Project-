@@ -33,7 +33,6 @@
 
 @property (nonatomic) NSString *idUtilisateur;
 @property (nonatomic) NSString *idEnregistre;
-- (IBAction)btnEnregistrer:(id)sender;
 
 
 
