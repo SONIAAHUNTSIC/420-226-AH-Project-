@@ -14,7 +14,7 @@
 + (ContactFacade*) contactFacade;
 
 -(int) createContact:(ContactDTO*) contactDTO;
--(ContactDTO*) readContactAvecIdUtilisateur:(NSString*) idUtilisateur etIdUtilisateurContact:(NSString*) idUtilisateurContact;
+-(ContactDTO*) readContactAvecIdUtilisateur:(NSString*) idUtilisateur;
 -(int) updateContact:(ContactDTO*) contactDTO;
 -(int) deleteContact:(ContactDTO*) contactDTO;
 -(NSMutableArray*)getAllContacts;

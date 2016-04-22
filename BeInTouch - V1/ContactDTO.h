@@ -11,9 +11,9 @@
 
 @interface ContactDTO : NSObject
 
-@property (strong, nonatomic) UtilisateurDTO* utilisateur;
+@property (strong, nonatomic) UtilisateurDTO* utilisateurActif;
 @property (strong, nonatomic) UtilisateurDTO* utilisateurContact;
 
--(instancetype) initAvecUtilisateur: (UtilisateurDTO*) unUtilisateur etUtilisateurContact:(UtilisateurDTO*)unUtilisateurContact;
+-(instancetype) initAvecUtilisateurActif: (UtilisateurDTO*)unUtilisateurActif etUtilisateurContact:(UtilisateurDTO*)unUtilisateurContact;
 
 @end

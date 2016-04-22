@@ -128,6 +128,9 @@
 		E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeMembreChatRoomViewController.m; sourceTree = "<group>"; };
 		E3EFC0451CC6842300C41932 /* ChatRoomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomTableViewController.h; sourceTree = "<group>"; };
 		E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomTableViewController.m; sourceTree = "<group>"; };
+		E3EFC04A1CCA198800C41932 /* controller.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = controller.php; path = ../../../../../Applications/MAMP/htdocs/BeInTouch/controller.php; sourceTree = "<group>"; };
+		E3EFC04B1CCA198800C41932 /* contact.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = contact.php; path = ../../../../../Applications/MAMP/htdocs/BeInTouch/contact.php; sourceTree = "<group>"; };
+		E3EFC04C1CCA198800C41932 /* utilisateur.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = utilisateur.php; path = ../../../../../Applications/MAMP/htdocs/BeInTouch/utilisateur.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 		E3213AD11CB9C8250016A3B4 /* BeInTouch - V1 */ = {
 			isa = PBXGroup;
 			children = (
+				E3EFC0491CCA0CB300C41932 /* PHP */,
 				E39B71471CBFA2BB00B15382 /* ViewController */,
 				E39B71481CBFA70E00B15382 /* Facade */,
 				E39B71461CBFA1EA00B15382 /* DTO */,
@@ -269,6 +273,16 @@
 				E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */,
 			);
 			name = Facade;
+			sourceTree = "<group>";
+		};
+		E3EFC0491CCA0CB300C41932 /* PHP */ = {
+			isa = PBXGroup;
+			children = (
+				E3EFC04A1CCA198800C41932 /* controller.php */,
+				E3EFC04B1CCA198800C41932 /* contact.php */,
+				E3EFC04C1CCA198800C41932 /* utilisateur.php */,
+			);
+			name = PHP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

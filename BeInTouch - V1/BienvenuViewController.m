@@ -62,7 +62,7 @@
         
         InfosViewController* infosViewController = [segue destinationViewController];
         [infosViewController setIdUtilisateur:[self idUtilisateur]];
-        NSLog(@"Requete , %@",idUtilisateur);
+        NSLog(@"Requete segue Info, %@",idUtilisateur);
     }
     else if ([segue.identifier isEqualToString:@"segueAjouter1"]){
 

@@ -260,6 +260,7 @@
             idEnregistre = [NSString stringWithFormat:@"%d", intEnregistre];
             
             
+            
             NSLog(@"Requete de %@ , %d enregistrement(s) %@\n\n",typeRequete,intEnregistre,typeRequeteAction);
             
         }

@@ -28,19 +28,21 @@ static ContactFacade* contactFacade = nil;
     return contactFacade;
 }
 
-- (int)createContact:(ContactDTO *)contactDTO
+- (int)createContact:(ContactDTO*)contactDTO
 {
     NSLog(@"test ContactFacade");
-    UtilisateurDTO* utilisateurActif =[[UtilisateurDTO alloc] init];
-    utilisateurActif =[contactDTO utilisateur];
-    UtilisateurDTO* utilisateurContactActif =[[UtilisateurDTO alloc] init];
-    utilisateurContactActif =[contactDTO utilisateurContact];
+    UtilisateurDTO* utilisateur =[[UtilisateurDTO alloc] init];
+    utilisateur = [contactDTO utilisateurActif];
+    UtilisateurDTO* utilisateurContact  = [[UtilisateurDTO alloc] init];
+    utilisateurContact = [contactDTO utilisateurContact];
+    
+
     
     int nombreEnregistrements = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createContact&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_utilisateur_contact=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurActif idUtilisateur],[utilisateurContactActif idUtilisateur]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createContact&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_utilisateur_contact=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateur idUtilisateur],[utilisateurContact idUtilisateur]];
     
     NSData* donnees = nil;
     
@@ -67,14 +69,14 @@ static ContactFacade* contactFacade = nil;
     return nombreEnregistrements;
 }
 
--(ContactDTO *)readContactAvecIdUtilisateur:(NSString *)idUtilisateur etIdUtilisateurContact:(NSString *)idUtilisateurContact
+-(ContactDTO *)readContactAvecIdUtilisateur:(NSString *)idUtilisateur
 {
     ContactDTO* contactDTO = nil;
     
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readContact&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_utilisateur_contact=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idUtilisateur,idUtilisateurContact];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readContacts&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idUtilisateur];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -112,7 +114,8 @@ static ContactFacade* contactFacade = nil;
         UtilisateurDTO* utilisateurContact =[[UtilisateurDTO alloc] initAvecIdUtilisateur:idUtilisateurContact prenom:prenomContact nom:nomContact sexe:sexeContact dateCreation:dateCreationContact dateNaissance:dateNaissanceContact photo:photoContact courriel:courrielContact etTelephone:telephoneContact];
         
         
-        contactDTO = [[ContactDTO alloc] initAvecUtilisateur:utilisateur etUtilisateurContact:utilisateurContact];
+        contactDTO = [[ContactDTO alloc]initAvecUtilisateurActif:(UtilisateurDTO *)utilisateur
+                                            etUtilisateurContact:(UtilisateurDTO *)utilisateurContact];
         
     } else if([response statusCode] != 200 &&      donnees != nil) {
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
@@ -130,8 +133,8 @@ static ContactFacade* contactFacade = nil;
 
 - (int)updateContact:(ContactDTO *)contactDTO
 {
-    UtilisateurDTO* utilisateurActif =[[UtilisateurDTO alloc] init];
-    utilisateurActif =[contactDTO utilisateur];
+    UtilisateurDTO* utilisateur =[[UtilisateurDTO alloc] init];
+    utilisateur =[contactDTO utilisateurActif];
     UtilisateurDTO* utilisateurContactActif =[[UtilisateurDTO alloc] init];
     utilisateurContactActif =[contactDTO utilisateurContact];
 
@@ -140,7 +143,8 @@ static ContactFacade* contactFacade = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:   @URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateContact&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_utilisateur_contact=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurActif idUtilisateur],[utilisateurContactActif idUtilisateur]];    NSData* donnees = nil;
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateContact&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_utilisateur_contact=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateur idUtilisateur],[utilisateurContactActif idUtilisateur]];
+    NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -168,7 +172,7 @@ static ContactFacade* contactFacade = nil;
 - (int)deleteContact:(ContactDTO *)contactDTO
 {
     UtilisateurDTO* utilisateurActif =[[UtilisateurDTO alloc] init];
-    utilisateurActif =[contactDTO utilisateur];
+    utilisateurActif =[contactDTO utilisateurActif];
     UtilisateurDTO* utilisateurContactActif =[[UtilisateurDTO alloc] init];
     utilisateurContactActif =[contactDTO utilisateurContact];
     
@@ -201,14 +205,13 @@ static ContactFacade* contactFacade = nil;
     return nombreEnregistrements;
 }
 
-- (NSMutableArray*)getAllContacts
+- (NSMutableArray*)getAllContacts 
 {
-    NSLog(@"get all ");
-    NSMutableArray* contactChatRooms = [[NSMutableArray alloc] init];
+    NSMutableArray* utilisateurs = [[NSMutableArray alloc] init];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContactChatRooms&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllUtilisateurs&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -216,20 +219,28 @@ static ContactFacade* contactFacade = nil;
     [request setHTTPBody:[parametresRequete dataUsingEncoding:NSUTF8StringEncoding]];
     donnees = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    if([response statusCode] == 200 && donnees != nil) {
+    if([response statusCode] == 200
+       && donnees != nil) {
         NSLog(@"== 200");
         NSArray* resultats = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
-        for (NSDictionary* contactJSON in resultats) {
-            ContactDTO* contactDTO = [[ContactDTO alloc] init];
+        for (NSDictionary* utilisateurJSON in resultats) {
+            UtilisateurDTO* utilisateurDTO = [[UtilisateurDTO alloc] init];
             
-            [contactDTO setUtilisateur:contactJSON[@"utilisateur"]];
-            [contactDTO setUtilisateurContact:contactJSON[@"utilisateurContact"]];
+            [utilisateurDTO setIdUtilisateur:utilisateurJSON[@"id_utilisateur"]];
+            [utilisateurDTO setPrenom:utilisateurJSON[@"prenom"]];
+            [utilisateurDTO setNom:utilisateurJSON[@"nom"]];
+            [utilisateurDTO setSexe:utilisateurJSON[@"sexe"]];
+            [utilisateurDTO setDateCreation:utilisateurJSON[@"date_creation"]];
+            [utilisateurDTO setDateNaissance:utilisateurJSON[@"date_naissance"]];
+            [utilisateurDTO setPhoto:utilisateurJSON[@"photo"]];
+            [utilisateurDTO setCourriel:utilisateurJSON[@"courriel"]];
+            [utilisateurDTO setTelephone:utilisateurJSON[@"telephone"]];
             
-            [contactChatRooms addObject:contactDTO];
+            [utilisateurs addObject:utilisateurDTO];
         }
-    } else if([response statusCode] != 200 &&      donnees != nil) {
-        NSLog(@"test not 200");
+    } else if([response statusCode] != 200
+              &&      donnees != nil) {
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         NSString* codeErreur = erreurJSON[@"codeErreur"];
         NSString* messageErreur = erreurJSON[@"messageErreur"];
@@ -240,7 +251,8 @@ static ContactFacade* contactFacade = nil;
     } else {
         NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
-    return contactChatRooms;
+    return utilisateurs;
+
 }
 
 @end
