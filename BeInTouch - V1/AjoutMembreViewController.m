@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    myData = [NSMutableArray array];
+    [myData addObject:@"Sonia"];
+    [myData addObject:@"Patrick"];
+    [myData addObject:@"Aliou"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,14 +41,10 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 0;
+    return [myData count];
 }
 
 
@@ -57,9 +58,28 @@
     if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
     
-    //NSString *cellValue = [maData objectAtIndex:indexPath.row];
-    // cell.textLabel.text = cellValue;
+    NSString *cellValue = [myData objectAtIndex:indexPath.row];
+    cell.textLabel.text = cellValue;
     return cell;
+}
+
+// Pour gérer le checkMark
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    /*UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+     cell.accessoryType = UITableViewCellAccessoryCheckmark;
+     
+     //deselect hightlight blue color
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];*/
+    
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
 }
 
 @end

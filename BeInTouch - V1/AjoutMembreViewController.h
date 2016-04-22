@@ -10,4 +10,9 @@
 
 @interface AjoutMembreViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
+{
+    NSMutableArray *myData;
+}
+@property (strong, nonatomic) IBOutlet UITableView *tv;
+
 @end
