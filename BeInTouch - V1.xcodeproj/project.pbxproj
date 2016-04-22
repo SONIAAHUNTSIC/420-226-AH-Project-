@@ -65,6 +65,9 @@
 		E3EFC0441CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */; };
 		E3EFC0471CC6842300C41932 /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */; };
 		E3EFC0481CC6842300C41932 /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */; };
+		E3EFC0511CCA65B800C41932 /* controller.php in Resources */ = {isa = PBXBuildFile; fileRef = E3EFC0501CCA65B800C41932 /* controller.php */; };
+		E3EFC0531CCA65D100C41932 /* contact.php in Resources */ = {isa = PBXBuildFile; fileRef = E3EFC0521CCA65D100C41932 /* contact.php */; };
+		E3EFC0551CCA65D900C41932 /* utilisateur.php in Resources */ = {isa = PBXBuildFile; fileRef = E3EFC0541CCA65D900C41932 /* utilisateur.php */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,9 +131,9 @@
 		E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeMembreChatRoomViewController.m; sourceTree = "<group>"; };
 		E3EFC0451CC6842300C41932 /* ChatRoomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomTableViewController.h; sourceTree = "<group>"; };
 		E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomTableViewController.m; sourceTree = "<group>"; };
-		E3EFC04A1CCA198800C41932 /* controller.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = controller.php; path = ../../../../../Applications/MAMP/htdocs/BeInTouch/controller.php; sourceTree = "<group>"; };
-		E3EFC04B1CCA198800C41932 /* contact.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = contact.php; path = ../../../../../Applications/MAMP/htdocs/BeInTouch/contact.php; sourceTree = "<group>"; };
-		E3EFC04C1CCA198800C41932 /* utilisateur.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = utilisateur.php; path = ../../../../../Applications/MAMP/htdocs/BeInTouch/utilisateur.php; sourceTree = "<group>"; };
+		E3EFC0501CCA65B800C41932 /* controller.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = controller.php; sourceTree = "<group>"; };
+		E3EFC0521CCA65D100C41932 /* contact.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = contact.php; sourceTree = "<group>"; };
+		E3EFC0541CCA65D900C41932 /* utilisateur.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = utilisateur.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,9 +281,9 @@
 		E3EFC0491CCA0CB300C41932 /* PHP */ = {
 			isa = PBXGroup;
 			children = (
-				E3EFC04A1CCA198800C41932 /* controller.php */,
-				E3EFC04B1CCA198800C41932 /* contact.php */,
-				E3EFC04C1CCA198800C41932 /* utilisateur.php */,
+				E3EFC0541CCA65D900C41932 /* utilisateur.php */,
+				E3EFC0521CCA65D100C41932 /* contact.php */,
+				E3EFC0501CCA65B800C41932 /* controller.php */,
 			);
 			name = PHP;
 			sourceTree = "<group>";
@@ -366,6 +369,9 @@
 			files = (
 				E3213AE21CB9C8250016A3B4 /* LaunchScreen.storyboard in Resources */,
 				E3213ADF1CB9C8250016A3B4 /* Assets.xcassets in Resources */,
+				E3EFC0551CCA65D900C41932 /* utilisateur.php in Resources */,
+				E3EFC0511CCA65B800C41932 /* controller.php in Resources */,
+				E3EFC0531CCA65D100C41932 /* contact.php in Resources */,
 				E3213ADD1CB9C8250016A3B4 /* Main.storyboard in Resources */,
 				B6A993E71CC40627005CE052 /* icon_photo.png in Resources */,
 			);
