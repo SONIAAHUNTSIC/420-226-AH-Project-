@@ -14,7 +14,7 @@
 @synthesize utilisateur;
 @synthesize chatRoom;
 @synthesize utilisateurContact;
-@synthesize swAdministrateur;
+@synthesize swAdmin;
 @synthesize swCreateur;
 @synthesize dateDebut;
 @synthesize swActif;
@@ -24,17 +24,24 @@
 
 #pragma mark - Methode d'initialisation
 
--(instancetype)initAvecUtilisateur:(UtilisateurDTO *)unUtilisateurDTO chatRoom:(ChatRoomDTO *)unChatRoomDTO utilisateurContact:(UtilisateurDTO *)unUtilisateurContactDTO swAdministrateur:(NSString *)unSwAdministrateur swCreateur:(NSString *)unSwCreateur dateDebut:(NSString *)unDateDebut SwActif:(NSString *)unSwActif etDateDepart:(NSString *)undateDepart
+-(instancetype)initAvecUtilisateur:(UtilisateurDTO *)unUtilisateurDTO
+                          chatRoom:(ChatRoomDTO *)unChatRoomDTO
+                utilisateurContact:(UtilisateurDTO *)unUtilisateurContactDTO
+                           swAdmin:(NSString *)unSwAdmin
+                        swCreateur:(NSString *)unSwCreateur
+                         dateDebut:(NSString *)unDateDebut
+                           SwActif:(NSString *)unSwActif
+                      etDateDepart:(NSString *)unDateDepart
 {
     if(self = [super init]) {
         [self setUtilisateur:unUtilisateurDTO];
         [self setChatRoom:unChatRoomDTO];
         [self setUtilisateurContact:unUtilisateurContactDTO];
-        [self setSwAdministrateur:unSwAdministrateur];
+        [self setSwAdmin:unSwAdmin];
         [self setSwCreateur:unSwCreateur];
         [self setDateDebut:unDateDebut];
         [self setSwActif:unSwActif];
-        [self setDateDepart:undateDepart];
+        [self setDateDepart:unDateDepart];
         
     }
     return self;

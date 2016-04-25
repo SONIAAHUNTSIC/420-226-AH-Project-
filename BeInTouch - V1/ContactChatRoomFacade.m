@@ -7,6 +7,10 @@
 //
 
 #import "ContactChatRoomFacade.h"
+#import "ContactChatRoomDTO.h"
+#import "UtilisateurFacade.h"
+#import "ChatRoomFacade.h"
+#import "ContactFacade.h"
 
 static ContactChatRoomFacade* contactChatRoomFacade = nil;
 
@@ -42,7 +46,7 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createContactChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_chatroom=%@&id_utilisateur_contact=%@&sw_admin=%@&sw_createur=%@&date_debut=%@&sw_actif=%@&date_depart=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurActif idUtilisateur],[chatRoomActif idChatRoom],[utilisateurContactActif idUtilisateur],[contactChatRoomDTO swAdministrateur],[contactChatRoomDTO swCreateur],[contactChatRoomDTO dateDebut],[contactChatRoomDTO swActif],[contactChatRoomDTO dateDepart]];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=createContactChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_chatroom=%@&id_utilisateur_contact=%@&sw_admin=%@&sw_createur=%@&date_debut=%@&sw_actif=%@&date_depart=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurActif idUtilisateur],[chatRoomActif idChatRoom],[utilisateurContactActif idUtilisateur],[contactChatRoomDTO swAdmin],[contactChatRoomDTO swCreateur],[contactChatRoomDTO dateDebut],[contactChatRoomDTO swActif],[contactChatRoomDTO dateDepart]];
     
     NSData* donnees = nil;
     
@@ -123,7 +127,14 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
          UtilisateurDTO* utilisateurContact =[[UtilisateurDTO alloc] initAvecIdUtilisateur:idUtilisateurContact prenom:prenomContact nom:nomContact sexe:sexeContact dateCreation:dateCreationContact dateNaissance:dateNaissanceContact photo:photoContact courriel:courrielContact etTelephone:telephoneContact];
          
  
-         contactChatRoomDTO = [[ContactChatRoomDTO alloc] initAvecUtilisateur:utilisateur chatRoom:chatroom utilisateurContact:utilisateurContact swAdministrateur:contactChatRoomJSON[@"swAdministrateur"] swCreateur:contactChatRoomJSON[@"swCreateur"] dateDebut:contactChatRoomJSON[@"dateDebut"] SwActif:contactChatRoomJSON[@"swActif"] etDateDepart:contactChatRoomJSON[@"datedepart"]];
+         contactChatRoomDTO = [[ContactChatRoomDTO alloc] initAvecUtilisateur:utilisateur
+                                            chatRoom:chatroom
+                                  utilisateurContact:utilisateurContact
+                                             swAdmin:contactChatRoomJSON[@"sw_admin"]
+                                          swCreateur:contactChatRoomJSON[@"swCreateur"]
+                                           dateDebut:contactChatRoomJSON[@"dateDebut"]
+                                             SwActif:contactChatRoomJSON[@"swActif"]
+                                        etDateDepart:contactChatRoomJSON[@"datedepart"]];
          
      } else if([response statusCode] != 200 &&      donnees != nil) {
          NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
@@ -152,7 +163,7 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
      NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:   @URL_SERVICE_WEB]];
      NSHTTPURLResponse* response = nil;
      NSError* error = nil;
-     NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateContactChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_chatroom=%@&id_utilisateur_contact=%@&sw_admin=%@&sw_createur=%@&date_debut=%@&sw_actif=%@&date_depart=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurActif idUtilisateur],[chatRoomActif idChatRoom],[utilisateurContactActif idUtilisateur],[contactChatRoomDTO swAdministrateur],[contactChatRoomDTO swCreateur],[contactChatRoomDTO dateDebut],[contactChatRoomDTO swActif],[contactChatRoomDTO dateDepart]];
+     NSString* parametresRequete = [NSString stringWithFormat:@"methode=updateContactChatRoom&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_chatroom=%@&id_utilisateur_contact=%@&sw_admin=%@&sw_createur=%@&date_debut=%@&sw_actif=%@&date_depart=%@&", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, [utilisateurActif idUtilisateur],[chatRoomActif idChatRoom],[utilisateurContactActif idUtilisateur],[contactChatRoomDTO swAdmin],[contactChatRoomDTO swCreateur],[contactChatRoomDTO dateDebut],[contactChatRoomDTO swActif],[contactChatRoomDTO dateDepart]];
      NSData* donnees = nil;
  
      [request setHTTPMethod:@"POST"];
@@ -215,15 +226,16 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
      }
      return nombreEnregistrements;
  }
- 
- - (NSMutableArray*)getAllContactChatRooms
+
+// getAllChatRooms ok S.I.F.
+ - (NSMutableArray*)getAllContactChatRooms:(NSString *)idUtilisateur
 {
     NSLog(@"get all ");
     NSMutableArray* contactChatRooms = [[NSMutableArray alloc] init];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContactChatRooms&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContactChatRooms&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT,idUtilisateur];
     NSData* donnees = nil;
  
     [request setHTTPMethod:@"POST"];
@@ -236,22 +248,34 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
         NSArray* resultats = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
  
         for (NSDictionary* contactChatRoomJSON in resultats) {
+            
             ContactChatRoomDTO* contactChatRoomDTO = [[ContactChatRoomDTO alloc] init];
             
-            [contactChatRoomDTO setUtilisateur:contactChatRoomJSON[@"utilisateur"]];
-            [contactChatRoomDTO setChatRoom:contactChatRoomJSON[@"chatRoom"]];
-            [contactChatRoomDTO setUtilisateurContact:contactChatRoomJSON[@"utilisateurContact"]];
+            UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur: contactChatRoomJSON[@"id_utilisateur"]];
+            [contactChatRoomDTO setUtilisateur:utilisateurDTO];
             
-            [contactChatRoomDTO setSwAdministrateur:contactChatRoomJSON[@"swAdministrateur"]];
-            [contactChatRoomDTO setSwCreateur:contactChatRoomJSON[@"swCreateur"]];
-            [contactChatRoomDTO setDateDebut:contactChatRoomJSON[@"dateDebut"]];
-            [contactChatRoomDTO setSwActif:contactChatRoomJSON[@"swActif"]];
-            [contactChatRoomDTO setDateDepart:contactChatRoomJSON[@"dateDepart"]];
+            ChatRoomDTO *chatRoomDTO = [[ChatRoomFacade chatRoomFacade]readChatRoom: contactChatRoomJSON[@"id_chatroom"]];
+            [contactChatRoomDTO setChatRoom:chatRoomDTO];
+            
+          
+            
+            UtilisateurDTO *contact= [[UtilisateurFacade utilisateurFacade]readUtilisateur: contactChatRoomJSON[@"id_utilisateur_contact"]];
+            
+            
+            [contactChatRoomDTO setUtilisateurContact:contact];
+            
+
+            
+            [contactChatRoomDTO setSwAdmin:contactChatRoomJSON[@"sw_admin"]];
+            [contactChatRoomDTO setSwCreateur:contactChatRoomJSON[@"sw_createur"]];
+            [contactChatRoomDTO setDateDebut:contactChatRoomJSON[@"date_debut"]];
+            [contactChatRoomDTO setSwActif:contactChatRoomJSON[@"sw_actif"]];
+            [contactChatRoomDTO setDateDepart:contactChatRoomJSON[@"date_depart"]];
             
             [contactChatRooms addObject:contactChatRoomDTO];
         }
     } else if([response statusCode] != 200 &&      donnees != nil) {
-        NSLog(@"test not 200");
+        
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         NSString* codeErreur = erreurJSON[@"codeErreur"];
         NSString* messageErreur = erreurJSON[@"messageErreur"];

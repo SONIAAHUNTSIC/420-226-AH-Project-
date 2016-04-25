@@ -7,12 +7,60 @@
 //
 
 #import "ChatRoomTableViewController.h"
+#import "ChatRoomDTO.h"
+#import "ChatRoomFacade.h"
+#import "DetailChatRoomViewController.h"
+#import "ContactChatRoomFacade.h"
 
 @interface ChatRoomTableViewController ()
 
 @end
 
 @implementation ChatRoomTableViewController
+
+#pragma mark - Proprietés privées
+@synthesize  chatRooms;
+@synthesize contactChatRooms;
+
+@synthesize  idUtilisateur;
+@synthesize idChatRoom;
+
+
+
+#pragma mark - Méthodes privées
+- (void)chargerDonnees {
+    
+    // Charge les données
+   if ([self chatRooms] !=nil){
+        
+        
+        [self setChatRooms:nil];
+   }
+    
+    self.chatRooms = [[NSMutableArray alloc] init];
+
+
+    [self setContactChatRooms:[[ContactChatRoomFacade  contactChatRoomFacade]getAllContactChatRooms:[self idUtilisateur]]];
+    
+     ContactChatRoomDTO* contactChatRoom = [[ContactChatRoomDTO alloc] init];
+     ChatRoomDTO *unChatRoomDTO = [[ChatRoomDTO alloc]init];
+    
+    
+    for(int i=0 ; i < [ contactChatRooms count]; ++i) {
+        
+        contactChatRoom = [contactChatRooms objectAtIndex:i];
+        
+         unChatRoomDTO =  [contactChatRoom chatRoom];
+        
+         [chatRooms addObject:unChatRoomDTO];
+
+    }
+    
+    // Recharge la table view
+    [[self tableView] reloadData];
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +70,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [[self tableView] setDelegate:self];
+    [[self tableView] setDataSource:self];
+    [self chargerDonnees];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,43 +85,63 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 0;
+    return 1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return [chatRooms count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    
+    
+    ChatRoomDTO* chatRoomDTO = [[self chatRooms]objectAtIndex:[indexPath row]];
+    
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCell" forIndexPath:indexPath];
+    
+    if (cell== nil){
+        cell = [[UITableViewCell alloc] initWithStyle:
+        UITableViewCellStyleSubtitle reuseIdentifier:@"idCell"];
+    }
+    
+    // Mettre à jour les labels des celules de la table avec les données de l'enregistrement lu à partir de la base de données
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@", [chatRoomDTO sujet]]] ;
+     NSLog(@"sujet  %@",[chatRoomDTO sujet ]);
+
+
     
     return cell;
 }
-*/
 
-/*
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
+    
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

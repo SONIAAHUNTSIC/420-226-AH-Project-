@@ -65,6 +65,7 @@ static ChatRoomFacade* chatRoomFacade = nil;
     return nombreEnregistrements;
 }
 
+//   readChatRoom ok S.I.F
 - (ChatRoomDTO *)readChatRoom:(NSString *)idChatRoom
 {
     ChatRoomDTO* chatRoomDTO = nil;
@@ -82,7 +83,10 @@ static ChatRoomFacade* chatRoomFacade = nil;
        && donnees != nil) {
         NSDictionary* chatRoomJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
     
-        chatRoomDTO = [[ChatRoomDTO alloc] initAvecIdChatRoom:chatRoomJSON[@"idChaRoom"]  sujet:chatRoomJSON[@"sujet"] dateCreation:chatRoomJSON[@"dateCreation"] etDateFermeture:chatRoomJSON[@"dateFermeture"]];
+        chatRoomDTO = [[ChatRoomDTO alloc] initAvecIdChatRoom:chatRoomJSON[@"id_chatroom"]
+                                                        sujet:chatRoomJSON[@"sujet"]
+                                                 dateCreation:chatRoomJSON[@"date_creation"]
+                                              etDateFermeture:chatRoomJSON[@"date_fermeture"]];
     } else if([response statusCode] != 200
               &&      donnees != nil) {
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];

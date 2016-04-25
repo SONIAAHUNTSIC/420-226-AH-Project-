@@ -9,7 +9,7 @@
 #import "InfosViewController.h"
 #import "VoirAmiViewController.h"
 #import "AjouterAmisViewController.h"
-#import "NouveauChatRoomViewController.h"
+#import "ChatRoomTableViewController.h"
 
 @interface BienvenuViewController ()
 
@@ -82,9 +82,11 @@
     else if ([segue.identifier isEqualToString:@"segueCreerChatRoom"]){
         
         
-        //NouveauChatRoomViewController* nouveauTchatRoomViewController = [segue destinationViewController];
-        //[nouveauTchatRoomViewController setIdUtilisateur:[self idUtilisateur]];
-        NSLog(@"Requete , %@",idUtilisateur);
+        
+        UINavigationController *navController = (UINavigationController *)[segue destinationViewController];
+        ChatRoomTableViewController *controller = (ChatRoomTableViewController *)[navController topViewController];
+        [controller setIdUtilisateur:[self idUtilisateur]];
+        
     }
 }
 

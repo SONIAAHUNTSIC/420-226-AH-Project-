@@ -17,18 +17,18 @@
 
 
 #ifndef UTILISATEUR
-#define UTILISATEUR "root"
+#define UTILISATEUR "sonia"
 #endif
 
 #ifndef MOT_DE_PASSE
-#define MOT_DE_PASSE "root"
+#define MOT_DE_PASSE "123456"
 #endif
 
 #ifndef BASE_DE_DONNEES
 #define BASE_DE_DONNEES "beintouch"
 #endif
 #ifndef PORT
-#define PORT 8888
+#define PORT 3306
 #endif
 
 

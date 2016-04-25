@@ -10,5 +10,17 @@
 
 @interface ChatRoomTableViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
 
+#pragma mark - Proprietés privées
+@property (strong,nonatomic) NSMutableArray* chatRooms;
+@property (strong,nonatomic) NSMutableArray* contactChatRooms;
+@property (strong,nonatomic) NSString *idUtilisateur;
+@property (strong,nonatomic) NSString *idChatRoom;
+
+
+
+#pragma mark - Méthodes privées
+- (void)chargerDonnees;
+
+
 
 @end

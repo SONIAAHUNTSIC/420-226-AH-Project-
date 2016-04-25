@@ -69,14 +69,15 @@ static ContactFacade* contactFacade = nil;
     return nombreEnregistrements;
 }
 
--(ContactDTO *)readContactAvecIdUtilisateur:(NSString *)idUtilisateur
+
+-(ContactDTO *)readContact:(NSString *)idUtilisateur 
 {
     ContactDTO* contactDTO = nil;
     
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readContacts&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idUtilisateur];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=readContact&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT, idUtilisateur];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
