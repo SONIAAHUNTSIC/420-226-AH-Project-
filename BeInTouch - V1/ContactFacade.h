@@ -17,7 +17,7 @@
 -(ContactDTO*) readContact:(NSString*) idUtilisateur;
 -(int) updateContact:(ContactDTO*) contactDTO;
 -(int) deleteContact:(ContactDTO*) contactDTO;
--(NSMutableArray*)getAllContacts;
+-(NSMutableArray*)getAllContacts:(NSString *) idUtilisateur;
 
 
 @end

@@ -11,4 +11,5 @@
 @interface VoirAmiViewController : UIViewController  <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic) NSString *idUtilisateur;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end

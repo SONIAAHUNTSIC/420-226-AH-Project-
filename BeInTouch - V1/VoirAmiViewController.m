@@ -7,8 +7,18 @@
 //
 
 #import "VoirAmiViewController.h"
+#import "ContactFacade.h"
+#import "ContactDTO.h"
+#import "UtilisateurDTO.h"
 
 @interface VoirAmiViewController ()
+
+#pragma mark - Propriétés privées
+@property (strong, nonatomic) NSMutableArray* amis;
+
+
+#pragma mark - Méthodes privées
+- (void)listerAmis;
 
 @end
 
@@ -16,7 +26,7 @@
 
 
 #pragma mark - Propriétés
-
+@synthesize amis;
 @synthesize idUtilisateur;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,10 +38,44 @@
     return self;
 }
 
+- (void)listerAmis {
+    
+    
+    // Charger les données
+    if ([self amis] != nil) {
+        [self setAmis:nil];
+    }
+    
+    [self setAmis:[[ContactFacade contactFacade]getAllContacts:[self idUtilisateur]]];
+        
+       /* ContactDTO* contactDTO = [[ContactDTO alloc] init];
+        
+        for(int i=0 ; i < [ amis count]; ++i) {
+            
+            contactDTO = [amis objectAtIndex:i];
+            
+        }*/
+    
+    // Recharge la table view
+    [[self tableView] reloadData];
+    // Dans la méthode qui fait la transaction réseau, après la transaction réseau :
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[self tableView] setDelegate:self];
+    [[self tableView] setDataSource:self];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        // Appel de la méthode qui fait une transaction réseau.
+        [self listerAmis];
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,24 +95,40 @@
 }
 */
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 0;
+    return [[self amis] count];
     
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.0;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *MyIdentifier = @"MyIdentifier";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
-    if (cell == nil)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
+     UtilisateurDTO* amisDTO = [[self amis] objectAtIndex:[indexPath row]];
     
-    //NSString *cellValue = [maData objectAtIndex:indexPath.row];
-    // cell.textLabel.text = cellValue;
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"idAmis" forIndexPath:indexPath];
+    
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"idAmis"];
+    }
+    
+    
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ %@", [amisDTO prenom], [amisDTO nom]]];
+    
+     NSLog(@"prenom  %@",[amisDTO prenom ]);
+    
     return cell;
 }
 

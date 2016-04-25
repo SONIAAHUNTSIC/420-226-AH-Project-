@@ -7,6 +7,8 @@
 //
 
 #import "ContactFacade.h"
+#import "ContactDTO.h"
+#import "UtilisateurFacade.h"
 
 static ContactFacade* contactFacade = nil;
 
@@ -206,13 +208,14 @@ static ContactFacade* contactFacade = nil;
     return nombreEnregistrements;
 }
 
-- (NSMutableArray*)getAllContacts 
+- (NSMutableArray*)getAllContacts:(NSString *) idUtilisateur; 
 {
-    NSMutableArray* utilisateurs = [[NSMutableArray alloc] init];
+    NSMutableArray* contacts = [[NSMutableArray alloc] init];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllUtilisateurs&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContacts&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT,idUtilisateur];
+    
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -225,20 +228,23 @@ static ContactFacade* contactFacade = nil;
         NSLog(@"== 200");
         NSArray* resultats = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
-        for (NSDictionary* utilisateurJSON in resultats) {
-            UtilisateurDTO* utilisateurDTO = [[UtilisateurDTO alloc] init];
+      
+        
+        for (NSDictionary* contactJSON in resultats) {
+            ContactDTO* contactDTO = [[ContactDTO alloc] init];
             
-            [utilisateurDTO setIdUtilisateur:utilisateurJSON[@"id_utilisateur"]];
-            [utilisateurDTO setPrenom:utilisateurJSON[@"prenom"]];
-            [utilisateurDTO setNom:utilisateurJSON[@"nom"]];
-            [utilisateurDTO setSexe:utilisateurJSON[@"sexe"]];
-            [utilisateurDTO setDateCreation:utilisateurJSON[@"date_creation"]];
-            [utilisateurDTO setDateNaissance:utilisateurJSON[@"date_naissance"]];
-            [utilisateurDTO setPhoto:utilisateurJSON[@"photo"]];
-            [utilisateurDTO setCourriel:utilisateurJSON[@"courriel"]];
-            [utilisateurDTO setTelephone:utilisateurJSON[@"telephone"]];
+            UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur: idUtilisateur];
             
-            [utilisateurs addObject:utilisateurDTO];
+            [contactDTO setUtilisateurActif:utilisateurDTO];
+            
+            UtilisateurDTO *contact= [[UtilisateurFacade utilisateurFacade]readUtilisateur: contactJSON[@"id_utilisateur_contact"]];
+            
+            
+            [contactDTO setUtilisateurContact:contact];
+            
+        
+            [contacts addObject:contact];
+            
         }
     } else if([response statusCode] != 200
               &&      donnees != nil) {
@@ -252,7 +258,7 @@ static ContactFacade* contactFacade = nil;
     } else {
         NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
-    return utilisateurs;
+    return contacts;
 
 }
 
