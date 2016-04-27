@@ -111,7 +111,7 @@
     
     [self setIdContact:[membresDTO idUtilisateur]];
     
-    NSLog(@"ajoutMembre idcontact = %@",idChatRoom);
+    NSLog(@"ajoutMembre idcontact = %@",idContact);
 
     
 }

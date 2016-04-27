@@ -7,11 +7,12 @@
 //
 
 #import "ChatRoomTableViewController.h"
-#import "ChatRoomDTO.h"
+#import "UtilisateurFacade.h"
 #import "ChatRoomFacade.h"
 #import "DetailChatRoomViewController.h"
 #import "ContactChatRoomFacade.h"
 #import "NouveauChatRoomViewController.h"
+#import "AjoutMembreViewController.h"
 
 @interface ChatRoomTableViewController ()
 
@@ -188,8 +189,37 @@
 -(IBAction)AjoutMembre:(UIStoryboardSegue*) segue
 {
     NSLog(@"retour de ajout membre");
-    // Recharge la table view
-    [self chargerDonnees];
+    
+    AjoutMembreViewController *ajoutMembreViewController = [segue  sourceViewController];
+    
+    UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:[ajoutMembreViewController idUtilisateur]];
+    
+    UtilisateurDTO *contactDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:[ajoutMembreViewController idContact]];
+    
+    ChatRoomDTO *chatRoomDTO = [[ChatRoomFacade chatRoomFacade]readChatRoom:[ajoutMembreViewController idChatRoom]];
+    
+    ContactChatRoomDTO *contactChatRoomDTO = [[ContactChatRoomDTO alloc] initAvecUtilisateur:utilisateurDTO chatRoom:chatRoomDTO utilisateurContact:contactDTO swAdmin:@"1" swCreateur:@"1" dateDebut:@"dateDebut" SwActif:@"1" etDateDepart:@"dateDepart"];
+    
+    
+    if([contactChatRoomDTO utilisateur] != nil
+       && [contactChatRoomDTO chatRoom] != nil
+       && [contactChatRoomDTO utilisateurContact] != nil )
+    {
+    
+        int intEnregistre = 0;
+        intEnregistre = [[ContactChatRoomFacade contactChatRoomFacade] createContactChatRoom:contactChatRoomDTO];
+        if (intEnregistre == 1) {
+            NSLog(@"Requete reussie");
+            // Recharge la table view
+            [self chargerDonnees];
+
+        }
+        
+        else {
+            NSLog(@"Impossible d'exécuter la requête");
+        }
+    }
+    
     
 }
 
