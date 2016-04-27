@@ -11,6 +11,7 @@
 #import "ChatRoomFacade.h"
 #import "DetailChatRoomViewController.h"
 #import "ContactChatRoomFacade.h"
+#import "NouveauChatRoomViewController.h"
 
 @interface ChatRoomTableViewController ()
 
@@ -167,11 +168,28 @@
 }
 */
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"nouveauChatRoom"]){
+        
+        NouveauChatRoomViewController* nouveauTchatRoomViewController = [segue destinationViewController];
+        [nouveauTchatRoomViewController setIdUtilisateur:[self idUtilisateur]];
+        NSLog(@"chatroom idutilisateur = , %@",idUtilisateur);
+    }else if ([segue.identifier isEqualToString:@"sujetChat"]){
+        /*
+        DetailChatRoomViewController* detailTchatRoomViewController = [segue destinationViewController];
+        [detailTchatRoomViewController setIdUtilisateur:[self idUtilisateur]];
+        NSLog(@"Requete , %@",idUtilisateur);*/
+    }
+
     
 }
 
--(IBAction)AjoutMembre:(UIStoryboardSegue*) segue{
+-(IBAction)AjoutMembre:(UIStoryboardSegue*) segue
+{
+    NSLog(@"retour de ajout membre");
+    // Recharge la table view
+    [self chargerDonnees];
     
 }
 

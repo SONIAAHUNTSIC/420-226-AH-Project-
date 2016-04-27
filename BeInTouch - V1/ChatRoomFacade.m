@@ -32,8 +32,8 @@ static ChatRoomFacade* chatRoomFacade = nil;
 
 - (int)createChatRoom:(ChatRoomDTO *)chatRoomDTO
 {
-    NSLog(@"test ChatRoom");
     int nombreEnregistrements = 0;
+    int idEnregistre = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
@@ -50,6 +50,7 @@ static ChatRoomFacade* chatRoomFacade = nil;
         NSDictionary* resultatJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
         nombreEnregistrements = (int) [resultatJSON[@"nombreEnregistrements"] integerValue];
+        idEnregistre  = (int) [resultatJSON[@"id_chatroom"]integerValue];
     } else if([response statusCode] != 200
               &&      donnees != nil) {
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
@@ -62,7 +63,8 @@ static ChatRoomFacade* chatRoomFacade = nil;
     } else {
         NSLog(@"[Code d'erreur %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
-    return nombreEnregistrements;
+    //return nombreEnregistrements;
+    return idEnregistre;
 }
 
 //   readChatRoom ok S.I.F
