@@ -15,6 +15,7 @@
 @property (strong,nonatomic) NSMutableArray* contactChatRooms;
 @property (strong,nonatomic) NSString *idUtilisateur;
 @property (strong,nonatomic) NSString *idChatRoom;
+@property (strong,nonatomic) NSString *sujet;
 
 
 

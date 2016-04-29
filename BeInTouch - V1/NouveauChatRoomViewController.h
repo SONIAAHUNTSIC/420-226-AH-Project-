@@ -12,6 +12,5 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *textSujetChat;
 @property (nonatomic) NSString *idUtilisateur;
-@property (nonatomic) NSString *idChatRoom;
 
 @end

@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tv;
 @property (nonatomic) NSString *idUtilisateur;
-@property (nonatomic) NSString *idChatRoom;
+@property (nonatomic) NSString *sujet;
 @property (nonatomic) NSString *idEnregistre;
 @property (nonatomic) NSString *idContact;
 

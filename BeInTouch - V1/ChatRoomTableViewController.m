@@ -67,12 +67,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     [[self tableView] setDelegate:self];
     [[self tableView] setDataSource:self];
     [self chargerDonnees];
@@ -159,16 +153,6 @@
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"nouveauChatRoom"]){
@@ -177,10 +161,10 @@
         [nouveauTchatRoomViewController setIdUtilisateur:[self idUtilisateur]];
         NSLog(@"chatroom idutilisateur = , %@",idUtilisateur);
     }else if ([segue.identifier isEqualToString:@"sujetChat"]){
-        /*
+    
         DetailChatRoomViewController* detailTchatRoomViewController = [segue destinationViewController];
         [detailTchatRoomViewController setIdUtilisateur:[self idUtilisateur]];
-        NSLog(@"Requete , %@",idUtilisateur);*/
+        NSLog(@"Requete , %@",idUtilisateur);
     }
 
     
@@ -192,35 +176,54 @@
     
     AjoutMembreViewController *ajoutMembreViewController = [segue  sourceViewController];
     
-    UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:[ajoutMembreViewController idUtilisateur]];
-    
-    UtilisateurDTO *contactDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:[ajoutMembreViewController idContact]];
-    
-    ChatRoomDTO *chatRoomDTO = [[ChatRoomFacade chatRoomFacade]readChatRoom:[ajoutMembreViewController idChatRoom]];
-    
-    ContactChatRoomDTO *contactChatRoomDTO = [[ContactChatRoomDTO alloc] initAvecUtilisateur:utilisateurDTO chatRoom:chatRoomDTO utilisateurContact:contactDTO swAdmin:@"1" swCreateur:@"1" dateDebut:@"dateDebut" SwActif:@"1" etDateDepart:@"dateDepart"];
-    
-    
-    if([contactChatRoomDTO utilisateur] != nil
-       && [contactChatRoomDTO chatRoom] != nil
-       && [contactChatRoomDTO utilisateurContact] != nil )
+    ChatRoomDTO* chatroomDTO = [[ChatRoomDTO alloc] initAvecIdChatRoom:idChatRoom
+                                                                 sujet:[ajoutMembreViewController sujet] dateCreation:@"UnDateCreation" etDateFermeture:@"UnDatefermeture"];
+    if ([ajoutMembreViewController idUtilisateur] == nil
+        ||[ajoutMembreViewController idContact] == nil
+        ||[[chatroomDTO sujet]  isEqual:@""])
     {
-    
+        NSLog(@"Impossible de créer la chatroom");
+    }else{
         int intEnregistre = 0;
-        intEnregistre = [[ContactChatRoomFacade contactChatRoomFacade] createContactChatRoom:contactChatRoomDTO];
-        if (intEnregistre == 1) {
-            NSLog(@"Requete reussie");
-            // Recharge la table view
-            [self chargerDonnees];
-
-        }
+        NSLog(@"%@",[chatroomDTO sujet]);
         
-        else {
+        intEnregistre = [[ChatRoomFacade chatRoomFacade] createChatRoom:chatroomDTO];
+        
+        NSLog(@"%d",intEnregistre);
+        if (intEnregistre != 0)
+        {
+            idChatRoom = [NSString stringWithFormat:@"%d", intEnregistre];
+            NSLog(@"Requete de création reussie idChatroom =, %d ",intEnregistre);
+         
+         }
+         else {
+         NSLog(@"Impossible d'exécuter la requêtede");
+         }
+
+        UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:[ajoutMembreViewController idUtilisateur]];
+    
+        UtilisateurDTO *contactDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:[ajoutMembreViewController idContact]];
+    
+        ChatRoomDTO *chatRoomDTO = [[ChatRoomFacade chatRoomFacade]readChatRoom:idChatRoom];
+    
+        ContactChatRoomDTO *contactChatRoomDTO = [[ContactChatRoomDTO alloc] initAvecUtilisateur:utilisateurDTO chatRoom:chatRoomDTO utilisateurContact:contactDTO swAdmin:@"1" swCreateur:@"1" dateDebut:@"dateDebut" SwActif:@"1" etDateDepart:@"dateDepart"];
+    
+        if([contactChatRoomDTO utilisateur] != nil
+           && [contactChatRoomDTO chatRoom] != nil
+           && [contactChatRoomDTO utilisateurContact] != nil )
+        {
+            int intEnregistre = 0;
+            intEnregistre = [[ContactChatRoomFacade contactChatRoomFacade] createContactChatRoom:contactChatRoomDTO];
+            if (intEnregistre == 1) {
+                NSLog(@"Requete reussie");
+                // Recharge la table view
+                [self chargerDonnees];
+            }
+            else {
             NSLog(@"Impossible d'exécuter la requête");
+            }
         }
     }
-    
-    
 }
 
 @end

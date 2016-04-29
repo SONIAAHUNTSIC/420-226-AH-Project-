@@ -8,8 +8,6 @@
 
 #import "AjoutMembreViewController.h"
 #import "ContactFacade.h"
-#import "ContactFacade.h"
-#import "UtilisateurFacade.h"
 
 @interface AjoutMembreViewController ()
 @property (strong,nonatomic) NSMutableArray* membres;
@@ -19,7 +17,7 @@
 
 @implementation AjoutMembreViewController
 @synthesize idUtilisateur;
-@synthesize idChatRoom;
+@synthesize sujet;
 @synthesize idContact;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,7 +40,7 @@
     // Recharge la table view
     [[self tv] reloadData];
     NSLog(@"ajoutMembre idUtilisateur = %@",idUtilisateur);
-    NSLog(@"ajoutMembre idchatroom = %@",idChatRoom);
+    //NSLog(@"ajoutMembre idchatroom = %@",idChatRoom);
 }
 
 
