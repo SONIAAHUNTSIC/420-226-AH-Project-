@@ -205,11 +205,19 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
     
+    
+    NSString *MyString;
+    NSDate *now = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
+    MyString = [dateFormatter stringFromDate:now];
+   // [dateFormatter release];
+    
     UtilisateurDTO* utilisateurDTO = [[UtilisateurDTO alloc]initAvecIdUtilisateur:idUtilisateur
                                                                            prenom: textPrenom.text
                                                                               nom: textNom.text
                                                                              sexe:textSexe.text
-                                                                     dateCreation: @""
+                                                                     dateCreation: MyString
                                                                     dateNaissance:textDateNaissance.text
                                                                             photo:@"UnPhoto"
                                                                          courriel:textCourriel.text

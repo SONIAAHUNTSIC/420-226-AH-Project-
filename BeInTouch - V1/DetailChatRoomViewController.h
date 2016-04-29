@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIBubbleTableViewDataSource.h"
 
-@interface DetailChatRoomViewController : UIViewController
+@interface DetailChatRoomViewController : UIViewController <UIBubbleTableViewDataSource>
+
+#pragma mark - Proprietés privées
+@property (nonatomic) NSMutableArray* messages;
+@property (nonatomic) NSMutableArray* contactsChatRoom;
 @property (nonatomic) NSString *idUtilisateur;
+@property (nonatomic) NSString *idChatRoom;
+@property (nonatomic) NSString *idUtilisateurContact;
+@property (nonatomic) NSString *idMessage;
+
+@property (nonatomic) NSString *idEnregistre;
 @end

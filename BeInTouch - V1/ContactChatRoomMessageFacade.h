@@ -17,6 +17,6 @@
 -(ContactChatRoomMessageDTO*) readContactChatRoomMessageAvecIdUtilisateur:(NSString*) idUtilisateur idUtilisateurContact:(NSString*) idUtilisateurContact idChatRoom:(NSString*) idChatRoom etIdMessage:(NSString*) idMessage;
 -(int) updateContactChatRoomMessage:(ContactChatRoomMessageDTO*) contactChatRoomMessageDTO;
 -(int) deleteContactChatRoomMessage:(ContactChatRoomMessageDTO*) contactChatRoomMessageDTO;
--(NSMutableArray*)getAllContactChatRoomMessages;
+-(NSMutableArray*)getAllContactChatRoomMessages:(NSString*)idUtilisateur etChatRoom:(NSString *)idChatRoom;
 
 @end

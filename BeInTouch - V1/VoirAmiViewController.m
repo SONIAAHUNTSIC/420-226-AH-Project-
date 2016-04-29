@@ -40,7 +40,7 @@
     [self setMembres:[[ContactFacade contactFacade] getAllContacts:[self idUtilisateur]]];
     // Recharge la table view
     [[self tableView] reloadData];
-    NSLog(@"ajoutMembre idUtilisateur = %@",idUtilisateur);
+    NSLog(@"voir idUtilisateur = %@",idUtilisateur);
 }
 
 

@@ -233,7 +233,7 @@ static ContactFacade* contactFacade = nil;
         for (NSDictionary* contactJSON in resultats) {
             ContactDTO* contactDTO = [[ContactDTO alloc] init];
             
-            UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur: idUtilisateur];
+            UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur: contactJSON[@"id_utilisateur"]];
             
             [contactDTO setUtilisateurActif:utilisateurDTO];
             
@@ -241,9 +241,15 @@ static ContactFacade* contactFacade = nil;
             
             
             [contactDTO setUtilisateurContact:contact];
-            
+           // if ([utilisateurDTO idUtilisateur] != idUtilisateur){
+           //     [contacts addObject:utilisateurDTO];
+                
+           // }
+           // if  ([contact idUtilisateur] != idUtilisateur){
         
-            [contacts addObject:contact];
+                [contacts addObject:contact];
+            
+          //  }
             
         }
     } else if([response statusCode] != 200

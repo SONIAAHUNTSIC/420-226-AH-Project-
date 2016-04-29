@@ -13,7 +13,9 @@
 @synthesize dateMessage;
 @synthesize contenu;
 
--(instancetype) initAvecIdMessage: (NSString*) unIdMessage dateMessage:(NSString*)unDateMessage etContenu:(NSString*)unContenu
+-(instancetype) initAvecIdMessage: (NSString*)unIdMessage
+                      dateMessage:(NSString*)unDateMessage
+                        etContenu:(NSString*)unContenu
 {
     if (self = [super init]) {
         [self setIdMessage:unIdMessage];

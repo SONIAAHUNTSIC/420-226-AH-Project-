@@ -288,5 +288,48 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
     }
     return contactChatRooms;
  }
+// Obtiene tous les membres du ChatRoom
+- (NSMutableArray*)getAllContacts:(NSString *)idChatRoom
+{
+    NSLog(@"get all contact du chat");
+    NSMutableArray* contacts = [[NSMutableArray alloc] init];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
+    NSHTTPURLResponse* response;
+    NSError* error = nil;
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContactsC&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_chatroom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT,idChatRoom];
+    NSData* donnees = nil;
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:[parametresRequete dataUsingEncoding:NSUTF8StringEncoding]];
+    donnees = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if([response statusCode] == 200 && donnees != nil) {
+        NSLog(@"== 200");
+        NSArray* resultats = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
+        
+        for (NSDictionary* contactChatRoomJSON in resultats) {
+            
+            
+            UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur: contactChatRoomJSON[@"id_utilisateur_contact"]];
+            
+            
+            [contacts addObject:utilisateurDTO];
+        }
+    } else if([response statusCode] != 200 &&      donnees != nil) {
+        
+        NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
+        NSString* codeErreur = erreurJSON[@"codeErreur"];
+        NSString* messageErreur = erreurJSON[@"messageErreur"];
+        
+        NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête %@?%@ -> [Code d'erreur MySQL %@] %@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete, codeErreur, messageErreur);
+    } else if(error != nil) {
+        NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête %@?%@ : %@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete, [error localizedDescription]);
+    } else {
+        NSLog(@"[Code d'erreur HTTP %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
+    }
+    return contacts;
+}
+
 
 @end

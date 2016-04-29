@@ -14,6 +14,8 @@
 @property (strong, nonatomic) NSString* dateMessage;
 @property (strong, nonatomic) NSString* contenu;
 
--(instancetype) initAvecIdMessage: (NSString*) unIdMessage dateMessage:(NSString*)unDateMessage etContenu:(NSString*)unContenu;
+-(instancetype) initAvecIdMessage: (NSString*) unIdMessage
+                      dateMessage:(NSString*)unDateMessage
+                        etContenu:(NSString*)unContenu;
 
 @end

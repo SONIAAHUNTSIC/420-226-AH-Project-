@@ -50,6 +50,21 @@
 		E3213B001CBBA7430016A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */; };
 		E3213B011CBBA7430016A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */; };
 		E3213B021CBBA7430016A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
+		E341E5AF1CD3283500176C31 /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AB1CD3283500176C31 /* bubbleMine.png */; };
+		E341E5B01CD3283500176C31 /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AC1CD3283500176C31 /* bubbleMine@2x.png */; };
+		E341E5B11CD3283500176C31 /* bubbleSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AD1CD3283500176C31 /* bubbleSomeone.png */; };
+		E341E5B21CD3283500176C31 /* bubbleSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AE1CD3283500176C31 /* bubbleSomeone@2x.png */; };
+		E341E5B51CD3284400176C31 /* missingAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B31CD3284400176C31 /* missingAvatar.png */; };
+		E341E5B61CD3284400176C31 /* missingAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B41CD3284400176C31 /* missingAvatar@2x.png */; };
+		E341E5BB1CD3285800176C31 /* typingMine.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B71CD3285800176C31 /* typingMine.png */; };
+		E341E5BC1CD3285800176C31 /* typingMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B81CD3285800176C31 /* typingMine@2x.png */; };
+		E341E5BD1CD3285800176C31 /* typingSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B91CD3285800176C31 /* typingSomeone.png */; };
+		E341E5BE1CD3285800176C31 /* typingSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5BA1CD3285800176C31 /* typingSomeone@2x.png */; };
+		E341E5CC1CD328B300176C31 /* NSBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C21CD328B300176C31 /* NSBubbleData.m */; };
+		E341E5CD1CD328B300176C31 /* UIBubbleHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C41CD328B300176C31 /* UIBubbleHeaderTableViewCell.m */; };
+		E341E5CE1CD328B300176C31 /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C61CD328B300176C31 /* UIBubbleTableView.m */; };
+		E341E5CF1CD328B300176C31 /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C81CD328B300176C31 /* UIBubbleTableViewCell.m */; };
+		E341E5D01CD328B300176C31 /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5CB1CD328B300176C31 /* UIBubbleTypingTableViewCell.m */; };
 		E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
 		E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
 		E39B71491CC1500600B15382 /* EnregistrementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */; };
@@ -112,6 +127,27 @@
 		E3213AF21CBB34B50016A3B4 /* Constants-hosting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-hosting.h"; sourceTree = "<group>"; };
 		E3213AF41CBB4ABE0016A3B4 /* Constants-localhost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-localhost.h"; sourceTree = "<group>"; };
 		E3213B061CBBA7430016A3B4 /* BeInTouch-V1-hosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeInTouch-V1-hosting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E341E5AB1CD3283500176C31 /* bubbleMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleMine.png; sourceTree = "<group>"; };
+		E341E5AC1CD3283500176C31 /* bubbleMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleMine@2x.png"; sourceTree = "<group>"; };
+		E341E5AD1CD3283500176C31 /* bubbleSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSomeone.png; sourceTree = "<group>"; };
+		E341E5AE1CD3283500176C31 /* bubbleSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleSomeone@2x.png"; sourceTree = "<group>"; };
+		E341E5B31CD3284400176C31 /* missingAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missingAvatar.png; sourceTree = "<group>"; };
+		E341E5B41CD3284400176C31 /* missingAvatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missingAvatar@2x.png"; sourceTree = "<group>"; };
+		E341E5B71CD3285800176C31 /* typingMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingMine.png; sourceTree = "<group>"; };
+		E341E5B81CD3285800176C31 /* typingMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingMine@2x.png"; sourceTree = "<group>"; };
+		E341E5B91CD3285800176C31 /* typingSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingSomeone.png; sourceTree = "<group>"; };
+		E341E5BA1CD3285800176C31 /* typingSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingSomeone@2x.png"; sourceTree = "<group>"; };
+		E341E5C11CD328B300176C31 /* NSBubbleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBubbleData.h; sourceTree = "<group>"; };
+		E341E5C21CD328B300176C31 /* NSBubbleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBubbleData.m; sourceTree = "<group>"; };
+		E341E5C31CD328B300176C31 /* UIBubbleHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleHeaderTableViewCell.h; sourceTree = "<group>"; };
+		E341E5C41CD328B300176C31 /* UIBubbleHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleHeaderTableViewCell.m; sourceTree = "<group>"; };
+		E341E5C51CD328B300176C31 /* UIBubbleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableView.h; sourceTree = "<group>"; };
+		E341E5C61CD328B300176C31 /* UIBubbleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTableView.m; sourceTree = "<group>"; };
+		E341E5C71CD328B300176C31 /* UIBubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewCell.h; sourceTree = "<group>"; };
+		E341E5C81CD328B300176C31 /* UIBubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTableViewCell.m; sourceTree = "<group>"; };
+		E341E5C91CD328B300176C31 /* UIBubbleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewDataSource.h; sourceTree = "<group>"; };
+		E341E5CA1CD328B300176C31 /* UIBubbleTypingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTypingTableViewCell.h; sourceTree = "<group>"; };
+		E341E5CB1CD328B300176C31 /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
 		E39B71401CBD502900B15382 /* BeInTouch-V1-localhost-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeInTouch-V1-localhost-Prefix.pch"; sourceTree = "<group>"; };
 		E39B71411CBD502900B15382 /* BeInTouch-V1-hosting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeInTouch-V1-hosting-Prefix.pch"; sourceTree = "<group>"; };
 		E39B71421CBD502900B15382 /* UtilisateurDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurDTO.m; sourceTree = "<group>"; };
@@ -177,6 +213,8 @@
 		E3213AD11CB9C8250016A3B4 /* BeInTouch - V1 */ = {
 			isa = PBXGroup;
 			children = (
+				E341E5C01CD3287E00176C31 /* src */,
+				E341E5AA1CD3281300176C31 /* images */,
 				E39B71471CBFA2BB00B15382 /* ViewController */,
 				E39B71481CBFA70E00B15382 /* Facade */,
 				E39B71461CBFA1EA00B15382 /* DTO */,
@@ -202,6 +240,41 @@
 				E3213AD31CB9C8250016A3B4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E341E5AA1CD3281300176C31 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E341E5B71CD3285800176C31 /* typingMine.png */,
+				E341E5B81CD3285800176C31 /* typingMine@2x.png */,
+				E341E5B91CD3285800176C31 /* typingSomeone.png */,
+				E341E5BA1CD3285800176C31 /* typingSomeone@2x.png */,
+				E341E5B31CD3284400176C31 /* missingAvatar.png */,
+				E341E5B41CD3284400176C31 /* missingAvatar@2x.png */,
+				E341E5AB1CD3283500176C31 /* bubbleMine.png */,
+				E341E5AC1CD3283500176C31 /* bubbleMine@2x.png */,
+				E341E5AD1CD3283500176C31 /* bubbleSomeone.png */,
+				E341E5AE1CD3283500176C31 /* bubbleSomeone@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		E341E5C01CD3287E00176C31 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E341E5C11CD328B300176C31 /* NSBubbleData.h */,
+				E341E5C21CD328B300176C31 /* NSBubbleData.m */,
+				E341E5C31CD328B300176C31 /* UIBubbleHeaderTableViewCell.h */,
+				E341E5C41CD328B300176C31 /* UIBubbleHeaderTableViewCell.m */,
+				E341E5C51CD328B300176C31 /* UIBubbleTableView.h */,
+				E341E5C61CD328B300176C31 /* UIBubbleTableView.m */,
+				E341E5C71CD328B300176C31 /* UIBubbleTableViewCell.h */,
+				E341E5C81CD328B300176C31 /* UIBubbleTableViewCell.m */,
+				E341E5C91CD328B300176C31 /* UIBubbleTableViewDataSource.h */,
+				E341E5CA1CD328B300176C31 /* UIBubbleTypingTableViewCell.h */,
+				E341E5CB1CD328B300176C31 /* UIBubbleTypingTableViewCell.m */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		E39B71461CBFA1EA00B15382 /* DTO */ = {
@@ -350,10 +423,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E341E5BE1CD3285800176C31 /* typingSomeone@2x.png in Resources */,
 				E3213AE21CB9C8250016A3B4 /* LaunchScreen.storyboard in Resources */,
+				E341E5BD1CD3285800176C31 /* typingSomeone.png in Resources */,
+				E341E5B01CD3283500176C31 /* bubbleMine@2x.png in Resources */,
+				E341E5AF1CD3283500176C31 /* bubbleMine.png in Resources */,
+				E341E5B21CD3283500176C31 /* bubbleSomeone@2x.png in Resources */,
 				E3213ADF1CB9C8250016A3B4 /* Assets.xcassets in Resources */,
+				E341E5BB1CD3285800176C31 /* typingMine.png in Resources */,
+				E341E5BC1CD3285800176C31 /* typingMine@2x.png in Resources */,
 				E3213ADD1CB9C8250016A3B4 /* Main.storyboard in Resources */,
+				E341E5B51CD3284400176C31 /* missingAvatar.png in Resources */,
 				B6A993E71CC40627005CE052 /* icon_photo.png in Resources */,
+				E341E5B61CD3284400176C31 /* missingAvatar@2x.png in Resources */,
+				E341E5B11CD3283500176C31 /* bubbleSomeone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +465,9 @@
 				6EBB36281CBEC84700784B45 /* MessageFacade.m in Sources */,
 				B68544B11CC01DE8003F4BBE /* InfosViewController.m in Sources */,
 				E3EFC0331CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */,
+				E341E5CE1CD328B300176C31 /* UIBubbleTableView.m in Sources */,
 				E3EFC0471CC6842300C41932 /* ChatRoomTableViewController.m in Sources */,
+				E341E5CF1CD328B300176C31 /* UIBubbleTableViewCell.m in Sources */,
 				6E90C5CA1CC0E6570026B92D /* ContactDTO.m in Sources */,
 				6E90C5C21CC0E6570026B92D /* ContactChatRoomDTO.m in Sources */,
 				E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */,
@@ -390,15 +475,18 @@
 				E3213AEB1CB9C95B0016A3B4 /* UtilisateurFacade.m in Sources */,
 				6E90C5C01CC0E6570026B92D /* ChatRoomFacade.m in Sources */,
 				6E90C5C81CC0E6570026B92D /* ContactChatRoomMessageFacade.m in Sources */,
+				E341E5CD1CD328B300176C31 /* UIBubbleHeaderTableViewCell.m in Sources */,
 				B68544BD1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */,
 				E3213AD71CB9C8250016A3B4 /* AppDelegate.m in Sources */,
 				E3EFC03F1CC67DCE00C41932 /* AjoutMembreViewController.m in Sources */,
 				E3EFC02F1CC6559600C41932 /* DetailChatRoomViewController.m in Sources */,
+				E341E5D01CD328B300176C31 /* UIBubbleTypingTableViewCell.m in Sources */,
 				B68544AD1CC01D65003F4BBE /* BienvenuViewController.m in Sources */,
 				E3213AD41CB9C8250016A3B4 /* main.m in Sources */,
 				E3EFC0431CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */,
 				6E90C5C61CC0E6570026B92D /* ContactChatRoomMessageDTO.m in Sources */,
 				6E90C5C41CC0E6570026B92D /* ContactChatRoomFacade.m in Sources */,
+				E341E5CC1CD328B300176C31 /* NSBubbleData.m in Sources */,
 				B6917C4B1CBE83C000E2499C /* EnregistrementViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

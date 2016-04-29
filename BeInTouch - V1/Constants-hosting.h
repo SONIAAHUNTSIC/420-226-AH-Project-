@@ -8,7 +8,7 @@
 
 
 #ifndef URL_SERVICE_WEB
-#define URL_SERVICE_WEB "http://www.soniaif-softwaredeveloper.ca/BeInTouch/utilisateur.php"
+#define URL_SERVICE_WEB "http://www.soniaif-softwaredeveloper.ca/BeInTouch/controller.php"
 
 #endif
 

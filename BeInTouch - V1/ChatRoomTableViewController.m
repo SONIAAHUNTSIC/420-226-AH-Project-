@@ -24,7 +24,7 @@
 @synthesize  chatRooms;
 @synthesize contactChatRooms;
 
-@synthesize  idUtilisateur;
+@synthesize idUtilisateur;
 @synthesize idChatRoom;
 
 
@@ -115,7 +115,15 @@
     
     return cell;
 }
-
+- (void)tableView:(UITableView*)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath*)indexPath {
+    
+    ChatRoomDTO* chatRoomDTO = [[self chatRooms]  objectAtIndex:[indexPath row]];
+    
+    // Passe la clef primaire au prochain view controller pour qu'il charge les données de l'enregistrement
+    [self setIdChatRoom:[chatRoomDTO idChatRoom]];
+    [self performSegueWithIdentifier:@"sujetChat" sender:self];
+    NSLog(@"sujet %@",[chatRoomDTO idChatRoom]);
+}
 
 
 // Override to support conditional editing of the table view.
@@ -162,8 +170,9 @@
         NSLog(@"chatroom idutilisateur = , %@",idUtilisateur);
     }else if ([segue.identifier isEqualToString:@"sujetChat"]){
     
-        DetailChatRoomViewController* detailTchatRoomViewController = [segue destinationViewController];
-        [detailTchatRoomViewController setIdUtilisateur:[self idUtilisateur]];
+        DetailChatRoomViewController* detailChatRoomViewController = [segue destinationViewController];
+        [detailChatRoomViewController setIdUtilisateur:[self idUtilisateur]];
+        [detailChatRoomViewController setIdChatRoom:[self idChatRoom]];
         NSLog(@"Requete , %@",idUtilisateur);
     }
 
@@ -177,7 +186,9 @@
     AjoutMembreViewController *ajoutMembreViewController = [segue  sourceViewController];
     
     ChatRoomDTO* chatroomDTO = [[ChatRoomDTO alloc] initAvecIdChatRoom:idChatRoom
-                                                                 sujet:[ajoutMembreViewController sujet] dateCreation:@"UnDateCreation" etDateFermeture:@"UnDatefermeture"];
+                                                sujet:[ajoutMembreViewController sujet]
+                                                dateCreation:@""
+                                                etDateFermeture:@""];
     if ([ajoutMembreViewController idUtilisateur] == nil
         ||[ajoutMembreViewController idContact] == nil
         ||[[chatroomDTO sujet]  isEqual:@""])

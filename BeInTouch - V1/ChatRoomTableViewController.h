@@ -13,9 +13,9 @@
 #pragma mark - Proprietés privées
 @property (strong,nonatomic) NSMutableArray* chatRooms;
 @property (strong,nonatomic) NSMutableArray* contactChatRooms;
-@property (strong,nonatomic) NSString *idUtilisateur;
-@property (strong,nonatomic) NSString *idChatRoom;
-@property (strong,nonatomic) NSString *sujet;
+@property (nonatomic) NSString *idUtilisateur;
+@property (nonatomic) NSString *idChatRoom;
+@property (nonatomic) NSString *sujet;
 
 
 

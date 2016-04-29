@@ -103,8 +103,13 @@
                   
     int intEnregistre = [[ContactFacade contactFacade] createContact:contactDTO];
     
-      NSLog(@"Requete de %@ , %d enregistrement(s) %@\n\n",typeRequete,intEnregistre,typeRequeteAction);
+    ContactDTO *contact1DTO = [[ContactDTO alloc] initAvecUtilisateurActif:utilisateurContactDTO
+                                                     etUtilisateurContact:utilisateurDTO];
     
+    int intEnregistre1 = [[ContactFacade contactFacade] createContact:contact1DTO];
+    
+      NSLog(@"Requete de %@ , %d enregistrement(s) %@\n\n",typeRequete,intEnregistre,typeRequeteAction);
+     NSLog(@"Requete de %@ , %d enregistrement(s) %@\n\n",typeRequete,intEnregistre1,typeRequeteAction);
     
     NSString *message = @"Un ami ajouté";
     UIAlertView *toast = [[UIAlertView alloc] initWithTitle:nil
