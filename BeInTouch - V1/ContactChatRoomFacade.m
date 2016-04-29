@@ -289,14 +289,14 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
     return contactChatRooms;
  }
 // Obtiene tous les membres du ChatRoom
-- (NSMutableArray*)getAllContacts:(NSString *)idChatRoom
+- (NSMutableArray*)getAllContacts:(NSString*)idUtilisateur etChatRoom:(NSString *)idChatRoom
 {
     NSLog(@"get all contact du chat");
     NSMutableArray* contacts = [[NSMutableArray alloc] init];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContactsC&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_chatroom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT,idChatRoom];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContactsC&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_chatroom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT,idUtilisateur,idChatRoom];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];

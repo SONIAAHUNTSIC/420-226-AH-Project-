@@ -212,8 +212,11 @@
         
         self.contactsChatRoom = [[NSMutableArray alloc] init];
         
+        
+        //Obtiene tous les contacts du chatroom
+        
         [self setContactsChatRoom:[[ContactChatRoomFacade  contactChatRoomFacade]
-                                   getAllContacts:[self idChatRoom]]];
+                                   getAllContacts:[self idUtilisateur] etChatRoom:[self idChatRoom]]];
         NSLog(@"antes for");
         
         for(int i=0 ; i < [contactsChatRoom count]; i++) {

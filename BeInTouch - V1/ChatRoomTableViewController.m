@@ -48,7 +48,7 @@
      ChatRoomDTO *unChatRoomDTO = [[ChatRoomDTO alloc]init];
     
     
-    for(int i=0 ; i < [ contactChatRooms count]; ++i) {
+    for(int i=0 ; i < [ contactChatRooms count]; i++) {
         
         contactChatRoom = [contactChatRooms objectAtIndex:i];
         

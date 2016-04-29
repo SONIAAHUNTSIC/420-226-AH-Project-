@@ -34,7 +34,7 @@ static MessageFacade* messageFacade = nil;
 - (int)createMessage:(MessageDTO *)messageDTO
 {
     NSLog(@"test message");
-    int nombreEnregistrements = 0;
+    int nombreMessage = 0;
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response = nil;
     NSError* error = nil;
@@ -50,7 +50,7 @@ static MessageFacade* messageFacade = nil;
         NSLog(@"test 200");
         NSDictionary* resultatJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
-        nombreEnregistrements = (int) [resultatJSON[@"nombreEnregistrements"] integerValue];
+        nombreMessage = (int) [resultatJSON[@"id_message"] integerValue];
     } else if([response statusCode] != 200
               &&      donnees != nil) {
         NSDictionary* erreurJSON = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
@@ -63,7 +63,7 @@ static MessageFacade* messageFacade = nil;
     } else {
         NSLog(@"[Code d'erreur %ld] Échec de la requête %@?%@", (long) [response statusCode], @URL_SERVICE_WEB, parametresRequete);
     }
-    return nombreEnregistrements;
+    return nombreMessage;
 }
 
 - (MessageDTO*)readMessage:(NSString *)idMessage
