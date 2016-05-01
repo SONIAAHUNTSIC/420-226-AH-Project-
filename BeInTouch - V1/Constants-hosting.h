@@ -22,7 +22,7 @@
 #endif
 
 #ifndef MOT_DE_PASSE
-#define MOT_DE_PASSE "123456"
+#define MOT_DE_PASSE ""
 #endif
 
 #ifndef BASE_DE_DONNEES
