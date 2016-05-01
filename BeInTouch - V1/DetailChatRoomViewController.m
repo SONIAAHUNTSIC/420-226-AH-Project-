@@ -77,23 +77,50 @@
     
     ContactChatRoomMessageDTO * contactChatRoomMessageDTO = [[ContactChatRoomMessageDTO alloc] init];
     MessageDTO *unMessageDTO = [[MessageDTO alloc]init];
-    
+    UtilisateurDTO *unUtilisateurDTO = [[UtilisateurDTO alloc]init];
     NSLog(@"mensajes %lu",(unsigned long)[messages count]);
     bubbleData = [[NSMutableArray alloc] init];
+//    for(int i=0 ; i < [messages count]; i++) {
+//        
+//        contactChatRoomMessageDTO = [messages objectAtIndex:i];
+//        
+//        unMessageDTO  = [contactChatRoomMessageDTO message];
+//        
+//        
+//        NSLog(@"mensaje contenu %@ ",[unMessageDTO contenu]);
+//        NSBubbleData *heyBubble = [NSBubbleData dataWithText:[unMessageDTO contenu] date:[NSDate dateWithTimeIntervalSinceNow:-300] type:BubbleTypeSomeoneElse];
+//        
+//        [bubbleData addObject:heyBubble];
+//        
+//        
+//    }
     for(int i=0 ; i < [messages count]; i++) {
         
         contactChatRoomMessageDTO = [messages objectAtIndex:i];
         
         unMessageDTO  = [contactChatRoomMessageDTO message];
+        unUtilisateurDTO = [contactChatRoomMessageDTO utilisateur];
         
         
-        NSLog(@"mensaje contenu %@ ",[unMessageDTO contenu]);
-        NSBubbleData *heyBubble = [NSBubbleData dataWithText:[unMessageDTO contenu] date:[NSDate dateWithTimeIntervalSinceNow:-300] type:BubbleTypeSomeoneElse];
-        
-        [bubbleData addObject:heyBubble];
-        
-        
+        if ([unUtilisateurDTO.idUtilisateur isEqualToString:idUtilisateur]){
+            
+            NSLog(@"mensaje contenu %@ ",[unMessageDTO contenu]);
+            NSBubbleData *heyBubble = [NSBubbleData dataWithText:[unMessageDTO contenu] date:[NSDate dateWithTimeIntervalSinceNow:-300] type:BubbleTypeMine];
+            
+            [bubbleData addObject:heyBubble];
+            
+        }
+        else {
+            
+            NSLog(@"mensaje contenu %@ ",[unMessageDTO contenu]);
+            NSBubbleData *heyBubble = [NSBubbleData dataWithText:[unMessageDTO contenu] date:[NSDate dateWithTimeIntervalSinceNow:-300] type:BubbleTypeSomeoneElse];
+            
+            [bubbleData addObject:heyBubble];
+            
+        }
     }
+
+    
     //NSBubbleData *heyBubble = [NSBubbleData dataWithText:@"sonia" date:[NSDate dateWithTimeIntervalSinceNow:-300] type:BubbleTypeSomeoneElse];
     //heyBubble.avatar = @"xx";
     
@@ -227,7 +254,7 @@
             UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur:idUtilisateur];
             ChatRoomDTO *chatRoomDTO = [[ChatRoomFacade chatRoomFacade]readChatRoom:idChatRoom];
             MessageDTO *messageDTO = [[MessageFacade messageFacade]readMessage:idEnregistre];
-            
+                      
                 
                                                          
             ContactChatRoomMessageDTO* contactChatRoomMessageDTO = [[ContactChatRoomMessageDTO alloc]initAvecUtilisateur:utilisateurDTO

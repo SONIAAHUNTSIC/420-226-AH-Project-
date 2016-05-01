@@ -214,17 +214,8 @@
                                     <navigationItem title="Bienvenue" id="it4-1F-HVb"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPp-iG-hPk">
-                                <rect key="frame" x="98" y="116" width="124" height="30"/>
-                                <state key="normal" title="Voir infos">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mrS-11-dqf" kind="modal" identifier="segueInfo" id="M56-TG-z7H"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R42-Nd-vwb">
-                                <rect key="frame" x="105" y="154" width="111" height="30"/>
+                                <rect key="frame" x="105" y="178" width="111" height="30"/>
                                 <state key="normal" title="Ajouter amis">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -233,7 +224,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-ak-97H">
-                                <rect key="frame" x="92" y="192" width="137" height="30"/>
+                                <rect key="frame" x="92" y="216" width="137" height="30"/>
                                 <state key="normal" title="Voir ou ajouter amis">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -242,12 +233,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwU-kC-G73">
-                                <rect key="frame" x="88" y="230" width="144" height="30"/>
-                                <state key="normal" title="Créer chatroom">
+                                <rect key="frame" x="88" y="263" width="144" height="30"/>
+                                <state key="normal" title="ChatRoom">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="2k7-7R-5bg" kind="modal" identifier="segueCreerChatRoom" id="raQ-oP-Vka"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPp-iG-hPk">
+                                <rect key="frame" x="98" y="140" width="124" height="30"/>
+                                <state key="normal" title="Voir infos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mrS-11-dqf" kind="modal" identifier="segueInfo" id="M56-TG-z7H"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -611,7 +611,7 @@
                             <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="&gt;&gt;" id="mfJ-CH-JaM">
-                            <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.92146596859999996" green="0.41778539879999999" blue="0.1339227627" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="WpZ-BB-oao" kind="modal" identifier="ajoutMembre" id="Jsx-5c-MEC"/>
                             </connections>
@@ -836,6 +836,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="cQk-oq-jfn"/>
-        <segue reference="wUx-5e-bUa"/>
+        <segue reference="yfr-hN-DND"/>
     </inferredMetricsTieBreakers>
 </document>
