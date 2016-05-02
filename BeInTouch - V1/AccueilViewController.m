@@ -43,21 +43,21 @@
         
         if ([_textIdConnecter.text  isEqual: @""]) {
             
-           // UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Vous devez entrer son ID" message:@"Pour se connecter" preferredStyle:UIAlertControllerStyleAlert];
+           UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Vous devez entrer son ID" message:@"Pour se connecter" preferredStyle:UIAlertControllerStyleAlert];
             
-            //UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-            //[alertController addAction:ok];
+           UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+           [alertController addAction:ok];
             
-           // [self presentViewController:alertController animated:YES completion:nil];
+           [self presentViewController:alertController animated:YES completion:nil];
             
-            NSLog(@"alert view: %@ = id\n",_textIdConnecter.text);
+          
             
         }
         else {
             BienvenuViewController* bienvenuViewController = [segue destinationViewController];
             
             bienvenuViewController.idUtilisateur =  _textIdConnecter.text;
-            NSLog(@"Prepare for Segue : %@ = id\n",_textIdConnecter.text);
+            
             
         }
     }

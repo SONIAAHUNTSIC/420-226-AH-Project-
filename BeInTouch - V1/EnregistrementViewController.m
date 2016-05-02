@@ -91,7 +91,7 @@
     }
     
 }
-
+#pragma mark - viewDidLoad
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -174,7 +174,7 @@
 -(void)montrerDateSelectionner
 {
     NSDateFormatter *format=[[NSDateFormatter alloc]init];
-    [format setDateFormat:@"dd/MMM/YYY"];
+    [format setDateFormat:@"dd/MM"];
     self.textDateNaissance.text=[NSString stringWithFormat:@"%@",[format stringFromDate:datePicker.date]];
     [self.textDateNaissance resignFirstResponder];
 

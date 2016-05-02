@@ -242,8 +242,11 @@
         
         //Obtiene tous les contacts du chatroom
         
+      //  [self setContactsChatRoom:[[ContactChatRoomFacade  contactChatRoomFacade]
+      //                             getAllContacts:[self idUtilisateur] etChatRoom:[self idChatRoom]]];
         [self setContactsChatRoom:[[ContactChatRoomFacade  contactChatRoomFacade]
-                                   getAllContacts:[self idUtilisateur] etChatRoom:[self idChatRoom]]];
+                                   getAllContacts:[self idUtilisateur] etIdChatRoom:[self idChatRoom]]];
+        
         NSLog(@"antes for");
         
         for(int i=0 ; i < [contactsChatRoom count]; i++) {
@@ -269,6 +272,8 @@
         {
             NSLog(@"entra if");
             int intEnregistre2 = 0;
+            
+            
             intEnregistre2 = [[ContactChatRoomMessageFacade contactChatRoomMessageFacade] createContactChatRoomMessage:contactChatRoomMessageDTO];
             if (intEnregistre2 == 1) {
                 NSLog(@"Requete reussie");

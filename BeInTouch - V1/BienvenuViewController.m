@@ -53,6 +53,7 @@
  // Pass the selected object to the new view controller.
  }
  */
+#pragma mark - prepare for segue
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
     
@@ -80,7 +81,6 @@
         NSLog(@"Requete , %@",idUtilisateur);
     }
     else if ([segue.identifier isEqualToString:@"segueCreerChatRoom"]){
-        
         
         
         UINavigationController *navController = (UINavigationController *)[segue destinationViewController];

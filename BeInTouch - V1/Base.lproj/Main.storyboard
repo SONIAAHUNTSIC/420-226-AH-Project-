@@ -95,53 +95,47 @@
                                 <rect key="frame" x="20" y="105" width="66" height="66"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92W-GC-I76">
-                                <rect key="frame" x="136" y="120" width="151" height="25"/>
+                                <rect key="frame" x="136" y="140" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Date anniversaire" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-jb-2XU">
-                                <rect key="frame" x="136" y="202" width="151" height="25"/>
+                                <rect key="frame" x="136" y="227" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fns-bA-dNb">
-                                <rect key="frame" x="136" y="76" width="151" height="25"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Sexe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-is-ltA">
-                                <rect key="frame" x="136" y="163" width="151" height="25"/>
+                                <rect key="frame" x="136" y="184" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Courriel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XjK-ZC-zR7">
-                                <rect key="frame" x="136" y="243" width="151" height="25"/>
+                                <rect key="frame" x="136" y="268" width="151" height="26"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Téléphone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-Eg-kKt">
-                                <rect key="frame" x="136" y="282" width="151" height="25"/>
+                                <rect key="frame" x="136" y="317" width="151" height="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLF-7f-8qL">
                                 <rect key="frame" x="0.0" y="12" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Enregistrement" id="a1X-Zz-0aN">
                                         <barButtonItem key="leftBarButtonItem" title="Accueil" id="Tfx-WM-5wP">
-                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.92146596859999996" green="0.41778539879999999" blue="0.1339227627" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="LrY-bf-aaO" kind="unwind" unwindAction="returnFromEnregistrement:" id="yKc-eE-2mg"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="OK" id="c5e-Rm-4JG">
-                                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.92146596859999996" green="0.41778539879999999" blue="0.1339227627" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="rYv-v9-4Oi" kind="modal" identifier="segueEnregistrement" id="cQk-oq-jfn"/>
                                             </connections>
@@ -169,6 +163,12 @@
                                     <action selector="ChoisirUnePhoto" destination="hxk-ID-1bg" eventType="touchUpInside" id="gFs-iO-xOE"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prénom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fns-bA-dNb">
+                                <rect key="frame" x="136" y="97" width="151" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.3896670384" green="1" blue="0.23475226709999999" alpha="1" colorSpace="calibratedRGB"/>

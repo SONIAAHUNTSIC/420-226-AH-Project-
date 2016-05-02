@@ -19,7 +19,7 @@
 -(int) deleteContactChatRoom:(ContactChatRoomDTO*) contactChatRoomDTO ;
 -(NSMutableArray*)getAllContactChatRooms:(NSString *) idUtilisateur;
 -(NSMutableArray*)getAllContacts:(NSString *) idUtilisateur
-                  etChatRoom : (NSString*) idChatRoom;
+                  etIdChatRoom : (NSString*) idChatRoom;
 
 
 @end

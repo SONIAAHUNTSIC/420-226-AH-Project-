@@ -288,15 +288,15 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
     }
     return contactChatRooms;
  }
-// Obtiene tous les membres du ChatRoom
-- (NSMutableArray*)getAllContacts:(NSString*)idUtilisateur etChatRoom:(NSString *)idChatRoom
+// Obtiene tous les membres du ChatRoom S.I.F
+- (NSMutableArray*)getAllContacts:(NSString *)idUtilisateur etIdChatRoom: (NSString *)idChatRoom
 {
-    NSLog(@"get all contact du chat");
+    NSLog(@"get all contact du chat ");
     NSMutableArray* contacts = [[NSMutableArray alloc] init];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@URL_SERVICE_WEB]];
     NSHTTPURLResponse* response;
     NSError* error = nil;
-    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContactsC&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_utilisateur=%@&id_chatroom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT,idUtilisateur,idChatRoom];
+    NSString* parametresRequete = [NSString stringWithFormat:@"methode=getAllContactsC&serveur=%@&utilisateur=%@&motDePasse=%@&baseDeDonnees=%@&port=%@&id_chatroom=%@", @SERVEUR, @UTILISATEUR, @MOT_DE_PASSE, @BASE_DE_DONNEES, @PORT,idChatRoom];
     NSData* donnees = nil;
     
     [request setHTTPMethod:@"POST"];
@@ -309,9 +309,20 @@ static ContactChatRoomFacade* contactChatRoomFacade = nil;
         NSArray* resultats = [NSJSONSerialization JSONObjectWithData:donnees options:NSJSONReadingAllowFragments error:&error];
         
         for (NSDictionary* contactChatRoomJSON in resultats) {
+
+            UtilisateurDTO *utilisateurDTO;
+            
+            if ([contactChatRoomJSON[@"id_utilisateur"]  isEqualToString:idUtilisateur])
+                 {
+              utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur: contactChatRoomJSON[@"id_utilisateur_contact"]];
+                 }
             
             
-            UtilisateurDTO *utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur: contactChatRoomJSON[@"id_utilisateur_contact"]];
+            if ([contactChatRoomJSON[@"id_utilisateur_contact"] isEqualToString:idUtilisateur])
+            {
+              utilisateurDTO = [[UtilisateurFacade utilisateurFacade]readUtilisateur: contactChatRoomJSON[@"id_utilisateur"]];
+            }
+           
             
             
             [contacts addObject:utilisateurDTO];
