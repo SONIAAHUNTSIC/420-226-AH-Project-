@@ -12,17 +12,17 @@
 
 #endif
 
-#ifndef  SERVEUR
-#define SERVEUR "localhost:3306"
+#ifndef SERVEUR
+#define SERVEUR "localhost"
 #endif
 
 
 #ifndef UTILISATEUR
-#define UTILISATEUR "soniaifs"
+#define UTILISATEUR "soniaifs_sonia"
 #endif
 
 #ifndef MOT_DE_PASSE
-#define MOT_DE_PASSE ""
+#define MOT_DE_PASSE "soniaifs_sonia"
 #endif
 
 #ifndef BASE_DE_DONNEES

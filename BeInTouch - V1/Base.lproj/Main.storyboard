@@ -8,7 +8,7 @@
         <!--Accueil-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="AccueilViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="currentContext" id="vXZ-lx-hvc" customClass="AccueilViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -199,7 +199,7 @@
         <!--Bienvenu View Controller-->
         <scene sceneID="T9r-se-lSq">
             <objects>
-                <viewController id="rYv-v9-4Oi" customClass="BienvenuViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="overFullScreen" id="rYv-v9-4Oi" customClass="BienvenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jsN-Bb-wwI"/>
                         <viewControllerLayoutGuide type="bottom" id="3x9-h4-gxK"/>
@@ -835,7 +835,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cQk-oq-jfn"/>
+        <segue reference="TGD-Fi-nDU"/>
         <segue reference="yfr-hN-DND"/>
     </inferredMetricsTieBreakers>
 </document>

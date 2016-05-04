@@ -7,7 +7,7 @@
 		<key>BeInTouch-V1-hosting.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>BeInTouch-V1-hosting.xcscheme_^#shared#^_</key>
 		<dict>
@@ -33,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>E3213AF61CBBA7430016A3B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E341E5D31CD921CE00176C31</key>
 		<dict>
 			<key>primary</key>
 			<true/>

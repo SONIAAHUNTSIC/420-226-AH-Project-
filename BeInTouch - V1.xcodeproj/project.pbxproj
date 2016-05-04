@@ -8,48 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		6E90C5BE1CC0E6570026B92D /* ChatRoomDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5AF1CC0E6570026B92D /* ChatRoomDTO.m */; };
-		6E90C5BF1CC0E6570026B92D /* ChatRoomDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5AF1CC0E6570026B92D /* ChatRoomDTO.m */; };
 		6E90C5C01CC0E6570026B92D /* ChatRoomFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B11CC0E6570026B92D /* ChatRoomFacade.m */; };
-		6E90C5C11CC0E6570026B92D /* ChatRoomFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B11CC0E6570026B92D /* ChatRoomFacade.m */; };
 		6E90C5C21CC0E6570026B92D /* ContactChatRoomDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B31CC0E6570026B92D /* ContactChatRoomDTO.m */; };
-		6E90C5C31CC0E6570026B92D /* ContactChatRoomDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B31CC0E6570026B92D /* ContactChatRoomDTO.m */; };
 		6E90C5C41CC0E6570026B92D /* ContactChatRoomFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B51CC0E6570026B92D /* ContactChatRoomFacade.m */; };
-		6E90C5C51CC0E6570026B92D /* ContactChatRoomFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B51CC0E6570026B92D /* ContactChatRoomFacade.m */; };
 		6E90C5C61CC0E6570026B92D /* ContactChatRoomMessageDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B71CC0E6570026B92D /* ContactChatRoomMessageDTO.m */; };
-		6E90C5C71CC0E6570026B92D /* ContactChatRoomMessageDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B71CC0E6570026B92D /* ContactChatRoomMessageDTO.m */; };
 		6E90C5C81CC0E6570026B92D /* ContactChatRoomMessageFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B91CC0E6570026B92D /* ContactChatRoomMessageFacade.m */; };
-		6E90C5C91CC0E6570026B92D /* ContactChatRoomMessageFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B91CC0E6570026B92D /* ContactChatRoomMessageFacade.m */; };
 		6E90C5CA1CC0E6570026B92D /* ContactDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5BB1CC0E6570026B92D /* ContactDTO.m */; };
-		6E90C5CB1CC0E6570026B92D /* ContactDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5BB1CC0E6570026B92D /* ContactDTO.m */; };
 		6E90C5CC1CC0E6570026B92D /* ContactFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5BD1CC0E6570026B92D /* ContactFacade.m */; };
-		6E90C5CD1CC0E6570026B92D /* ContactFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5BD1CC0E6570026B92D /* ContactFacade.m */; };
 		6EBB36261CBEC84700784B45 /* MessageDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB361F1CBEC84700784B45 /* MessageDTO.m */; };
-		6EBB36271CBEC84700784B45 /* MessageDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB361F1CBEC84700784B45 /* MessageDTO.m */; };
 		6EBB36281CBEC84700784B45 /* MessageFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB36211CBEC84700784B45 /* MessageFacade.m */; };
-		6EBB36291CBEC84700784B45 /* MessageFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB36211CBEC84700784B45 /* MessageFacade.m */; };
 		B68544AD1CC01D65003F4BBE /* BienvenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544AC1CC01D65003F4BBE /* BienvenuViewController.m */; };
-		B68544AE1CC01D65003F4BBE /* BienvenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544AC1CC01D65003F4BBE /* BienvenuViewController.m */; };
 		B68544B11CC01DE8003F4BBE /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B01CC01DE8003F4BBE /* InfosViewController.m */; };
-		B68544B21CC01DE8003F4BBE /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B01CC01DE8003F4BBE /* InfosViewController.m */; };
 		B68544BD1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */; };
-		B68544BE1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */; };
 		B6917C4B1CBE83C000E2499C /* EnregistrementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */; };
 		B6A993E71CC40627005CE052 /* icon_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A993E61CC40627005CE052 /* icon_photo.png */; };
-		B6A993E81CC40627005CE052 /* icon_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A993E61CC40627005CE052 /* icon_photo.png */; };
 		B6D017081CC08851003BC41E /* VoirAmiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D017071CC08851003BC41E /* VoirAmiViewController.m */; };
-		B6D017091CC08851003BC41E /* VoirAmiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D017071CC08851003BC41E /* VoirAmiViewController.m */; };
 		E3213AD41CB9C8250016A3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD31CB9C8250016A3B4 /* main.m */; };
 		E3213AD71CB9C8250016A3B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD61CB9C8250016A3B4 /* AppDelegate.m */; };
 		E3213ADD1CB9C8250016A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
 		E3213ADF1CB9C8250016A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */; };
 		E3213AE21CB9C8250016A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */; };
 		E3213AEB1CB9C95B0016A3B4 /* UtilisateurFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */; };
-		E3213AFB1CBBA7430016A3B4 /* UtilisateurFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */; };
-		E3213AFC1CBBA7430016A3B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD61CB9C8250016A3B4 /* AppDelegate.m */; };
-		E3213AFD1CBBA7430016A3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD31CB9C8250016A3B4 /* main.m */; };
-		E3213B001CBBA7430016A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */; };
-		E3213B011CBBA7430016A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */; };
-		E3213B021CBBA7430016A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
 		E341E5AF1CD3283500176C31 /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AB1CD3283500176C31 /* bubbleMine.png */; };
 		E341E5B01CD3283500176C31 /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AC1CD3283500176C31 /* bubbleMine@2x.png */; };
 		E341E5B11CD3283500176C31 /* bubbleSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AD1CD3283500176C31 /* bubbleSomeone.png */; };
@@ -65,21 +44,57 @@
 		E341E5CE1CD328B300176C31 /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C61CD328B300176C31 /* UIBubbleTableView.m */; };
 		E341E5CF1CD328B300176C31 /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C81CD328B300176C31 /* UIBubbleTableViewCell.m */; };
 		E341E5D01CD328B300176C31 /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5CB1CD328B300176C31 /* UIBubbleTypingTableViewCell.m */; };
+		E341E5D51CD921CE00176C31 /* ContactFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5BD1CC0E6570026B92D /* ContactFacade.m */; };
+		E341E5D61CD921CE00176C31 /* VoirAmiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D017071CC08851003BC41E /* VoirAmiViewController.m */; };
+		E341E5D71CD921CE00176C31 /* MessageDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB361F1CBEC84700784B45 /* MessageDTO.m */; };
+		E341E5D81CD921CE00176C31 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0361CC66C9500C41932 /* AccueilViewController.m */; };
+		E341E5D91CD921CE00176C31 /* MessageFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB36211CBEC84700784B45 /* MessageFacade.m */; };
+		E341E5DA1CD921CE00176C31 /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544B01CC01DE8003F4BBE /* InfosViewController.m */; };
+		E341E5DB1CD921CE00176C31 /* NouveauChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0321CC669F700C41932 /* NouveauChatRoomViewController.m */; };
+		E341E5DC1CD921CE00176C31 /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C61CD328B300176C31 /* UIBubbleTableView.m */; };
+		E341E5DD1CD921CE00176C31 /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */; };
+		E341E5DE1CD921CE00176C31 /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C81CD328B300176C31 /* UIBubbleTableViewCell.m */; };
+		E341E5DF1CD921CE00176C31 /* ContactDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5BB1CC0E6570026B92D /* ContactDTO.m */; };
+		E341E5E01CD921CE00176C31 /* ContactChatRoomDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B31CC0E6570026B92D /* ContactChatRoomDTO.m */; };
+		E341E5E11CD921CE00176C31 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
+		E341E5E21CD921CE00176C31 /* ChatRoomDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5AF1CC0E6570026B92D /* ChatRoomDTO.m */; };
+		E341E5E31CD921CE00176C31 /* UtilisateurFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */; };
+		E341E5E41CD921CE00176C31 /* ChatRoomFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B11CC0E6570026B92D /* ChatRoomFacade.m */; };
+		E341E5E51CD921CE00176C31 /* ContactChatRoomMessageFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B91CC0E6570026B92D /* ContactChatRoomMessageFacade.m */; };
+		E341E5E61CD921CE00176C31 /* UIBubbleHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C41CD328B300176C31 /* UIBubbleHeaderTableViewCell.m */; };
+		E341E5E71CD921CE00176C31 /* AjouterAmisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544BC1CC029AC003F4BBE /* AjouterAmisViewController.m */; };
+		E341E5E81CD921CE00176C31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD61CB9C8250016A3B4 /* AppDelegate.m */; };
+		E341E5E91CD921CE00176C31 /* AjoutMembreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC03E1CC67DCE00C41932 /* AjoutMembreViewController.m */; };
+		E341E5EA1CD921CE00176C31 /* DetailChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC02E1CC6559600C41932 /* DetailChatRoomViewController.m */; };
+		E341E5EB1CD921CE00176C31 /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5CB1CD328B300176C31 /* UIBubbleTypingTableViewCell.m */; };
+		E341E5EC1CD921CE00176C31 /* BienvenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68544AC1CC01D65003F4BBE /* BienvenuViewController.m */; };
+		E341E5ED1CD921CE00176C31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3213AD31CB9C8250016A3B4 /* main.m */; };
+		E341E5EE1CD921CE00176C31 /* ListeMembreChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */; };
+		E341E5EF1CD921CE00176C31 /* ContactChatRoomMessageDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B71CC0E6570026B92D /* ContactChatRoomMessageDTO.m */; };
+		E341E5F01CD921CE00176C31 /* ContactChatRoomFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90C5B51CC0E6570026B92D /* ContactChatRoomFacade.m */; };
+		E341E5F11CD921CE00176C31 /* NSBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = E341E5C21CD328B300176C31 /* NSBubbleData.m */; };
+		E341E5F21CD921CE00176C31 /* EnregistrementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */; };
+		E341E5F51CD921CE00176C31 /* typingSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5BA1CD3285800176C31 /* typingSomeone@2x.png */; };
+		E341E5F61CD921CE00176C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213AE01CB9C8250016A3B4 /* LaunchScreen.storyboard */; };
+		E341E5F71CD921CE00176C31 /* typingSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B91CD3285800176C31 /* typingSomeone.png */; };
+		E341E5F81CD921CE00176C31 /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AC1CD3283500176C31 /* bubbleMine@2x.png */; };
+		E341E5F91CD921CE00176C31 /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AB1CD3283500176C31 /* bubbleMine.png */; };
+		E341E5FA1CD921CE00176C31 /* bubbleSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AE1CD3283500176C31 /* bubbleSomeone@2x.png */; };
+		E341E5FB1CD921CE00176C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADE1CB9C8250016A3B4 /* Assets.xcassets */; };
+		E341E5FC1CD921CE00176C31 /* typingMine.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B71CD3285800176C31 /* typingMine.png */; };
+		E341E5FD1CD921CE00176C31 /* typingMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B81CD3285800176C31 /* typingMine@2x.png */; };
+		E341E5FE1CD921CE00176C31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3213ADB1CB9C8250016A3B4 /* Main.storyboard */; };
+		E341E5FF1CD921CE00176C31 /* missingAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B31CD3284400176C31 /* missingAvatar.png */; };
+		E341E6001CD921CE00176C31 /* icon_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A993E61CC40627005CE052 /* icon_photo.png */; };
+		E341E6011CD921CE00176C31 /* missingAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5B41CD3284400176C31 /* missingAvatar@2x.png */; };
+		E341E6021CD921CE00176C31 /* bubbleSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = E341E5AD1CD3283500176C31 /* bubbleSomeone.png */; };
 		E39B71431CBD502900B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
-		E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E39B71421CBD502900B15382 /* UtilisateurDTO.m */; };
-		E39B71491CC1500600B15382 /* EnregistrementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6917C4A1CBE83C000E2499C /* EnregistrementViewController.m */; };
 		E3EFC02F1CC6559600C41932 /* DetailChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC02E1CC6559600C41932 /* DetailChatRoomViewController.m */; };
-		E3EFC0301CC6559600C41932 /* DetailChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC02E1CC6559600C41932 /* DetailChatRoomViewController.m */; };
 		E3EFC0331CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0321CC669F700C41932 /* NouveauChatRoomViewController.m */; };
-		E3EFC0341CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0321CC669F700C41932 /* NouveauChatRoomViewController.m */; };
 		E3EFC0371CC66C9500C41932 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0361CC66C9500C41932 /* AccueilViewController.m */; };
-		E3EFC0381CC66C9500C41932 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0361CC66C9500C41932 /* AccueilViewController.m */; };
 		E3EFC03F1CC67DCE00C41932 /* AjoutMembreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC03E1CC67DCE00C41932 /* AjoutMembreViewController.m */; };
-		E3EFC0401CC67DCE00C41932 /* AjoutMembreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC03E1CC67DCE00C41932 /* AjoutMembreViewController.m */; };
 		E3EFC0431CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */; };
-		E3EFC0441CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0421CC67EFA00C41932 /* ListeMembreChatRoomViewController.m */; };
 		E3EFC0471CC6842300C41932 /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */; };
-		E3EFC0481CC6842300C41932 /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFC0461CC6842300C41932 /* ChatRoomTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,7 +141,6 @@
 		E3213AEA1CB9C95B0016A3B4 /* UtilisateurFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurFacade.m; sourceTree = "<group>"; };
 		E3213AF21CBB34B50016A3B4 /* Constants-hosting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-hosting.h"; sourceTree = "<group>"; };
 		E3213AF41CBB4ABE0016A3B4 /* Constants-localhost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constants-localhost.h"; sourceTree = "<group>"; };
-		E3213B061CBBA7430016A3B4 /* BeInTouch-V1-hosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeInTouch-V1-hosting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E341E5AB1CD3283500176C31 /* bubbleMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleMine.png; sourceTree = "<group>"; };
 		E341E5AC1CD3283500176C31 /* bubbleMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleMine@2x.png"; sourceTree = "<group>"; };
 		E341E5AD1CD3283500176C31 /* bubbleSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSomeone.png; sourceTree = "<group>"; };
@@ -148,6 +162,8 @@
 		E341E5C91CD328B300176C31 /* UIBubbleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewDataSource.h; sourceTree = "<group>"; };
 		E341E5CA1CD328B300176C31 /* UIBubbleTypingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTypingTableViewCell.h; sourceTree = "<group>"; };
 		E341E5CB1CD328B300176C31 /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
+		E341E6061CD921CE00176C31 /* BeInTouch-V1-hosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeInTouch-V1-hosting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E341E6071CD921CE00176C31 /* BeInTouch-V1-localhost copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BeInTouch-V1-localhost copy-Info.plist"; path = "/Users/Sonia/Documents/BeInTouch - V1/BeInTouch-V1-localhost copy-Info.plist"; sourceTree = "<absolute>"; };
 		E39B71401CBD502900B15382 /* BeInTouch-V1-localhost-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeInTouch-V1-localhost-Prefix.pch"; sourceTree = "<group>"; };
 		E39B71411CBD502900B15382 /* BeInTouch-V1-hosting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeInTouch-V1-hosting-Prefix.pch"; sourceTree = "<group>"; };
 		E39B71421CBD502900B15382 /* UtilisateurDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilisateurDTO.m; sourceTree = "<group>"; };
@@ -174,7 +190,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3213AFE1CBBA7430016A3B4 /* Frameworks */ = {
+		E341E5F31CD921CE00176C31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,6 +214,7 @@
 			children = (
 				E3213AD11CB9C8250016A3B4 /* BeInTouch - V1 */,
 				E3213AD01CB9C8250016A3B4 /* Products */,
+				E341E6071CD921CE00176C31 /* BeInTouch-V1-localhost copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E3213ACF1CB9C8250016A3B4 /* BeInTouch-V1-localhost.app */,
-				E3213B061CBBA7430016A3B4 /* BeInTouch-V1-hosting.app */,
+				E341E6061CD921CE00176C31 /* BeInTouch-V1-hosting.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -364,13 +381,13 @@
 			productReference = E3213ACF1CB9C8250016A3B4 /* BeInTouch-V1-localhost.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E3213AF61CBBA7430016A3B4 /* BeInTouch-V1-hosting */ = {
+		E341E5D31CD921CE00176C31 /* BeInTouch-V1-hosting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3213B031CBBA7430016A3B4 /* Build configuration list for PBXNativeTarget "BeInTouch-V1-hosting" */;
+			buildConfigurationList = E341E6031CD921CE00176C31 /* Build configuration list for PBXNativeTarget "BeInTouch-V1-hosting" */;
 			buildPhases = (
-				E3213AF71CBBA7430016A3B4 /* Sources */,
-				E3213AFE1CBBA7430016A3B4 /* Frameworks */,
-				E3213AFF1CBBA7430016A3B4 /* Resources */,
+				E341E5D41CD921CE00176C31 /* Sources */,
+				E341E5F31CD921CE00176C31 /* Frameworks */,
+				E341E5F41CD921CE00176C31 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -378,7 +395,7 @@
 			);
 			name = "BeInTouch-V1-hosting";
 			productName = "BeInTouch - V1";
-			productReference = E3213B061CBBA7430016A3B4 /* BeInTouch-V1-hosting.app */;
+			productReference = E341E6061CD921CE00176C31 /* BeInTouch-V1-hosting.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -392,9 +409,6 @@
 				TargetAttributes = {
 					E3213ACE1CB9C8250016A3B4 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 5V2CQ8ZSEH;
-					};
-					E3213AF61CBBA7430016A3B4 = {
 						DevelopmentTeam = 5V2CQ8ZSEH;
 					};
 				};
@@ -413,7 +427,7 @@
 			projectRoot = "";
 			targets = (
 				E3213ACE1CB9C8250016A3B4 /* BeInTouch-V1-localhost */,
-				E3213AF61CBBA7430016A3B4 /* BeInTouch-V1-hosting */,
+				E341E5D31CD921CE00176C31 /* BeInTouch-V1-hosting */,
 			);
 		};
 /* End PBXProject section */
@@ -440,14 +454,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3213AFF1CBBA7430016A3B4 /* Resources */ = {
+		E341E5F41CD921CE00176C31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3213B001CBBA7430016A3B4 /* LaunchScreen.storyboard in Resources */,
-				E3213B011CBBA7430016A3B4 /* Assets.xcassets in Resources */,
-				E3213B021CBBA7430016A3B4 /* Main.storyboard in Resources */,
-				B6A993E81CC40627005CE052 /* icon_photo.png in Resources */,
+				E341E5F51CD921CE00176C31 /* typingSomeone@2x.png in Resources */,
+				E341E5F61CD921CE00176C31 /* LaunchScreen.storyboard in Resources */,
+				E341E5F71CD921CE00176C31 /* typingSomeone.png in Resources */,
+				E341E5F81CD921CE00176C31 /* bubbleMine@2x.png in Resources */,
+				E341E5F91CD921CE00176C31 /* bubbleMine.png in Resources */,
+				E341E5FA1CD921CE00176C31 /* bubbleSomeone@2x.png in Resources */,
+				E341E5FB1CD921CE00176C31 /* Assets.xcassets in Resources */,
+				E341E5FC1CD921CE00176C31 /* typingMine.png in Resources */,
+				E341E5FD1CD921CE00176C31 /* typingMine@2x.png in Resources */,
+				E341E5FE1CD921CE00176C31 /* Main.storyboard in Resources */,
+				E341E5FF1CD921CE00176C31 /* missingAvatar.png in Resources */,
+				E341E6001CD921CE00176C31 /* icon_photo.png in Resources */,
+				E341E6011CD921CE00176C31 /* missingAvatar@2x.png in Resources */,
+				E341E6021CD921CE00176C31 /* bubbleSomeone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,35 +515,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3213AF71CBBA7430016A3B4 /* Sources */ = {
+		E341E5D41CD921CE00176C31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EBB36271CBEC84700784B45 /* MessageDTO.m in Sources */,
-				B68544B21CC01DE8003F4BBE /* InfosViewController.m in Sources */,
-				E3EFC0381CC66C9500C41932 /* AccueilViewController.m in Sources */,
-				6E90C5C91CC0E6570026B92D /* ContactChatRoomMessageFacade.m in Sources */,
-				E39B71491CC1500600B15382 /* EnregistrementViewController.m in Sources */,
-				6E90C5C31CC0E6570026B92D /* ContactChatRoomDTO.m in Sources */,
-				6E90C5CD1CC0E6570026B92D /* ContactFacade.m in Sources */,
-				E3EFC0481CC6842300C41932 /* ChatRoomTableViewController.m in Sources */,
-				B68544BE1CC029AC003F4BBE /* AjouterAmisViewController.m in Sources */,
-				E39B71451CBD54B000B15382 /* UtilisateurDTO.m in Sources */,
-				E3213AFB1CBBA7430016A3B4 /* UtilisateurFacade.m in Sources */,
-				6E90C5C51CC0E6570026B92D /* ContactChatRoomFacade.m in Sources */,
-				6E90C5CB1CC0E6570026B92D /* ContactDTO.m in Sources */,
-				B68544AE1CC01D65003F4BBE /* BienvenuViewController.m in Sources */,
-				E3EFC0401CC67DCE00C41932 /* AjoutMembreViewController.m in Sources */,
-				6E90C5C11CC0E6570026B92D /* ChatRoomFacade.m in Sources */,
-				B6D017091CC08851003BC41E /* VoirAmiViewController.m in Sources */,
-				E3EFC0301CC6559600C41932 /* DetailChatRoomViewController.m in Sources */,
-				E3213AFC1CBBA7430016A3B4 /* AppDelegate.m in Sources */,
-				6E90C5C71CC0E6570026B92D /* ContactChatRoomMessageDTO.m in Sources */,
-				6E90C5BF1CC0E6570026B92D /* ChatRoomDTO.m in Sources */,
-				E3EFC0441CC67EFA00C41932 /* ListeMembreChatRoomViewController.m in Sources */,
-				E3213AFD1CBBA7430016A3B4 /* main.m in Sources */,
-				E3EFC0341CC669F700C41932 /* NouveauChatRoomViewController.m in Sources */,
-				6EBB36291CBEC84700784B45 /* MessageFacade.m in Sources */,
+				E341E5D51CD921CE00176C31 /* ContactFacade.m in Sources */,
+				E341E5D61CD921CE00176C31 /* VoirAmiViewController.m in Sources */,
+				E341E5D71CD921CE00176C31 /* MessageDTO.m in Sources */,
+				E341E5D81CD921CE00176C31 /* AccueilViewController.m in Sources */,
+				E341E5D91CD921CE00176C31 /* MessageFacade.m in Sources */,
+				E341E5DA1CD921CE00176C31 /* InfosViewController.m in Sources */,
+				E341E5DB1CD921CE00176C31 /* NouveauChatRoomViewController.m in Sources */,
+				E341E5DC1CD921CE00176C31 /* UIBubbleTableView.m in Sources */,
+				E341E5DD1CD921CE00176C31 /* ChatRoomTableViewController.m in Sources */,
+				E341E5DE1CD921CE00176C31 /* UIBubbleTableViewCell.m in Sources */,
+				E341E5DF1CD921CE00176C31 /* ContactDTO.m in Sources */,
+				E341E5E01CD921CE00176C31 /* ContactChatRoomDTO.m in Sources */,
+				E341E5E11CD921CE00176C31 /* UtilisateurDTO.m in Sources */,
+				E341E5E21CD921CE00176C31 /* ChatRoomDTO.m in Sources */,
+				E341E5E31CD921CE00176C31 /* UtilisateurFacade.m in Sources */,
+				E341E5E41CD921CE00176C31 /* ChatRoomFacade.m in Sources */,
+				E341E5E51CD921CE00176C31 /* ContactChatRoomMessageFacade.m in Sources */,
+				E341E5E61CD921CE00176C31 /* UIBubbleHeaderTableViewCell.m in Sources */,
+				E341E5E71CD921CE00176C31 /* AjouterAmisViewController.m in Sources */,
+				E341E5E81CD921CE00176C31 /* AppDelegate.m in Sources */,
+				E341E5E91CD921CE00176C31 /* AjoutMembreViewController.m in Sources */,
+				E341E5EA1CD921CE00176C31 /* DetailChatRoomViewController.m in Sources */,
+				E341E5EB1CD921CE00176C31 /* UIBubbleTypingTableViewCell.m in Sources */,
+				E341E5EC1CD921CE00176C31 /* BienvenuViewController.m in Sources */,
+				E341E5ED1CD921CE00176C31 /* main.m in Sources */,
+				E341E5EE1CD921CE00176C31 /* ListeMembreChatRoomViewController.m in Sources */,
+				E341E5EF1CD921CE00176C31 /* ContactChatRoomMessageDTO.m in Sources */,
+				E341E5F01CD921CE00176C31 /* ContactChatRoomFacade.m in Sources */,
+				E341E5F11CD921CE00176C31 /* NSBubbleData.m in Sources */,
+				E341E5F21CD921CE00176C31 /* EnregistrementViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,35 +697,33 @@
 			};
 			name = Release;
 		};
-		E3213B041CBBA7430016A3B4 /* Debug */ = {
+		E341E6041CD921CE00176C31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: SONIA IBARRA FLORES (H5BXBQPGZ9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SONIA IBARRA FLORES (H5BXBQPGZ9)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeInTouch - V1/BeInTouch-V1-hosting-Prefix.pch";
 				INFOPLIST_FILE = "BeInTouch - V1/BeInTouch-V1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.qc.collegeahuntsic.BeInTouch---V1";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.qc.collegeahuntsic.BeInTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		E3213B051CBBA7430016A3B4 /* Release */ = {
+		E341E6051CD921CE00176C31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: SONIA IBARRA FLORES (H5BXBQPGZ9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SONIA IBARRA FLORES (H5BXBQPGZ9)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeInTouch - V1/BeInTouch-V1-hosting-Prefix.pch";
 				INFOPLIST_FILE = "BeInTouch - V1/BeInTouch-V1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.qc.collegeahuntsic.BeInTouch---V1";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.qc.collegeahuntsic.BeInTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -723,11 +750,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3213B031CBBA7430016A3B4 /* Build configuration list for PBXNativeTarget "BeInTouch-V1-hosting" */ = {
+		E341E6031CD921CE00176C31 /* Build configuration list for PBXNativeTarget "BeInTouch-V1-hosting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E3213B041CBBA7430016A3B4 /* Debug */,
-				E3213B051CBBA7430016A3B4 /* Release */,
+				E341E6041CD921CE00176C31 /* Debug */,
+				E341E6051CD921CE00176C31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
